@@ -43,10 +43,12 @@ namespace Facturador
                 cbTiposolicitud.Items.Add(validareader("TipoSolicitudDescrip", "TipoSolicitudId", respuestastringtoiposl));
             }
             respuestastringtoiposl.Close();
-            cbTiposolicitud.Items.Add("Todos");
             con.Cerrarconexion();
+            cbTiposolicitud.Items.Add("Todos");
+
             //
             //Seguimiento
+            /*
             conect conseg = new conect();
             String queryseguimiento = "select * from c_seguimiento ;";
             //String sQuerytipoSol = "select SubTipoSolicitudDescripcion from tiposolicitud Natural join subtiposolicitud where TipoSolicitudGrupo=  " + iGrupo;
@@ -55,9 +57,12 @@ namespace Facturador
             {
                 seguimiento.Items.Add(validareader("Iniciales", "ID_Seguimiento", seguimientos));
             }
-            seguimiento.Items.Add("Todos");
+           
             seguimientos.Close();
-            conseg.Cerrarconexion();
+            conseg.Cerrarconexion();*/
+            seguimiento.Items.Add("Todos");
+            seguimiento.Items.Add("En Seguimiento");
+            seguimiento.Items.Add("Sin Seguimiento");
             //Seguimiento
 
             //Sub tipo silicitud
@@ -233,12 +238,19 @@ namespace Facturador
                     string sValorCombo = seguimiento.SelectedItem.ToString();
                     if (sValorCombo == "Todos")
                     {
-                        sQuerywhere += " AND CC.ID_Seguimiento in (1,2) ";
+                        sQuerywhere += " AND CC.ID_Seguimiento in (1,2,3,4,5) ";
                     }
-                    else
+                    if (sValorCombo == "En Seguimiento")
                     {
-                        sQuerywhere += " AND CC.ID_Seguimiento = " + (seguimiento.SelectedItem as ComboboxItem).Value;
+                        sQuerywhere += " AND CC.ID_Seguimiento in (1,5) ";
+
                     }
+                    if (sValorCombo == "Sin Seguimiento")
+                    {
+                        sQuerywhere += " AND CC.ID_Seguimiento in (2,3,4) ";
+                    }
+
+
                 }
 
                 if (!string.IsNullOrEmpty(textBoxCasonumero.Text))
@@ -264,7 +276,7 @@ namespace Facturador
 
                 if (!string.IsNullOrEmpty(tbCasoid.Text))
                 {
-                    sQuerywhere += " AND CC.CasoId =" + tbCasoid.Text;
+                    sQuerywhere += " AND CC.CasoId like '%" + tbCasoid.Text + "%'";
                 }
 
                 if (!string.IsNullOrEmpty(tbActor.Text))

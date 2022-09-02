@@ -23,6 +23,7 @@ namespace Facturador
         public String[] aIdtipoprioridad = new String[250];
         public bool bPrioridadpctagregada = true;
         public String sEstatusid = "";
+        public int sComboTiposolicitud;
         funcionesdicss objfuncionesdicss = new funcionesdicss();
 
         public Boolean bcasopatente = false, bCasocliente = false, bCasointeresado = false, bCasoreferencias = false;
@@ -2105,7 +2106,7 @@ namespace Facturador
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            addnuevotitular addnuevotitular = new addnuevotitular(this);
+            addnuevotitular addnuevotitular = new addnuevotitular(this, login, sComboTiposolicitud);
             if (addnuevotitular.ShowDialog() == DialogResult.OK)
             {
                 comboBoxInteresado.Items.Add(addnuevotitular.cBcomboInteresadotitular);

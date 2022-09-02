@@ -616,7 +616,7 @@
             this.seguimiento.FormattingEnabled = true;
             this.seguimiento.Location = new System.Drawing.Point(675, 193);
             this.seguimiento.Name = "seguimiento";
-            this.seguimiento.Size = new System.Drawing.Size(137, 21);
+            this.seguimiento.Size = new System.Drawing.Size(179, 21);
             this.seguimiento.TabIndex = 187;
             this.seguimiento.Text = "Todos";
             // 
@@ -685,8 +685,10 @@
             // 
             // TSeguimiento
             // 
+            this.TSeguimiento.FillWeight = 50F;
             this.TSeguimiento.HeaderText = "Seg";
             this.TSeguimiento.Name = "TSeguimiento";
+            this.TSeguimiento.Width = 50;
             // 
             // fecpresentacion
             // 

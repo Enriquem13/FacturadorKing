@@ -20,6 +20,7 @@ namespace Facturador.Casos.Marcas
         public String[] paises = new String[250];
         public String[] paisesclave = new String[250];
         public int sTiposolicitudiscaso;
+        public int TipoSol;
         funcionesdicss objfuncionesdicss;
         public String sEstatusid  = "";
         public casoNuevomarcas_transferido(int iTiposolicitud, captura cap, Form1 loguinparam)
@@ -28,6 +29,7 @@ namespace Facturador.Casos.Marcas
             {
                 login = loguinparam;
                 cFcaptura = cap;
+                TipoSol = 7;
                 sTiposolicitudiscaso = iTiposolicitud;
                 InitializeComponent();
                 objfuncionesdicss = new funcionesdicss();
@@ -2187,7 +2189,7 @@ namespace Facturador.Casos.Marcas
 
         private void button5_Click(object sender, EventArgs e)
         {
-            addnuevotitular addnuevotitular = new addnuevotitular(this);
+            addnuevotitular addnuevotitular = new addnuevotitular(this, login, TipoSol);
             if (addnuevotitular.ShowDialog() == DialogResult.OK)
             {
                 comboBoxInteresado.Items.Add(addnuevotitular.cBcomboInteresadotitular);
@@ -2606,7 +2608,7 @@ namespace Facturador.Casos.Marcas
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            addnuevotitular addnuevotitular = new addnuevotitular(this);
+            addnuevotitular addnuevotitular = new addnuevotitular(this, login, TipoSol);
             if (addnuevotitular.ShowDialog() == DialogResult.OK)
             {
                 comboBoxInteresado.Items.Add(addnuevotitular.cBcomboInteresadotitular);

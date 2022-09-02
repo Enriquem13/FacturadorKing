@@ -20,7 +20,8 @@ namespace Facturador
         public String[] paises = new String[250];
         public String[] paisesclave = new String[250];
         //20220311FSV Fin de modificación
-        //20220330FSV 
+        //20220330FSV
+        public int TipoSol;
         funcionesdicss objfuncionesdicss = new funcionesdicss();
 
         public int iGrupotipo;
@@ -682,7 +683,7 @@ namespace Facturador
 
         private void button6_Click(object sender, EventArgs e)
         {
-            addnuevotitular addnuevotitular = new addnuevotitular(this);
+            addnuevotitular addnuevotitular = new addnuevotitular(this, fLoguin,TipoSol);
             if (addnuevotitular.ShowDialog() == DialogResult.OK)
             {
                 comboBoxInteresado.Items.Add(addnuevotitular.cBcomboInteresadotitular);

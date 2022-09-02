@@ -3066,7 +3066,8 @@ namespace Facturador
         public bool validaversion(String sVersion)
         {
             bool breinicia = false;
-            try
+            return breinicia;
+            /*try
             {
                 conect con_filev = new conect();
                 String sQuery = "SELECT * FROM act_version order by idact_version desc limit 1;";
@@ -3095,7 +3096,7 @@ namespace Facturador
             catch (Exception exs)
             {
                 return breinicia;
-            }
+            }*/
 
         }
 

@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Facturador.exe" size="20780544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Facturador.exe" size="20799488">
       <assemblyIdentity name="Facturador" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>J6h7F4d0UKY7MX4FF5kFJDb+2+/WYR5Lfoln2cjRORU=</dsig:DigestValue>
+        <dsig:DigestValue>64MFcMSlrGHAss4o5dbC9sFEwGKQ8cZ7+AFTK3Th1AM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1373,13 +1373,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Facturador.exe.config" size="539">
+  <file name="Facturador.exe.config" size="525">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>OYPdVMZAO6heJfjbvjlt3TbfedeSbxtDG8ZW1wzOvaM=</dsig:DigestValue>
+      <dsig:DigestValue>6mQdAX5+miqNrJVLyTp6mpXHDDsTB0YmMcbs2+lxqv8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="iconopng.ico" size="144494">

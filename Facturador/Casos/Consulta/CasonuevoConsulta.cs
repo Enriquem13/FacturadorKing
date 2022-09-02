@@ -22,7 +22,7 @@ namespace Facturador
         public String[] paises = new String[250];
         public String[] paisesclave = new String[250];
         //20220311FSV Fin de modificación
-
+        public int TipoSol;
         //20220330FSV 
         funcionesdicss objfuncionesdicss = new funcionesdicss();
 
@@ -295,6 +295,7 @@ namespace Facturador
             {
                 //20220314FSV (1) Inicio Recopilar datos a Grabar
                 String sComboTiposolicitud = validacombobox(comboTiposolicitud);
+                TipoSol = Convert.ToInt32( validacombobox(comboTiposolicitud));
                 String sComboboxSubtipo = validacombobox(comboboxSubtipo);
                 String sComboBoxClientes = validacombobox(comboBoxClientes);
                 String sComboBoxContacto = validacombobox(comboBoxContacto);
@@ -604,7 +605,7 @@ namespace Facturador
 
         private void button6_Click(object sender, EventArgs e)
         {
-            addnuevotitular addnuevotitular = new addnuevotitular(this);
+            addnuevotitular addnuevotitular = new addnuevotitular(this, fLoguin,TipoSol);
             if (addnuevotitular.ShowDialog() == DialogResult.OK)
             {
                 comboBoxInteresado.Items.Add(addnuevotitular.cBcomboInteresadotitular);

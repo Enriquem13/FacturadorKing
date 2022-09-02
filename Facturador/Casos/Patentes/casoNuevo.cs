@@ -22,6 +22,7 @@ namespace Facturador
         public int iGrupoid;
         public String[] aIdtipoprioridad = new String[250];
         public bool bPrioridadpctagregada = true;
+        public int TipoSol;
         funcionesdicss objfuncionesdicss = new funcionesdicss();
 
         public Boolean bcasopatente = false, bCasocliente = false, bCasointeresado = false, bCasoreferencias = false;
@@ -204,6 +205,7 @@ namespace Facturador
                 //
                 //hay que validar cuales campos son obligatorios y cuals son opcionales
                 String sComboTiposolicitud = validacombobox(comboTiposolicitud);//*
+                TipoSol = Convert.ToInt32(validacombobox(comboTiposolicitud));
                 //String sComboTiposolicitud = (comboTiposolicitud.SelectedItem as ComboboxItem).Value.ToString();//*
                 String sComboboxSubtipo = validacombobox(comboboxSubtipo);//.SelectedItem as ComboboxItem).Value.ToString();//*
                 String sComboboxSubtipo2 = validacombobox(comboboxSubtipo2);//.SelectedItem as ComboboxItem).Value.ToString();//*
@@ -1815,7 +1817,7 @@ namespace Facturador
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            addnuevotitular addnuevotitular = new addnuevotitular(this);
+            addnuevotitular addnuevotitular = new addnuevotitular(this,login,TipoSol);
             if (addnuevotitular.ShowDialog() == DialogResult.OK)
             {
                 comboBoxInteresado.Items.Add(addnuevotitular.cBcomboInteresadotitular);

@@ -21,7 +21,7 @@ namespace Facturador
         public String[] paisesclave = new String[250];
         public int sTiposolicitudiscaso;
         funcionesdicss objfuncionesdicss;
-
+        public int TipoSol;
         //public static conect conect;
         public Nuevocaso_marcas(int iTiposolicitud, captura cap, Form1 loguinparam)
         {
@@ -238,7 +238,7 @@ namespace Facturador
 
                 String sComboTiposolicitud = validacombobox(comboTiposolicitud);//*
                 //String sComboTiposolicitud = (comboTiposolicitud.SelectedItem as ComboboxItem).Value.ToString();//*
-
+                TipoSol = Convert.ToInt32(validacombobox(comboTiposolicitud));
                 //String sComboboxSubtipo = validacombobox(comboboxSubtipo);//.SelectedItem as ComboboxItem).Value.ToString();//*
                 String sID_Ley = validacombobox(ID_Ley);
 
@@ -1438,7 +1438,7 @@ namespace Facturador
 
         private void button5_Click(object sender, EventArgs e)
         {
-            addnuevotitular addnuevotitular = new addnuevotitular(this);
+            addnuevotitular addnuevotitular = new addnuevotitular(this,login,TipoSol);
             if (addnuevotitular.ShowDialog() == DialogResult.OK)
             {
                 comboBoxInteresado.Items.Add(addnuevotitular.cBcomboInteresadotitular);
