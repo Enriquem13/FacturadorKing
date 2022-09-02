@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Facturador",
+    "\\Facturador\\Facturador",
+    "\\Facturador\\Facturador\\Datos",
+    "\\Facturador\\Facturador\\Modelos",
+    "\\Facturador\\Facturador\\Tarifario",
+    "\\Facturador\\Facturador\\Utilerias",
+    "\\packages",
+    "\\packages\\InstallManager.1.1.0",
+    "\\packages\\LinqToExcel.1.11.0"
+  ],
+  "SelectedNode": "\\Facturador\\Casos\\Marcas\\casoNuevo_marcas.cs",
+  "PreviewInSolutionExplorer": false
+}

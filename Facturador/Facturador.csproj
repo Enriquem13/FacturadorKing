@@ -1,0 +1,1486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EFA66EA-01C0-4771-A806-3A9405CA9A56}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Facturador</RootNamespace>
+    <AssemblyName>Facturador</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\eduarximo\Documents\proyectosc\solucionfacturador\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://localhost:53310/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>69A7FA6B719EB84D638394EB63A7CAEB60D03847</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Facturador_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="InstallManager, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InstallManager.1.1.0\lib\net40\InstallManager.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="MailBee.NET">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\KingSendEmailInstall\MailBee.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Graph, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.10.8\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\king\libimap\sourceCode\trunk\Libs\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Remotion">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.5.0.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.3.5.0\lib\netstandard2.0\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Casos\Catalogos\addClientenuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\addClientenuevo.Designer.cs">
+      <DependentUpon>addClientenuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\addContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\addContacto.Designer.cs">
+      <DependentUpon>addContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\addnuevotitular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\addnuevotitular.Designer.cs">
+      <DependentUpon>addnuevotitular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="agregardocs.cs" />
+    <Compile Include="anexo_interesado.cs" />
+    <Compile Include="anexo_prioridades.cs" />
+    <Compile Include="anexo_prioridades_doc.cs" />
+    <Compile Include="anexo_titulares_interesados.cs" />
+    <Compile Include="Casos\Catalogos\atenderplazo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\atenderplazo.Designer.cs">
+      <DependentUpon>atenderplazo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\bAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\bAll.Designer.cs">
+      <DependentUpon>bAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\bBuscargrupodocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\bBuscargrupodocs.Designer.cs">
+      <DependentUpon>bBuscargrupodocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\bCasoparadoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\bCasoparadoc.Designer.cs">
+      <DependentUpon>bCasoparadoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\buscaCaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\buscaCaso.Designer.cs">
+      <DependentUpon>buscaCaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\BuscaInteresadoCaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\BuscaInteresadoCaso.designer.cs">
+      <DependentUpon>BuscaInteresadoCaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\buscarcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\buscarcliente.Designer.cs">
+      <DependentUpon>buscarcliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\capturaanualidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\capturaanualidades.Designer.cs">
+      <DependentUpon>capturaanualidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Consulta\fBuscarcorresponsalCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Consulta\fBuscarcorresponsalCC.designer.cs">
+      <DependentUpon>fBuscarcorresponsalCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Consulta\fTcasoconsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Consulta\fTcasoconsulta.Designer.cs">
+      <DependentUpon>fTcasoconsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Consulta\fTitularactualiza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Consulta\fTitularactualiza.Designer.cs">
+      <DependentUpon>fTitularactualiza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Contencioso\fCorresponsalupdateCO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Contencioso\fCorresponsalupdateCO.designer.cs">
+      <DependentUpon>fCorresponsalupdateCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Contencioso\fTitularupdateCO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Contencioso\fTitularupdateCO.designer.cs">
+      <DependentUpon>fTitularupdateCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Documentos\Capturadetitulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Documentos\Capturadetitulo.Designer.cs">
+      <DependentUpon>Capturadetitulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Documentos\CapturaSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Documentos\CapturaSolicitud.Designer.cs">
+      <DependentUpon>CapturaSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Documentos\fDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Documentos\fDocumentos.Designer.cs">
+      <DependentUpon>fDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Documentos\fSubtipodocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Documentos\fSubtipodocumentos.Designer.cs">
+      <DependentUpon>fSubtipodocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Documentos\generacarta.cs" />
+    <Compile Include="Casos\Marcas\casoNuevomarcas_transferido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Marcas\casoNuevomarcas_transferido.Designer.cs">
+      <DependentUpon>casoNuevomarcas_transferido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Marcas\fBuscarcorresponsal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Marcas\fBuscarcorresponsal.designer.cs">
+      <DependentUpon>fBuscarcorresponsal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Consulta\CasonuevoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Consulta\CasonuevoConsulta.Designer.cs">
+      <DependentUpon>CasonuevoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Contencioso\CasoNuevoContencioso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Contencioso\CasoNuevoContencioso.Designer.cs">
+      <DependentUpon>CasoNuevoContencioso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Derecho de autor\casoNuevoDerechosdeautor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Derecho de autor\casoNuevoDerechosdeautor.Designer.cs">
+      <DependentUpon>casoNuevoDerechosdeautor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Oposicion\CasoNuevoOposicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Oposicion\CasoNuevoOposicion.Designer.cs">
+      <DependentUpon>CasoNuevoOposicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Oposicion\Caso_Nuevo_Defensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Oposicion\Caso_Nuevo_Defensor.designer.cs">
+      <DependentUpon>Caso_Nuevo_Defensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Patentes\CasoNuevoTransferido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Patentes\CasoNuevoTransferido.Designer.cs">
+      <DependentUpon>CasoNuevoTransferido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\ReservaDerecho\casoNuevoReservadederechos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\ReservaDerecho\casoNuevoReservadederechos.Designer.cs">
+      <DependentUpon>casoNuevoReservadederechos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Marcas\casoNuevo_marcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Marcas\casoNuevo_marcas.Designer.cs">
+      <DependentUpon>casoNuevo_marcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Caso_nuevo_bBuscargrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Caso_nuevo_bBuscargrupo.Designer.cs">
+      <DependentUpon>Caso_nuevo_bBuscargrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Consulta\bConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Consulta\bConsulta.Designer.cs">
+      <DependentUpon>bConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Contencioso\bContencioso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Contencioso\bContencioso.Designer.cs">
+      <DependentUpon>bContencioso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Derecho de autor\bDerechoautor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Derecho de autor\bDerechoautor.Designer.cs">
+      <DependentUpon>bDerechoautor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Oposicion\bOposicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Oposicion\bOposicion.Designer.cs">
+      <DependentUpon>bOposicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\ReservaDerecho\bReservadederechos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\ReservaDerecho\bReservadederechos.Designer.cs">
+      <DependentUpon>bReservadederechos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Buscard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Buscard.Designer.cs">
+      <DependentUpon>Buscard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Marcas\bMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Marcas\bMarcas.Designer.cs">
+      <DependentUpon>bMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\bVariedadv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\bVariedadv.Designer.cs">
+      <DependentUpon>bVariedadv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="captura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="captura.Designer.cs">
+      <DependentUpon>captura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Documentos\CapturadeOficios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Documentos\CapturadeOficios.Designer.cs">
+      <DependentUpon>CapturadeOficios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Documentos\CapturaEscritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Documentos\CapturaEscritos.Designer.cs">
+      <DependentUpon>CapturaEscritos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\caso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\caso.Designer.cs">
+      <DependentUpon>caso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Patentes\casoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Patentes\casoNuevo.Designer.cs">
+      <DependentUpon>casoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\CatalagoEstatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\CatalagoEstatus.Designer.cs">
+      <DependentUpon>CatalagoEstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\CatalogoSubtipodocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\CatalogoSubtipodocumento.Designer.cs">
+      <DependentUpon>CatalogoSubtipodocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\CatEstatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\CatEstatus.Designer.cs">
+      <DependentUpon>CatEstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Cliente.designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Conceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Conceptos.Designer.cs">
+      <DependentUpon>Conceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conect.cs" />
+    <Compile Include="conect_facturas.cs" />
+    <Compile Include="conect_ipfacts.cs" />
+    <Compile Include="Casos\Catalogos\configinicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\configinicio.Designer.cs">
+      <DependentUpon>configinicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configuracionfiles.cs" />
+    <Compile Include="Casos\Catalogos\configuradocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\configuradocs.Designer.cs">
+      <DependentUpon>configuradocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Configuradocumento_consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Configuradocumento_consulta.Designer.cs">
+      <DependentUpon>Configuradocumento_consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Configuradocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Configuradocumento.Designer.cs">
+      <DependentUpon>Configuradocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\confirmarnumerodecasodocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\confirmarnumerodecasodocs.Designer.cs">
+      <DependentUpon>confirmarnumerodecasodocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Patentes\consultacaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Patentes\consultacaso.Designer.cs">
+      <DependentUpon>consultacaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\consultaulticasos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\consultaulticasos.Designer.cs">
+      <DependentUpon>consultaulticasos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Patentes\Consutlacaso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Patentes\Consutlacaso.Designer.cs">
+      <DependentUpon>Consutlacaso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\corrreospendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\corrreospendientes.Designer.cs">
+      <DependentUpon>corrreospendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\ReservaDerecho\dreservadederecho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\ReservaDerecho\dreservadederecho.Designer.cs">
+      <DependentUpon>dreservadederecho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\estatuspordocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\estatuspordocumento.Designer.cs">
+      <DependentUpon>estatuspordocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturador\Actualizartarifas_excel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturador\Actualizartarifas_excel.Designer.cs">
+      <DependentUpon>Actualizartarifas_excel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturador\Datos\CasoAdapter.cs" />
+    <Compile Include="Facturador\Datos\ClienteAdapter.cs" />
+    <Compile Include="Facturador\Datos\ConceptoAdapter.cs" />
+    <Compile Include="Facturador\Datos\GrupoAdapter.cs" />
+    <Compile Include="Facturador\Datos\InteresadoAdapter.cs" />
+    <Compile Include="Facturador\Datos\MonedaAdapter.cs" />
+    <Compile Include="Facturador\Datos\ReferenciaAdapter.cs" />
+    <Compile Include="Facturador\Datos\TarifaAdapter.cs" />
+    <Compile Include="Facturador\Datos\TipoDeCambioAdapter.cs" />
+    <Compile Include="Facturador\Datos\TipoSolicitudAdapter.cs" />
+    <Compile Include="Facturador\ExcelTarifas.cs" />
+    <Compile Include="Facturador\Facturador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturador\Facturador.Designer.cs">
+      <DependentUpon>Facturador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturador\Modelos\Caso.cs" />
+    <Compile Include="Facturador\Modelos\Cliente.cs" />
+    <Compile Include="Facturador\Modelos\ConceptoTarifa.cs" />
+    <Compile Include="Facturador\Modelos\Conversion\ConvertidorDivisas.cs" />
+    <Compile Include="Facturador\Modelos\Conversion\TipoDeCambio.cs" />
+    <Compile Include="Facturador\Modelos\EntradaFactura.cs" />
+    <Compile Include="Facturador\Modelos\EntradaTarifa.cs" />
+    <Compile Include="Facturador\Modelos\Estatus.cs" />
+    <Compile Include="Facturador\Modelos\Factura.cs" />
+    <Compile Include="Facturador\Modelos\Grupo.cs" />
+    <Compile Include="Facturador\Modelos\Interesado.cs" />
+    <Compile Include="Facturador\Modelos\ModeloBase.cs" />
+    <Compile Include="Facturador\Modelos\Moneda.cs" />
+    <Compile Include="Facturador\Modelos\PersonaBase.cs" />
+    <Compile Include="Facturador\Modelos\Referencia.cs" />
+    <Compile Include="Facturador\Modelos\Tarifa.cs" />
+    <Compile Include="Facturador\Modelos\TipoSolicitud.cs" />
+    <Compile Include="Facturador\Tarifario\SeleccionarTarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturador\Tarifario\SeleccionarTarifa.Designer.cs">
+      <DependentUpon>SeleccionarTarifa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturador\Tarifario\TarifaNueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturador\Tarifario\TarifaNueva.Designer.cs">
+      <DependentUpon>TarifaNueva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturador\Utilerias\BaseDatos.cs" />
+    <Compile Include="Facturador\Utilerias\Logger.cs" />
+    <Compile Include="Facturador\Utilerias\TipoDeBusqueda.cs" />
+    <Compile Include="Casos\Catalogos\fResponsableupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\fResponsableupdate.Designer.cs">
+      <DependentUpon>fResponsableupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo_facturacion\Facturar_CFDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_facturacion\Facturar_CFDI.Designer.cs">
+      <DependentUpon>Facturar_CFDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fatenderplazo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fatenderplazo.Designer.cs">
+      <DependentUpon>Fatenderplazo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FAutorizacionDenomicaciondeOrigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FAutorizacionDenomicaciondeOrigen.designer.cs">
+      <DependentUpon>FAutorizacionDenomicaciondeOrigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FCambioReginemNombreDenominacionRazon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FCambioReginemNombreDenominacionRazon.Designer.cs">
+      <DependentUpon>FCambioReginemNombreDenominacionRazon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fclientedetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fclientedetalle.Designer.cs">
+      <DependentUpon>Fclientedetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FConsultaInteresado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FConsultaInteresado.designer.cs">
+      <DependentUpon>FConsultaInteresado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fcontacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fcontacto.designer.cs">
+      <DependentUpon>Fcontacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FDeclaracionrealyefectivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FDeclaracionrealyefectivo.Designer.cs">
+      <DependentUpon>FDeclaracionrealyefectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fdirecciones_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fdirecciones_cliente.designer.cs">
+      <DependentUpon>Fdirecciones_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FGeneraCartas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FGeneraCartas.Designer.cs">
+      <DependentUpon>FGeneraCartas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fidioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fidioma.designer.cs">
+      <DependentUpon>Fidioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="filelog.cs" />
+    <Compile Include="Casos\Catalogos\FInscripcionConvenioDOrigen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FInscripcionConvenioDOrigen.designer.cs">
+      <DependentUpon>FInscripcionConvenioDOrigen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Finteresado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Finteresado.designer.cs">
+      <DependentUpon>Finteresado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FInteresadoDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FInteresadoDetalle.Designer.cs">
+      <DependentUpon>FInteresadoDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FLicenciaFranquicia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FLicenciaFranquicia.designer.cs">
+      <DependentUpon>FLicenciaFranquicia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fmoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fmoneda.designer.cs">
+      <DependentUpon>Fmoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FNotadeCambioDomicilio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FNotadeCambioDomicilio.Designer.cs">
+      <DependentUpon>FNotadeCambioDomicilio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FOficina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FOficina.Designer.cs">
+      <DependentUpon>FOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Formato_03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Formato_03.Designer.cs">
+      <DependentUpon>Formato_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fpais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fpais.designer.cs">
+      <DependentUpon>Fpais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fprovedorfact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fprovedorfact.designer.cs">
+      <DependentUpon>Fprovedorfact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FSelectdireccionint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FSelectdireccionint.Designer.cs">
+      <DependentUpon>FSelectdireccionint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FSolicitudeProteccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FSolicitudeProteccion.designer.cs">
+      <DependentUpon>FSolicitudeProteccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FtCambioregimennombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\FtCambioregimennombre.Designer.cs">
+      <DependentUpon>FtCambioregimennombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Contencioso\fTcontencioso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Contencioso\fTcontencioso.Designer.cs">
+      <DependentUpon>fTcontencioso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Derecho de autor\fTderechosdeautor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Derecho de autor\fTderechosdeautor.Designer.cs">
+      <DependentUpon>fTderechosdeautor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\fTemplatesdocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\fTemplatesdocs.Designer.cs">
+      <DependentUpon>fTemplatesdocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Ftipoenvioinf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Ftipoenvioinf.designer.cs">
+      <DependentUpon>Ftipoenvioinf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\bBuscargrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\bBuscargrupo.Designer.cs">
+      <DependentUpon>bBuscargrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Ftipo_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Ftipo_cliente.designer.cs">
+      <DependentUpon>Ftipo_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Marcas\fTmarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Marcas\fTmarcas.Designer.cs">
+      <DependentUpon>fTmarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Oposicion\fToposiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Oposicion\fToposiciones.Designer.cs">
+      <DependentUpon>fToposiciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\ReservaDerecho\fTreservaderechos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\ReservaDerecho\fTreservaderechos.Designer.cs">
+      <DependentUpon>fTreservaderechos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funcionesdicss.cs" />
+    <Compile Include="Casos\Catalogos\Fusuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Fusuarios.designer.cs">
+      <DependentUpon>Fusuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="generacartas.cs" />
+    <Compile Include="generadocs.cs" />
+    <Compile Include="generadocscambiodom.cs" />
+    <Compile Include="Casos\Catalogos\generaformatocambiodomicilio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\generaformatocambiodomicilio.Designer.cs">
+      <DependentUpon>generaformatocambiodomicilio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\loadingconsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\loadingconsulta.Designer.cs">
+      <DependentUpon>loadingconsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\loadinprocess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\loadinprocess.Designer.cs">
+      <DependentUpon>loadinprocess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\load_documentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\load_documentos.Designer.cs">
+      <DependentUpon>load_documentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\loadpendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\loadpendientes.Designer.cs">
+      <DependentUpon>loadpendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo_facturacion\relaciona_subtipodoocumento_concepto_tarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo_facturacion\relaciona_subtipodoocumento_concepto_tarifa.Designer.cs">
+      <DependentUpon>relaciona_subtipodoocumento_concepto_tarifa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySqlBackup.cs" />
+    <Compile Include="PlantillaFactura\obj_factura_concepto.cs" />
+    <Compile Include="PlantillaFactura\obj_factura_pdf.cs" />
+    <Compile Include="PlantillaFactura\plantillafactura.cs" />
+    <Compile Include="plazo.cs" />
+    <Compile Include="Casos\Catalogos\plazos_consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\plazos_consulta.Designer.cs">
+      <DependentUpon>plazos_consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plazos_forms\agregaplazo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plazos_forms\agregaplazo.Designer.cs">
+      <DependentUpon>agregaplazo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plazos_forms\catTipoplazos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plazos_forms\catTipoplazos.Designer.cs">
+      <DependentUpon>catTipoplazos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plazos_forms\subtipodocplazos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plazos_forms\subtipodocplazos.Designer.cs">
+      <DependentUpon>subtipodocplazos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Casos\Catalogos\Consulacliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Consulacliente.Designer.cs">
+      <DependentUpon>Consulacliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="readmail.cs" />
+    <Compile Include="Casos\Catalogos\relacionadocumentoplazo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\relacionadocumentoplazo.Designer.cs">
+      <DependentUpon>relacionadocumentoplazo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\relaciondoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\relaciondoc.Designer.cs">
+      <DependentUpon>relaciondoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\renovacionydeclaacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\renovacionydeclaacion.Designer.cs">
+      <DependentUpon>renovacionydeclaacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\ReservaDerecho\Reservadederecho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\ReservaDerecho\Reservadederecho.Designer.cs">
+      <DependentUpon>Reservadederecho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Solicituddepatente2019.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\Solicituddepatente2019.designer.cs">
+      <DependentUpon>Solicituddepatente2019.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Robotplazos\conect_robot.cs" />
+    <Compile Include="Robotplazos\detalleenvio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Robotplazos\detalleenvio.designer.cs">
+      <DependentUpon>detalleenvio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Robotplazos\home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Robotplazos\home.designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Robotplazos\listviewcheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Robotplazos\listviewcheck.designer.cs">
+      <DependentUpon>listviewcheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Robotplazos\loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Robotplazos\loading.designer.cs">
+      <DependentUpon>loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Robotplazos\ordercolumn.cs" />
+    <Compile Include="Robotplazos\Waitforcases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Robotplazos\Waitforcases.designer.cs">
+      <DependentUpon>Waitforcases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Robotplazos\Waitforsendmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Robotplazos\Waitforsendmail.designer.cs">
+      <DependentUpon>Waitforsendmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="serviciocorreoking\servcorreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="serviciocorreoking\servcorreo.Designer.cs">
+      <DependentUpon>servcorreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="solicitudpat2.cs" />
+    <Compile Include="Casos\Catalogos\subtipodocumentoestatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\subtipodocumentoestatus.Designer.cs">
+      <DependentUpon>subtipodocumentoestatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\tarifario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\tarifario.Designer.cs">
+      <DependentUpon>tarifario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\tarifas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\tarifas.Designer.cs">
+      <DependentUpon>tarifas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\tipoplazo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\tipoplazo.Designer.cs">
+      <DependentUpon>tipoplazo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\updatePais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\updatePais.Designer.cs">
+      <DependentUpon>updatePais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\updateEstatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\updateEstatus.Designer.cs">
+      <DependentUpon>updateEstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Casos\Catalogos\usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Catalogos\usuarios.Designer.cs">
+      <DependentUpon>usuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Casos\Catalogos\addClientenuevo.resx">
+      <DependentUpon>addClientenuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\addContacto.resx">
+      <DependentUpon>addContacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\addnuevotitular.resx">
+      <DependentUpon>addnuevotitular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\atenderplazo.resx">
+      <DependentUpon>atenderplazo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\bAll.resx">
+      <DependentUpon>bAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\bBuscargrupodocs.resx">
+      <DependentUpon>bBuscargrupodocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\bCasoparadoc.resx">
+      <DependentUpon>bCasoparadoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\buscaCaso.resx">
+      <DependentUpon>buscaCaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\BuscaInteresadoCaso.resx">
+      <DependentUpon>BuscaInteresadoCaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\buscarcliente.resx">
+      <DependentUpon>buscarcliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\capturaanualidades.resx">
+      <DependentUpon>capturaanualidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Consulta\fBuscarcorresponsalCC.resx">
+      <DependentUpon>fBuscarcorresponsalCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Consulta\fTcasoconsulta.resx">
+      <DependentUpon>fTcasoconsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Consulta\fTitularactualiza.resx">
+      <DependentUpon>fTitularactualiza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Contencioso\fCorresponsalupdateCO.resx">
+      <DependentUpon>fCorresponsalupdateCO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Contencioso\fTitularupdateCO.resx">
+      <DependentUpon>fTitularupdateCO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Documentos\Capturadetitulo.resx">
+      <DependentUpon>Capturadetitulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Documentos\CapturaSolicitud.resx">
+      <DependentUpon>CapturaSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Documentos\fDocumentos.resx">
+      <DependentUpon>fDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Marcas\casoNuevomarcas_transferido.resx">
+      <DependentUpon>casoNuevomarcas_transferido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Marcas\fBuscarcorresponsal.resx">
+      <DependentUpon>fBuscarcorresponsal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Consulta\CasonuevoConsulta.resx">
+      <DependentUpon>CasonuevoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Contencioso\CasoNuevoContencioso.resx">
+      <DependentUpon>CasoNuevoContencioso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Derecho de autor\casoNuevoDerechosdeautor.resx">
+      <DependentUpon>casoNuevoDerechosdeautor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Oposicion\CasoNuevoOposicion.resx">
+      <DependentUpon>CasoNuevoOposicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Oposicion\Caso_Nuevo_Defensor.resx">
+      <DependentUpon>Caso_Nuevo_Defensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Patentes\CasoNuevoTransferido.resx">
+      <DependentUpon>CasoNuevoTransferido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\ReservaDerecho\casoNuevoReservadederechos.resx">
+      <DependentUpon>casoNuevoReservadederechos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Marcas\casoNuevo_marcas.resx">
+      <DependentUpon>casoNuevo_marcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Caso_nuevo_bBuscargrupo.resx">
+      <DependentUpon>Caso_nuevo_bBuscargrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Consulta\bConsulta.resx">
+      <DependentUpon>bConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Contencioso\bContencioso.resx">
+      <DependentUpon>bContencioso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Derecho de autor\bDerechoautor.resx">
+      <DependentUpon>bDerechoautor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Oposicion\bOposicion.resx">
+      <DependentUpon>bOposicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\ReservaDerecho\bReservadederechos.resx">
+      <DependentUpon>bReservadederechos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Buscard.resx">
+      <DependentUpon>Buscard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Marcas\bMarcas.resx">
+      <DependentUpon>bMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\bVariedadv.resx">
+      <DependentUpon>bVariedadv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="captura.resx">
+      <DependentUpon>captura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Documentos\CapturadeOficios.resx">
+      <DependentUpon>CapturadeOficios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Documentos\CapturaEscritos.resx">
+      <DependentUpon>CapturaEscritos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\caso.resx">
+      <DependentUpon>caso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Patentes\casoNuevo.resx">
+      <DependentUpon>casoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\CatalagoEstatus.resx">
+      <DependentUpon>CatalagoEstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\CatalogoSubtipodocumento.resx">
+      <DependentUpon>CatalogoSubtipodocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\CatEstatus.resx">
+      <DependentUpon>CatEstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Conceptos.resx">
+      <DependentUpon>Conceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\configinicio.resx">
+      <DependentUpon>configinicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\configuradocs.resx">
+      <DependentUpon>configuradocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Configuradocumento_consulta.resx">
+      <DependentUpon>Configuradocumento_consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Configuradocumento.resx">
+      <DependentUpon>Configuradocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\confirmarnumerodecasodocs.resx">
+      <DependentUpon>confirmarnumerodecasodocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Patentes\consultacaso.resx">
+      <DependentUpon>consultacaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\consultaulticasos.resx">
+      <DependentUpon>consultaulticasos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Patentes\Consutlacaso.resx">
+      <DependentUpon>Consutlacaso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\corrreospendientes.resx">
+      <DependentUpon>corrreospendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\ReservaDerecho\dreservadederecho.resx">
+      <DependentUpon>dreservadederecho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\estatuspordocumento.resx">
+      <DependentUpon>estatuspordocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturador\Actualizartarifas_excel.resx">
+      <DependentUpon>Actualizartarifas_excel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturador\Facturador.resx">
+      <DependentUpon>Facturador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturador\Tarifario\SeleccionarTarifa.resx">
+      <DependentUpon>SeleccionarTarifa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturador\Tarifario\TarifaNueva.resx">
+      <DependentUpon>TarifaNueva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\fResponsableupdate.resx">
+      <DependentUpon>fResponsableupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_facturacion\Facturar_CFDI.resx">
+      <DependentUpon>Facturar_CFDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Fatenderplazo.resx">
+      <DependentUpon>Fatenderplazo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FAutorizacionDenomicaciondeOrigen.resx">
+      <DependentUpon>FAutorizacionDenomicaciondeOrigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FCambioReginemNombreDenominacionRazon.resx">
+      <DependentUpon>FCambioReginemNombreDenominacionRazon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Fclientedetalle.resx">
+      <DependentUpon>Fclientedetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FConsultaInteresado.resx">
+      <DependentUpon>FConsultaInteresado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Fcontacto.resx">
+      <DependentUpon>Fcontacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FDeclaracionrealyefectivo.resx">
+      <DependentUpon>FDeclaracionrealyefectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Fdirecciones_cliente.resx">
+      <DependentUpon>Fdirecciones_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FGeneraCartas.resx">
+      <DependentUpon>FGeneraCartas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Fidioma.resx">
+      <DependentUpon>Fidioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FInscripcionConvenioDOrigen.resx">
+      <DependentUpon>FInscripcionConvenioDOrigen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Finteresado.resx">
+      <DependentUpon>Finteresado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FInteresadoDetalle.resx">
+      <DependentUpon>FInteresadoDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FLicenciaFranquicia.resx">
+      <DependentUpon>FLicenciaFranquicia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Fmoneda.resx">
+      <DependentUpon>Fmoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FNotadeCambioDomicilio.resx">
+      <DependentUpon>FNotadeCambioDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FOficina.resx">
+      <DependentUpon>FOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Formato_03.resx">
+      <DependentUpon>Formato_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Fpais.resx">
+      <DependentUpon>Fpais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Fprovedorfact.resx">
+      <DependentUpon>Fprovedorfact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FSelectdireccionint.resx">
+      <DependentUpon>FSelectdireccionint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FSolicitudeProteccion.resx">
+      <DependentUpon>FSolicitudeProteccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\FtCambioregimennombre.resx">
+      <DependentUpon>FtCambioregimennombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Contencioso\fTcontencioso.resx">
+      <DependentUpon>fTcontencioso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Derecho de autor\fTderechosdeautor.resx">
+      <DependentUpon>fTderechosdeautor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\fTemplatesdocs.resx">
+      <DependentUpon>fTemplatesdocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Ftipoenvioinf.resx">
+      <DependentUpon>Ftipoenvioinf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\bBuscargrupo.resx">
+      <DependentUpon>bBuscargrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Ftipo_cliente.resx">
+      <DependentUpon>Ftipo_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Marcas\fTmarcas.resx">
+      <DependentUpon>fTmarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Oposicion\fToposiciones.resx">
+      <DependentUpon>fToposiciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\ReservaDerecho\fTreservaderechos.resx">
+      <DependentUpon>fTreservaderechos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Fusuarios.resx">
+      <DependentUpon>Fusuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\generaformatocambiodomicilio.resx">
+      <DependentUpon>generaformatocambiodomicilio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\loadingconsulta.resx">
+      <DependentUpon>loadingconsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\loadinprocess.resx">
+      <DependentUpon>loadinprocess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\load_documentos.resx">
+      <DependentUpon>load_documentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\loadpendientes.resx">
+      <DependentUpon>loadpendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo_facturacion\relaciona_subtipodoocumento_concepto_tarifa.resx">
+      <DependentUpon>relaciona_subtipodoocumento_concepto_tarifa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\plazos_consulta.resx">
+      <DependentUpon>plazos_consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plazos_forms\agregaplazo.resx">
+      <DependentUpon>agregaplazo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plazos_forms\catTipoplazos.resx">
+      <DependentUpon>catTipoplazos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plazos_forms\subtipodocplazos.resx">
+      <DependentUpon>subtipodocplazos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Casos\Catalogos\Consulacliente.resx">
+      <DependentUpon>Consulacliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\relacionadocumentoplazo.resx">
+      <DependentUpon>relacionadocumentoplazo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\relaciondoc.resx">
+      <DependentUpon>relaciondoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\renovacionydeclaacion.resx">
+      <DependentUpon>renovacionydeclaacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\ReservaDerecho\Reservadederecho.resx">
+      <DependentUpon>Reservadederecho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\Solicituddepatente2019.resx">
+      <DependentUpon>Solicituddepatente2019.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\subtipodocumentoestatus.resx">
+      <DependentUpon>subtipodocumentoestatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\tarifario.resx">
+      <DependentUpon>tarifario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\tarifas.resx">
+      <DependentUpon>tarifas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\tipoplazo.resx">
+      <DependentUpon>tipoplazo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\updatePais.resx">
+      <DependentUpon>updatePais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\updateEstatus.resx">
+      <DependentUpon>updateEstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Catalogos\usuarios.resx">
+      <DependentUpon>usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Robotplazos\detalleenvio.resx">
+      <DependentUpon>detalleenvio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Robotplazos\home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Robotplazos\listviewcheck.resx">
+      <DependentUpon>listviewcheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Robotplazos\loading.resx">
+      <DependentUpon>loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Robotplazos\Waitforcases.resx">
+      <DependentUpon>Waitforcases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Robotplazos\Waitforsendmail.resx">
+      <DependentUpon>Waitforsendmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="serviciocorreoking\servcorreo.resx">
+      <DependentUpon>servcorreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Facturador_TemporaryKey.pfx" />
+    <Fakes Include="Fakes\MailBee.NET.fakes" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kinglogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adelante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconopng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contactonuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16494.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disconnect_logout_exit-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-consulta-tramite-dpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consuta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busquedacatalogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\csession.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconopng.ico" />
+    <None Include="Resources\2191186.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".exe">
+      <Visible>False</Visible>
+      <Description>Casos King</Description>
+      <Progid>0001</Progid>
+      <DefaultIcon>iconopng.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
