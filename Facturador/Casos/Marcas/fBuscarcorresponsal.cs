@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace Facturador
 {
     public partial class fBuscarcorresponsal : Form
-    {
+    {       public Form1 login;
             public String sClienteidvalue {get; set;}
             public String sContactoidvalue { get; set; }
             public String sClienteidtext { get; set; }
@@ -21,10 +21,11 @@ namespace Facturador
             public String rtCorreocontacto_pass { get; set; }
             public String sgCasoid = "", sgTiposolicitud="";
             
-        public fBuscarcorresponsal(String sCasoId, String sTiposolicitud, String sValorcontacto, String sTextocliente)
+        public fBuscarcorresponsal(String sCasoId, String sTiposolicitud, String sValorcontacto, String sTextocliente, Form1 loguinparam)
         {
             InitializeComponent();
             sgCasoid = sCasoId;
+            login = loguinparam;
             sgTiposolicitud = sTiposolicitud;
             //richID.Text = sgCasoid;
             //conect conect_caso_marcas = new conect();
@@ -326,7 +327,7 @@ namespace Facturador
 
         private void button4_Click(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this, login,15);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 comboBoxClientes.Items.Add(aClientenuevo.Cliente);
@@ -341,7 +342,7 @@ namespace Facturador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this, login, 15);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 comboBoxClientes.Items.Add(aClientenuevo.Cliente);

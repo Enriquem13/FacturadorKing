@@ -13,18 +13,21 @@ namespace Facturador
 {
     public partial class buscarcliente : Form
     {
+            public Form1 fLoguin;
             public String sClienteidvalue {get; set;}
             public String sContactoidvalue { get; set; }
             public String sClienteidtext { get; set; }
             public String sContactoidtext { get; set; }
             public String rtCorreocontacto_pass { get; set; }
             public String sgCasoid = "", sgTiposolicitud="";
-        public buscarcliente(String sCasoId, String sTiposolicitud, String sValorcontacto, String sTextocliente)
+        public int tiposol;
+        public buscarcliente(String sCasoId, String sTiposolicitud, String sValorcontacto, String sTextocliente,Form1 loguin)
         {
             InitializeComponent();
             sgCasoid = sCasoId;
             sgTiposolicitud = sTiposolicitud;
-
+            fLoguin = loguin;
+            tiposol = Convert.ToInt32(sgTiposolicitud);
             conect conect_clientes = new conect();
             String query2 = "select ClienteNombre, ClienteId from cliente order by cliente.ClienteNombre;";
             MySqlDataReader respuestastringclient = conect_clientes.getdatareader(query2);
@@ -186,7 +189,7 @@ namespace Facturador
 
         private void button4_Click(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this, fLoguin, tiposol);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 comboBoxClientes.Items.Add(aClientenuevo.Cliente);
@@ -199,7 +202,7 @@ namespace Facturador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this, fLoguin,tiposol);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 comboBoxClientes.Items.Add(aClientenuevo.Cliente);

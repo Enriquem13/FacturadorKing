@@ -6997,7 +6997,7 @@ namespace Facturador
         private void label19_DoubleClick(object sender, EventArgs e)//damos coble click para cambiar al cliente
         {
             //creamos una ventana en la que podamos buscar al cliente y asignarlo al caso
-            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, lContacto_texbox.Text, lCliente_texbox_.Text);
+            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, lContacto_texbox.Text, lCliente_texbox_.Text, loguin);
             if (bForm.ShowDialog() == DialogResult.OK)
             {
                 lCliente_texbox_.Text = bForm.sClienteidtext;
@@ -7539,7 +7539,7 @@ namespace Facturador
         private void lCliente_texbox__DoubleClick(object sender, EventArgs e)
         {
             //creamos una ventana en la que podamos buscar al cliente y asignarlo al caso
-            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, lContacto_texbox.Text, lCliente_texbox_.Text);
+            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, lContacto_texbox.Text, lCliente_texbox_.Text, loguin);
             if (bForm.ShowDialog() == DialogResult.OK)
             {
                 lCliente_texbox_.Text = bForm.sClienteidtext;
@@ -8637,7 +8637,7 @@ namespace Facturador
 
         private void label33_DoubleClick(object sender, EventArgs e)
         {
-            fBuscarcorresponsal bForm = new fBuscarcorresponsal(sCasoId, gSTipoSolicitudId, tblCotaccorresponsal.Text, tblCorresponsal.Text);
+            fBuscarcorresponsal bForm = new fBuscarcorresponsal(sCasoId, gSTipoSolicitudId, tblCotaccorresponsal.Text, tblCorresponsal.Text, loguin);
             if (bForm.ShowDialog() == DialogResult.OK)
             {
                 tblCorresponsal.Text = bForm.sClienteidtext;

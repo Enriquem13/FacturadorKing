@@ -23,13 +23,14 @@ namespace Facturador
         //20220330FSV
         public int TipoSol;
         funcionesdicss objfuncionesdicss = new funcionesdicss();
-
+        public int tiposoli;
         public int iGrupotipo;
         public CasoNuevoContencioso(int iGrupo, captura capturaform, Form1 loguin)
         {
             fLoguin = loguin;
             captura = capturaform;
             sTipodesolicitudg = iGrupo.ToString();
+            TipoSol = Convert.ToInt32(sTipodesolicitudg);
             iGrupotipo =  iGrupo;
             InitializeComponent();
             conect conectcliente = new conect();
@@ -255,7 +256,7 @@ namespace Facturador
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this,fLoguin,tiposoli);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 //comboBoxClientes.SelectedItem = aClientenuevo.Cliente;

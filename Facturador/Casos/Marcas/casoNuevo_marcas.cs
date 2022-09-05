@@ -1402,7 +1402,7 @@ namespace Facturador
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this, login,TipoSol);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 //comboBoxClientes.SelectedItem = aClientenuevo.Cliente;
@@ -1424,7 +1424,7 @@ namespace Facturador
 
         private void button6_Click(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this,login, TipoSol);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 comboBoxClientes.Items.Add(aClientenuevo.Cliente);

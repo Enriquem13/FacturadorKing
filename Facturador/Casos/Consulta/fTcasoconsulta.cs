@@ -959,7 +959,7 @@ namespace Facturador
             //20220324FSV Cambiamos etiqueta por cuadro de texto solo lectura
             //buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, lContacto.Text, lCliente.Text);
             //buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, lContacto.Text, tbClienteHeader.Text);
-            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, tbContactoHeader.Text, tbClienteHeader.Text);
+            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, tbContactoHeader.Text, tbClienteHeader.Text, loguin);
             //20220324FSV Fin de Modificación
             if (bForm.ShowDialog() == DialogResult.OK)
             {
@@ -1623,7 +1623,7 @@ namespace Facturador
             //}
 
 
-            fBuscarcorresponsalCC bForm = new fBuscarcorresponsalCC(sCasoId, gSTipoSolicitudId, tbContactoCorresponsalHeader.Text, tbCorresponsalHeader.Text);
+            fBuscarcorresponsalCC bForm = new fBuscarcorresponsalCC(sCasoId, gSTipoSolicitudId, tbContactoCorresponsalHeader.Text, tbCorresponsalHeader.Text, loguin);
             if (bForm.ShowDialog() == DialogResult.OK)
             {
                 tbCorresponsalHeader.Text = bForm.sClienteidtext;

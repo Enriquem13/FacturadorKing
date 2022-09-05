@@ -13,17 +13,21 @@ namespace Facturador
 {
     public partial class fBuscarcorresponsalCC : Form
     {
+            public Form1 fLoguin;
             public String sClienteidvalue {get; set;}
             public String sContactoidvalue { get; set; }
             public String sClienteidtext { get; set; }
             public String sContactoidtext { get; set; }
             public String rtCorreocontacto_pass { get; set; }
             public String sgCasoid = "", sgTiposolicitud="";
-        public fBuscarcorresponsalCC(String sCasoId, String sTiposolicitud, String sValorcontacto, String sTextocliente)
+        public int tiposol;
+        public fBuscarcorresponsalCC(String sCasoId, String sTiposolicitud, String sValorcontacto, String sTextocliente,Form1 loguin)
         {
             InitializeComponent();
             sgCasoid = sCasoId;
+            fLoguin = loguin;
             sgTiposolicitud = sTiposolicitud;
+            tiposol = Convert.ToInt32(sgTiposolicitud);
 
             conect conect_clientes = new conect();
             String query2 = "select ClienteNombre, ClienteId from cliente order by cliente.ClienteNombre;";
@@ -208,7 +212,7 @@ namespace Facturador
 
         private void button4_Click(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this, fLoguin, tiposol);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 comboBoxClientes.Items.Add(aClientenuevo.Cliente);
@@ -223,7 +227,7 @@ namespace Facturador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this, fLoguin, tiposol);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 comboBoxClientes.Items.Add(aClientenuevo.Cliente);

@@ -17,7 +17,7 @@ namespace Facturador
         public Form1 fLoguin;
         public captura captura;
         public String sTipodesolicitudg;
-
+        public int tiposol;
 
         //20220330FSV 
         public int iQuieninvoca;
@@ -76,7 +76,7 @@ namespace Facturador
             sTipodesolicitudg = iGrupo.ToString();
             iCasoIdMarca = oiCasoidmarca;
             string sCasoIdMarca = iCasoIdMarca.ToString();
-
+            tiposol = Convert.ToInt32(sTipodesolicitudg);
 
             InitializeComponent();
 
@@ -412,7 +412,7 @@ namespace Facturador
         private void button4_Click_1(object sender, EventArgs e)
         {
             
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this,fLoguin, tiposol);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 //comboBoxClientes.SelectedItem = aClientenuevo.Cliente;

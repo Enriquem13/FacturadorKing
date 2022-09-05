@@ -16,11 +16,13 @@ namespace Facturador
         public Form1 fLoguin;
         public captura captura;
         public String sTipodesolicitudg;
+        public int tiposol;
         public casoNuevoReservadederechos(int iGrupo, captura capturaform, Form1 loguin)
         {
             fLoguin = loguin;
             captura = capturaform;
             sTipodesolicitudg = iGrupo.ToString();
+            tiposol = Convert.ToInt32(sTipodesolicitudg);
             InitializeComponent();
             conect conect = new conect();
 
@@ -193,7 +195,7 @@ namespace Facturador
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this,fLoguin,tiposol);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 //comboBoxClientes.SelectedItem = aClientenuevo.Cliente;

@@ -14,7 +14,7 @@ namespace Facturador
     public partial class addnuevotitular : Form
     {
         public Form1 login;
-        String sIdusuario = "";
+
 
         Form fRemitentecasonuevo;
         public ComboboxItem cBcomboInteresadotitular { get; set; }

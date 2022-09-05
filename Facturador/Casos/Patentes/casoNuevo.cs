@@ -1516,7 +1516,7 @@ namespace Facturador
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this, login, TipoSol);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 comboBoxClientes.Items.Add(aClientenuevo.Cliente);

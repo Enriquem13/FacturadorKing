@@ -1671,7 +1671,7 @@ namespace Facturador
 
             //creamos una ventana en la que podamos buscar al cliente y asignarlo al caso
             //20220324FSV Cambiamos etiqueta por cuadro de texto solo lectura
-            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, tbContactoHeader.Text, tbClienteHeader.Text);
+            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, tbContactoHeader.Text, tbClienteHeader.Text, loguin);
             //20220324FSV Fin de Modificación
             if (bForm.ShowDialog() == DialogResult.OK)
             {
@@ -2370,7 +2370,7 @@ namespace Facturador
 
         private void label33_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            fCorresponsalupdateCO bForm = new fCorresponsalupdateCO(sCasoId, gSTipoSolicitudId, tbContactoCorresponsalHeader.Text, tbCorresponsalHeader.Text);
+            fCorresponsalupdateCO bForm = new fCorresponsalupdateCO(sCasoId, gSTipoSolicitudId, tbContactoCorresponsalHeader.Text, tbCorresponsalHeader.Text, loguin);
             if (bForm.ShowDialog() == DialogResult.OK)
             {
                 tbCorresponsalHeader.Text = bForm.sClienteidtext;

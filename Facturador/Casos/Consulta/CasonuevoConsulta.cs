@@ -272,7 +272,7 @@ namespace Facturador
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            addClientenuevo aClientenuevo = new addClientenuevo(this);
+            addClientenuevo aClientenuevo = new addClientenuevo(this, fLoguin, TipoSol);
             if (aClientenuevo.ShowDialog() == DialogResult.OK)
             {
                 //comboBoxClientes.SelectedItem = aClientenuevo.Cliente;

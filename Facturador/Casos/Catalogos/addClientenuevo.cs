@@ -13,6 +13,7 @@ namespace Facturador
 {
     public partial class addClientenuevo : Form
     {
+        public Form1 login;
         Form fRemitentecasonuevo;
         public ComboboxItem Cliente{ get; set;}
         public ComboboxItem Contacto { get; set; }
@@ -23,6 +24,8 @@ namespace Facturador
             InitializeComponent();
 
 
+            login = fLogin;
+            String IDUsuario = login.sId;
             fisica.Enabled = false;
             moral.Enabled = false;
             conect rcpais = new conect();
@@ -152,7 +155,7 @@ namespace Facturador
                                          // "'" + (combopais.SelectedItem as ComboboxItem).Value + "', " +
                                           "now(), " +
                                            fechaactual + "'," +
-                                            sResponsable +
+                                            login.sId +
                                             "," +
                                           "'1');";
                     MySqlDataReader respuestastring6 = con1.getdatareader(sQueryInsert);
