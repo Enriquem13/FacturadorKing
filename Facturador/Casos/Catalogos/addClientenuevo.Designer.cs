@@ -36,14 +36,6 @@
             this.tbNombreEmpresa = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.PaisNombre = new System.Windows.Forms.ComboBox();
-            this.fisica = new System.Windows.Forms.GroupBox();
-            this.fnombre = new System.Windows.Forms.TextBox();
-            this.fpaterno = new System.Windows.Forms.TextBox();
-            this.fmaterno = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.tipopersona = new System.Windows.Forms.ComboBox();
             this.Nacionalidad = new System.Windows.Forms.ComboBox();
             this.combopais = new System.Windows.Forms.ComboBox();
@@ -59,6 +51,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.fisica = new System.Windows.Forms.GroupBox();
+            this.fnombre = new System.Windows.Forms.TextBox();
+            this.fpaterno = new System.Windows.Forms.TextBox();
+            this.fmaterno = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbTelefonocontacto = new System.Windows.Forms.TextBox();
             this.tbCorreocontacto = new System.Windows.Forms.TextBox();
@@ -71,6 +71,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.CB_responsable = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.moral.SuspendLayout();
             this.fisica.SuspendLayout();
@@ -157,81 +158,6 @@
             this.PaisNombre.Name = "PaisNombre";
             this.PaisNombre.Size = new System.Drawing.Size(256, 21);
             this.PaisNombre.TabIndex = 25;
-            // 
-            // fisica
-            // 
-            this.fisica.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.fisica.Controls.Add(this.fnombre);
-            this.fisica.Controls.Add(this.fpaterno);
-            this.fisica.Controls.Add(this.fmaterno);
-            this.fisica.Controls.Add(this.label14);
-            this.fisica.Controls.Add(this.label15);
-            this.fisica.Controls.Add(this.label16);
-            this.fisica.Controls.Add(this.label17);
-            this.fisica.Location = new System.Drawing.Point(12, 315);
-            this.fisica.Name = "fisica";
-            this.fisica.Size = new System.Drawing.Size(917, 100);
-            this.fisica.TabIndex = 24;
-            this.fisica.TabStop = false;
-            // 
-            // fnombre
-            // 
-            this.fnombre.Location = new System.Drawing.Point(121, 34);
-            this.fnombre.Name = "fnombre";
-            this.fnombre.Size = new System.Drawing.Size(218, 20);
-            this.fnombre.TabIndex = 13;
-            // 
-            // fpaterno
-            // 
-            this.fpaterno.Location = new System.Drawing.Point(355, 34);
-            this.fpaterno.Name = "fpaterno";
-            this.fpaterno.Size = new System.Drawing.Size(218, 20);
-            this.fpaterno.TabIndex = 14;
-            // 
-            // fmaterno
-            // 
-            this.fmaterno.Location = new System.Drawing.Point(589, 34);
-            this.fmaterno.Name = "fmaterno";
-            this.fmaterno.Size = new System.Drawing.Size(218, 20);
-            this.fmaterno.TabIndex = 15;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(5, 37);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(105, 13);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Nombre Pers Fisica *";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(154, 57);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(124, 13);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "Primer/Segundo Nombre";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(388, 57);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(84, 13);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Apellido Paterno";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(596, 57);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(86, 13);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "Apellido Materno";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // tipopersona
             // 
@@ -364,6 +290,81 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Idioma *";
             // 
+            // fisica
+            // 
+            this.fisica.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.fisica.Controls.Add(this.fnombre);
+            this.fisica.Controls.Add(this.fpaterno);
+            this.fisica.Controls.Add(this.fmaterno);
+            this.fisica.Controls.Add(this.label14);
+            this.fisica.Controls.Add(this.label15);
+            this.fisica.Controls.Add(this.label16);
+            this.fisica.Controls.Add(this.label17);
+            this.fisica.Location = new System.Drawing.Point(12, 315);
+            this.fisica.Name = "fisica";
+            this.fisica.Size = new System.Drawing.Size(917, 100);
+            this.fisica.TabIndex = 24;
+            this.fisica.TabStop = false;
+            // 
+            // fnombre
+            // 
+            this.fnombre.Location = new System.Drawing.Point(121, 34);
+            this.fnombre.Name = "fnombre";
+            this.fnombre.Size = new System.Drawing.Size(218, 20);
+            this.fnombre.TabIndex = 13;
+            // 
+            // fpaterno
+            // 
+            this.fpaterno.Location = new System.Drawing.Point(355, 34);
+            this.fpaterno.Name = "fpaterno";
+            this.fpaterno.Size = new System.Drawing.Size(218, 20);
+            this.fpaterno.TabIndex = 14;
+            // 
+            // fmaterno
+            // 
+            this.fmaterno.Location = new System.Drawing.Point(589, 34);
+            this.fmaterno.Name = "fmaterno";
+            this.fmaterno.Size = new System.Drawing.Size(218, 20);
+            this.fmaterno.TabIndex = 15;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(5, 37);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(105, 13);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Nombre Pers Fisica *";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(154, 57);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(124, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Primer/Segundo Nombre";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(388, 57);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(84, 13);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Apellido Paterno";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(596, 57);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(86, 13);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "Apellido Materno";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tbTelefonocontacto);
@@ -474,12 +475,20 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Los campos con * son obligatorios.";
             // 
+            // CB_responsable
+            // 
+            this.CB_responsable.Location = new System.Drawing.Point(12, 587);
+            this.CB_responsable.Name = "CB_responsable";
+            this.CB_responsable.Size = new System.Drawing.Size(238, 20);
+            this.CB_responsable.TabIndex = 8;
+            // 
             // addClientenuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 638);
             this.ControlBox = false;
+            this.Controls.Add(this.CB_responsable);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -547,5 +556,6 @@
         private System.Windows.Forms.ComboBox PaisNombre;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox moral;
+        private System.Windows.Forms.TextBox CB_responsable;
     }
 }

@@ -77,6 +77,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Direccion = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tipo = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -100,8 +102,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Bagregar = new System.Windows.Forms.Button();
-            this.label32 = new System.Windows.Forms.Label();
-            this.tipo = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.Datos_Generales.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -564,7 +564,7 @@
             this.Direccion.Location = new System.Drawing.Point(4, 22);
             this.Direccion.Name = "Direccion";
             this.Direccion.Padding = new System.Windows.Forms.Padding(3);
-            this.Direccion.Size = new System.Drawing.Size(900, 604);
+            this.Direccion.Size = new System.Drawing.Size(900, 622);
             this.Direccion.TabIndex = 1;
             this.Direccion.Text = "Direccion";
             this.Direccion.UseVisualStyleBackColor = true;
@@ -599,6 +599,24 @@
             this.groupBox2.TabIndex = 57;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dirección";
+            // 
+            // tipo
+            // 
+            this.tipo.AcceptsTab = true;
+            this.tipo.Location = new System.Drawing.Point(61, 25);
+            this.tipo.Name = "tipo";
+            this.tipo.Size = new System.Drawing.Size(129, 20);
+            this.tipo.TabIndex = 70;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(22, 30);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(33, 13);
+            this.label32.TabIndex = 69;
+            this.label32.Text = "Para";
             // 
             // label31
             // 
@@ -812,24 +830,6 @@
             this.Bagregar.TabIndex = 57;
             this.Bagregar.Text = "Cancelar";
             this.Bagregar.UseVisualStyleBackColor = true;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(22, 30);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(33, 13);
-            this.label32.TabIndex = 69;
-            this.label32.Text = "Para";
-            // 
-            // tipo
-            // 
-            this.tipo.AcceptsTab = true;
-            this.tipo.Location = new System.Drawing.Point(61, 25);
-            this.tipo.Name = "tipo";
-            this.tipo.Size = new System.Drawing.Size(129, 20);
-            this.tipo.TabIndex = 70;
             // 
             // addnuevotitular
             // 

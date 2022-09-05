@@ -33,6 +33,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBoxResponsableopo = new System.Windows.Forms.ComboBox();
+            this.label51 = new System.Windows.Forms.Label();
             this.cbCvpais = new System.Windows.Forms.ComboBox();
             this.label42 = new System.Windows.Forms.Label();
             this.comboTipomarca1 = new System.Windows.Forms.ComboBox();
@@ -132,8 +134,6 @@
             this.comboboxSubtipo = new System.Windows.Forms.ComboBox();
             this.comboBoxFirma = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.comboBoxResponsableopo = new System.Windows.Forms.ComboBox();
-            this.label51 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -224,6 +224,23 @@
             this.groupBox3.TabIndex = 53;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Contrario:";
+            // 
+            // comboBoxResponsableopo
+            // 
+            this.comboBoxResponsableopo.FormattingEnabled = true;
+            this.comboBoxResponsableopo.Location = new System.Drawing.Point(675, 369);
+            this.comboBoxResponsableopo.Name = "comboBoxResponsableopo";
+            this.comboBoxResponsableopo.Size = new System.Drawing.Size(205, 24);
+            this.comboBoxResponsableopo.TabIndex = 83;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(577, 372);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(90, 16);
+            this.label51.TabIndex = 82;
+            this.label51.Text = "Responsable";
             // 
             // cbCvpais
             // 
@@ -1216,23 +1233,6 @@
             this.label16.TabIndex = 47;
             this.label16.Text = "Firma";
             this.label16.Visible = false;
-            // 
-            // comboBoxResponsableopo
-            // 
-            this.comboBoxResponsableopo.FormattingEnabled = true;
-            this.comboBoxResponsableopo.Location = new System.Drawing.Point(675, 369);
-            this.comboBoxResponsableopo.Name = "comboBoxResponsableopo";
-            this.comboBoxResponsableopo.Size = new System.Drawing.Size(205, 24);
-            this.comboBoxResponsableopo.TabIndex = 83;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(577, 372);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(90, 16);
-            this.label51.TabIndex = 82;
-            this.label51.Text = "Responsable";
             // 
             // CasoNuevoOposicion
             // 

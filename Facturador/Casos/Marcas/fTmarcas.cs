@@ -1,4 +1,4 @@
-﻿using Facturador.Casos.Documentos;
+﻿    using Facturador.Casos.Documentos;
 using Facturador.Casos.Oposicion;
 using Facturador.plazos_forms;
 using MySql.Data.MySqlClient;

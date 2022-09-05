@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Facturador.exe" size="20799488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Facturador.exe" size="20809216">
       <assemblyIdentity name="Facturador" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>64MFcMSlrGHAss4o5dbC9sFEwGKQ8cZ7+AFTK3Th1AM=</dsig:DigestValue>
+        <dsig:DigestValue>c6bHW5fEhJaQS4T5Y/6asqYuBTJedSVYvjKwXZKuUew=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

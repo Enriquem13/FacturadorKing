@@ -257,6 +257,12 @@
       <DependentUpon>fSubtipodocumentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Casos\Documentos\generacarta.cs" />
+    <Compile Include="Casos\Litigio\CasoNuevoLitigio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casos\Litigio\CasoNuevoLitigio.Designer.cs">
+      <DependentUpon>CasoNuevoLitigio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Casos\Marcas\casoNuevomarcas_transferido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1024,6 +1030,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Casos\Documentos\fDocumentos.resx">
       <DependentUpon>fDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Casos\Litigio\CasoNuevoLitigio.resx">
+      <DependentUpon>CasoNuevoLitigio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Casos\Marcas\casoNuevomarcas_transferido.resx">
       <DependentUpon>casoNuevomarcas_transferido.cs</DependentUpon>

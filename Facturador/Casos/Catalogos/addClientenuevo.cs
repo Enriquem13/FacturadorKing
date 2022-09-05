@@ -1,5 +1,4 @@
-﻿
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,25 +17,26 @@ namespace Facturador
         public ComboboxItem Cliente{ get; set;}
         public ComboboxItem Contacto { get; set; }
         public String Contactocorreo { get; set; }
-        public addClientenuevo(Form objremitente)
+        public addClientenuevo(Form objremitente, Form1 fLogin, int Tiposolicitud)
         {
             fRemitentecasonuevo = objremitente;
             InitializeComponent();
-            conect con1 = new conect();
+
 
             fisica.Enabled = false;
             moral.Enabled = false;
-
+            conect rcpais = new conect();
             String pais = "SELECT * FROM  pais where PaisNombre not like'%OFICINA%' AND  PaisNombre not like'%ORGANIZACION%'";
-            MySqlDataReader rpais = con1.getdatareader(pais);
+            MySqlDataReader rpais = rcpais.getdatareader(pais);
             while (rpais.Read())
             {
                 combopais.Items.Add(validareader("PaisClave", "PaisId", rpais));
                 //CB_idioma_cliente.Items
             }
             rpais.Close();
+            rcpais.Cerrarconexion();
 
-
+            conect con1 = new conect();
             String paisnombre = "SELECT concat_ws('--',PaisClave,PaisNombre) as PaisNombre,PaisId  FROM  pais where PaisNombre not like'%OFICINA%' AND  PaisNombre not like'%ORGANIZACION%'";
             MySqlDataReader rpaiss = con1.getdatareader(paisnombre);
             while (rpaiss.Read())
@@ -45,24 +45,28 @@ namespace Facturador
                 //CB_idioma_cliente.Items
             }
             rpaiss.Close();
+            con1.Cerrarconexion();
 
-
+            conect conectMoneda = new conect();
             //Agregamos lista de monedas
             String kwery4 = "SELECT * FROM  moneda";
-            MySqlDataReader respuestastring4 = con1.getdatareader(kwery4);
+            MySqlDataReader respuestastring4 = conectMoneda.getdatareader(kwery4);
             while (respuestastring4.Read())
             {
                 cbModena.Items.Add(validareader("MonedaDescrip", "MonedaId", respuestastring4));
             }
             respuestastring4.Close();
+            conectMoneda.Cerrarconexion();
+            conect tipoccliente = new conect();
             //Agregamos tipos de cliente
             String kwery6 = "SELECT * FROM  tipocliente";
-            MySqlDataReader respuestastring6 = con1.getdatareader(kwery6);
+            MySqlDataReader respuestastring6 = tipoccliente.getdatareader(kwery6);
             while (respuestastring6.Read())
             {
                 cbTipocliente.Items.Add(validareader("TipoClienteDescrip", "TipoClienteId", respuestastring6));
             }
             respuestastring6.Close();
+            tipoccliente.Cerrarconexion();
         }
         public ComboboxItem validareader(String campoText, String campoValue, MySqlDataReader mresultado)
         {
@@ -89,6 +93,8 @@ namespace Facturador
 
         private void button1_Click(object sender, EventArgs e)//cerrar las conexiones
         {
+            String fechaactual = DateTime.Now.ToString("yyyy/MM/dd");
+            String sResponsable = "NULL";
             try {
                 String TipoP = "";
                 if ((cbIdioma.SelectedItem as ComboboxItem).Text != ""
@@ -116,32 +122,38 @@ namespace Facturador
                                           "`ClienteClave`, " +
                                           "`PaisId`, " +
                                           "`NombreUtilClient`, " +
+                                          "`RazonSocialClient`, " +
                                           "`IdiomaId`, " +
                                           "`TipoClienteId`, " +
                                           "`MonedaId`, " +
                                           "`ClienteTipoPersonaSAT`, " +
-
+                                          "`ClienteNombre`, " +
                                           "`ClienteApellidoPaterno`, " +
                                           "`ClienteApellidoMaterno`, " +
-                                          "`Nombre_Util`, " +
-
                                           "`IDNacionalidad`, " +
                                           "`ClienteFechaAlta`, " +
+                                          "`ClienteFechaAlta`," +
+                                          "`UsuarioCaptura`," +
                                           "`ResponsableId`) " +
                                           "VALUES (NULL, " +
                                           "'" + tbClavecliente.Text + "', " +
                                           "'" + (combopais.SelectedItem as ComboboxItem).Value + "', " +
-                                          "'" + fnombre.Text + "', " +
+                                          "'" + PersonaUtil + "', " +
+                                          "'" + PersonaUtil + "', " +
                                           "'" + (cbIdioma.SelectedItem as ComboboxItem).Value + "', " +
                                           "'" + (cbTipocliente.SelectedItem as ComboboxItem).Value + "', " +
                                           "'" + (cbModena.SelectedItem as ComboboxItem).Value + "', " +
                                           "'" + TipoP + "', " +
+                                            "'" + fnombre.Text + "', " +
                                            "'" + fpaterno.Text + "', " +
                                             "'" + fmaterno.Text + "', " +
-                                              "'" + PersonaUtil + "', " +
+
                                           "'" + (Nacionalidad.SelectedItem as ComboboxItem).Value + "', " +
                                          // "'" + (combopais.SelectedItem as ComboboxItem).Value + "', " +
                                           "now(), " +
+                                           fechaactual + "'," +
+                                            sResponsable +
+                                            "," +
                                           "'1');";
                     MySqlDataReader respuestastring6 = con1.getdatareader(sQueryInsert);
                     if (respuestastring6 != null) {
