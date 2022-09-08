@@ -95,6 +95,7 @@
             this.columnHeader49 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.CB_interesadoDtipodireccion = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -114,33 +115,6 @@
             this.label32 = new System.Windows.Forms.Label();
             this.TB_interesadoDcalle = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label18 = new System.Windows.Forms.Label();
             this.CB_tipo_tarifa = new System.Windows.Forms.ComboBox();
             this.moral = new System.Windows.Forms.GroupBox();
@@ -162,6 +136,7 @@
             this.PaisNombre = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CB_proovedor_cliente_fac = new System.Windows.Forms.ComboBox();
+            this.TB_observaciones_cliente = new System.Windows.Forms.TextBox();
             this.tipopersona = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -169,7 +144,6 @@
             this.CB_moneda = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.TB_cup = new System.Windows.Forms.TextBox();
-            this.TB_observaciones_cliente = new System.Windows.Forms.TextBox();
             this.TB_rfc = new System.Windows.Forms.TextBox();
             this.TB_sitiow_cliente = new System.Windows.Forms.TextBox();
             this.TB_correo_cliente = new System.Windows.Forms.TextBox();
@@ -188,6 +162,31 @@
             this.CB_cliente_tipo = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader118 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Instrucciones = new System.Windows.Forms.TabPage();
             this.listView6 = new System.Windows.Forms.ListView();
@@ -300,6 +299,34 @@
             this.listView11 = new System.Windows.Forms.ListView();
             this.columncasos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader100 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView12 = new System.Windows.Forms.ListView();
+            this.columnHeader102 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader103 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader104 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader105 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader106 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader107 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader108 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader109 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader110 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader111 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader112 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader113 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader114 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader115 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.listView13 = new System.Windows.Forms.ListView();
+            this.columnHeader119 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader120 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader121 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader122 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView14 = new System.Windows.Forms.ListView();
+            this.columnHeader123 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader124 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Calle = new System.Windows.Forms.Label();
             columnHeader90 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Contacto.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -364,7 +391,7 @@
             this.Contacto.Location = new System.Drawing.Point(4, 22);
             this.Contacto.Name = "Contacto";
             this.Contacto.Padding = new System.Windows.Forms.Padding(3);
-            this.Contacto.Size = new System.Drawing.Size(1179, 732);
+            this.Contacto.Size = new System.Drawing.Size(1201, 512);
             this.Contacto.TabIndex = 2;
             this.Contacto.Text = "Contacto";
             this.Contacto.UseVisualStyleBackColor = true;
@@ -383,9 +410,9 @@
             this.columnactivocontacto});
             this.listView5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView5.HideSelection = false;
-            this.listView5.Location = new System.Drawing.Point(3, 422);
+            this.listView5.Location = new System.Drawing.Point(3, 202);
             this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(1173, 307);
+            this.listView5.Size = new System.Drawing.Size(1195, 307);
             this.listView5.TabIndex = 53;
             this.listView5.UseCompatibleStateImageBehavior = false;
             this.listView5.View = System.Windows.Forms.View.Details;
@@ -663,7 +690,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1179, 732);
+            this.tabPage2.Size = new System.Drawing.Size(1201, 512);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Domicilo";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -685,6 +712,7 @@
             this.listView3.TabIndex = 123;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
+            this.listView3.Visible = false;
             // 
             // columnHeader8
             // 
@@ -754,6 +782,7 @@
             this.listView4.TabIndex = 122;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
+            this.listView4.Visible = false;
             // 
             // columnHeader17
             // 
@@ -863,6 +892,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.CB_interesadoDtipodireccion);
             this.groupBox2.Controls.Add(this.label25);
@@ -883,16 +913,26 @@
             this.groupBox2.Controls.Add(this.TB_interesadoDcalle);
             this.groupBox2.Location = new System.Drawing.Point(15, 56);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1152, 197);
+            this.groupBox2.Size = new System.Drawing.Size(1152, 287);
             this.groupBox2.TabIndex = 50;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dirección";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(963, 191);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 23);
+            this.button6.TabIndex = 124;
+            this.button6.Text = "Agregar";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 160);
+            this.label7.Location = new System.Drawing.Point(35, 248);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 66;
@@ -902,7 +942,7 @@
             // CB_interesadoDtipodireccion
             // 
             this.CB_interesadoDtipodireccion.FormattingEnabled = true;
-            this.CB_interesadoDtipodireccion.Location = new System.Drawing.Point(146, 157);
+            this.CB_interesadoDtipodireccion.Location = new System.Drawing.Point(169, 245);
             this.CB_interesadoDtipodireccion.Name = "CB_interesadoDtipodireccion";
             this.CB_interesadoDtipodireccion.Size = new System.Drawing.Size(262, 21);
             this.CB_interesadoDtipodireccion.TabIndex = 23;
@@ -913,7 +953,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(19, 124);
+            this.label25.Location = new System.Drawing.Point(739, 143);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(42, 13);
             this.label25.TabIndex = 64;
@@ -922,7 +962,7 @@
             // CB_interesadoDpais
             // 
             this.CB_interesadoDpais.FormattingEnabled = true;
-            this.CB_interesadoDpais.Location = new System.Drawing.Point(102, 121);
+            this.CB_interesadoDpais.Location = new System.Drawing.Point(677, 159);
             this.CB_interesadoDpais.Name = "CB_interesadoDpais";
             this.CB_interesadoDpais.Size = new System.Drawing.Size(262, 21);
             this.CB_interesadoDpais.TabIndex = 22;
@@ -932,7 +972,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(439, 87);
+            this.label26.Location = new System.Drawing.Point(449, 144);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(85, 13);
             this.label26.TabIndex = 63;
@@ -941,7 +981,7 @@
             // TB_interesadoDcp
             // 
             this.TB_interesadoDcp.AcceptsTab = true;
-            this.TB_interesadoDcp.Location = new System.Drawing.Point(530, 84);
+            this.TB_interesadoDcp.Location = new System.Drawing.Point(413, 160);
             this.TB_interesadoDcp.Name = "TB_interesadoDcp";
             this.TB_interesadoDcp.Size = new System.Drawing.Size(150, 20);
             this.TB_interesadoDcp.TabIndex = 21;
@@ -950,7 +990,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(15, 87);
+            this.label27.Location = new System.Drawing.Point(144, 144);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(46, 13);
             this.label27.TabIndex = 61;
@@ -959,7 +999,7 @@
             // TB_interesadoDestado
             // 
             this.TB_interesadoDestado.AcceptsTab = true;
-            this.TB_interesadoDestado.Location = new System.Drawing.Point(119, 80);
+            this.TB_interesadoDestado.Location = new System.Drawing.Point(38, 160);
             this.TB_interesadoDestado.Name = "TB_interesadoDestado";
             this.TB_interesadoDestado.Size = new System.Drawing.Size(262, 20);
             this.TB_interesadoDestado.TabIndex = 19;
@@ -969,26 +1009,26 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(443, 48);
+            this.label28.Location = new System.Drawing.Point(585, 85);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(143, 26);
+            this.label28.Size = new System.Drawing.Size(284, 13);
             this.label28.TabIndex = 59;
-            this.label28.Text = "Población\r\n (Localidad o Municipio)";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label28.Text = "Municipio o Demarc Territorial(Ciudad extranjera)";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TB_interesadoDpoblacion
             // 
             this.TB_interesadoDpoblacion.AcceptsTab = true;
-            this.TB_interesadoDpoblacion.Location = new System.Drawing.Point(635, 51);
+            this.TB_interesadoDpoblacion.Location = new System.Drawing.Point(530, 101);
             this.TB_interesadoDpoblacion.Name = "TB_interesadoDpoblacion";
-            this.TB_interesadoDpoblacion.Size = new System.Drawing.Size(262, 20);
+            this.TB_interesadoDpoblacion.Size = new System.Drawing.Size(438, 20);
             this.TB_interesadoDpoblacion.TabIndex = 20;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(12, 51);
+            this.label29.Location = new System.Drawing.Point(144, 85);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(49, 13);
             this.label29.TabIndex = 57;
@@ -997,7 +1037,7 @@
             // TB_interesadoDcolonia
             // 
             this.TB_interesadoDcolonia.AcceptsTab = true;
-            this.TB_interesadoDcolonia.Location = new System.Drawing.Point(67, 48);
+            this.TB_interesadoDcolonia.Location = new System.Drawing.Point(38, 101);
             this.TB_interesadoDcolonia.Name = "TB_interesadoDcolonia";
             this.TB_interesadoDcolonia.Size = new System.Drawing.Size(262, 20);
             this.TB_interesadoDcolonia.TabIndex = 18;
@@ -1006,7 +1046,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(674, 23);
+            this.label30.Location = new System.Drawing.Point(687, 15);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(94, 13);
             this.label30.TabIndex = 55;
@@ -1015,7 +1055,7 @@
             // TB_interesadoDnumint
             // 
             this.TB_interesadoDnumint.AcceptsTab = true;
-            this.TB_interesadoDnumint.Location = new System.Drawing.Point(774, 15);
+            this.TB_interesadoDnumint.Location = new System.Drawing.Point(625, 31);
             this.TB_interesadoDnumint.Name = "TB_interesadoDnumint";
             this.TB_interesadoDnumint.Size = new System.Drawing.Size(262, 20);
             this.TB_interesadoDnumint.TabIndex = 17;
@@ -1024,7 +1064,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(427, 22);
+            this.label31.Location = new System.Drawing.Point(420, 15);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(97, 13);
             this.label31.TabIndex = 53;
@@ -1033,16 +1073,16 @@
             // TB_interesadoDnumext
             // 
             this.TB_interesadoDnumext.AcceptsTab = true;
-            this.TB_interesadoDnumext.Location = new System.Drawing.Point(530, 23);
+            this.TB_interesadoDnumext.Location = new System.Drawing.Point(413, 42);
             this.TB_interesadoDnumext.Name = "TB_interesadoDnumext";
-            this.TB_interesadoDnumext.Size = new System.Drawing.Size(113, 20);
+            this.TB_interesadoDnumext.Size = new System.Drawing.Size(121, 20);
             this.TB_interesadoDnumext.TabIndex = 16;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(12, 26);
+            this.label32.Location = new System.Drawing.Point(124, 22);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(44, 13);
             this.label32.TabIndex = 51;
@@ -1051,15 +1091,13 @@
             // TB_interesadoDcalle
             // 
             this.TB_interesadoDcalle.AcceptsTab = true;
-            this.TB_interesadoDcalle.Location = new System.Drawing.Point(70, 19);
+            this.TB_interesadoDcalle.Location = new System.Drawing.Point(38, 42);
             this.TB_interesadoDcalle.Name = "TB_interesadoDcalle";
             this.TB_interesadoDcalle.Size = new System.Drawing.Size(262, 20);
             this.TB_interesadoDcalle.TabIndex = 15;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.listView2);
-            this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.CB_tipo_tarifa);
             this.tabPage1.Controls.Add(this.moral);
@@ -1072,6 +1110,7 @@
             this.tabPage1.Controls.Add(this.PaisNombre);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.CB_proovedor_cliente_fac);
+            this.tabPage1.Controls.Add(this.TB_observaciones_cliente);
             this.tabPage1.Controls.Add(this.tipopersona);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label2);
@@ -1079,7 +1118,6 @@
             this.tabPage1.Controls.Add(this.CB_moneda);
             this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.TB_cup);
-            this.tabPage1.Controls.Add(this.TB_observaciones_cliente);
             this.tabPage1.Controls.Add(this.TB_rfc);
             this.tabPage1.Controls.Add(this.TB_sitiow_cliente);
             this.tabPage1.Controls.Add(this.TB_correo_cliente);
@@ -1101,203 +1139,10 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1179, 732);
+            this.tabPage1.Size = new System.Drawing.Size(1201, 512);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Generales";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(26, 625);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(1140, 130);
-            this.listView2.TabIndex = 121;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Calle";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Numero";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 150;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Colonia";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 150;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "CP";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 150;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Estado";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 120;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Pais";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader6.Width = 111;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Localidad";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader7.Width = 120;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader21,
-            this.columnHeader22,
-            this.columnHeader23,
-            this.columnHeader24,
-            this.columnHeader25,
-            this.columnHeader26,
-            this.columnHeader27,
-            this.columnHeader28,
-            this.columnHeader29,
-            this.columnHeader30,
-            this.columnHeader31,
-            this.columnHeader32,
-            this.columnHeader33,
-            this.columnHeader34,
-            this.columnHeader35,
-            this.columnHeader36});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(20, 489);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1140, 130);
-            this.listView1.TabIndex = 120;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "N° Cliente";
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Nombre";
-            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader10.Width = 150;
-            // 
-            // columnHeader21
-            // 
-            this.columnHeader21.Text = "Apellido Paterno";
-            this.columnHeader21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader21.Width = 150;
-            // 
-            // columnHeader22
-            // 
-            this.columnHeader22.Text = "Apellido Materno";
-            this.columnHeader22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader22.Width = 150;
-            // 
-            // columnHeader23
-            // 
-            this.columnHeader23.Text = "Idioma";
-            this.columnHeader23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader23.Width = 120;
-            // 
-            // columnHeader24
-            // 
-            this.columnHeader24.Text = "Tipo Persona SAT";
-            this.columnHeader24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader24.Width = 111;
-            // 
-            // columnHeader25
-            // 
-            this.columnHeader25.Text = "RFC";
-            this.columnHeader25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader25.Width = 120;
-            // 
-            // columnHeader26
-            // 
-            this.columnHeader26.Text = "CURP";
-            this.columnHeader26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader26.Width = 120;
-            // 
-            // columnHeader27
-            // 
-            this.columnHeader27.Text = "Tipo de Cliente";
-            this.columnHeader27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader27.Width = 100;
-            // 
-            // columnHeader28
-            // 
-            this.columnHeader28.Text = "Correo";
-            this.columnHeader28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader28.Width = 120;
-            // 
-            // columnHeader29
-            // 
-            this.columnHeader29.Text = "Comunicación";
-            this.columnHeader29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader29.Width = 100;
-            // 
-            // columnHeader30
-            // 
-            this.columnHeader30.Text = "Tipo de Envío";
-            this.columnHeader30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader30.Width = 100;
-            // 
-            // columnHeader31
-            // 
-            this.columnHeader31.Text = "Capturo";
-            this.columnHeader31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader31.Width = 100;
-            // 
-            // columnHeader32
-            // 
-            this.columnHeader32.Text = "Sitio Web";
-            this.columnHeader32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader32.Width = 100;
-            // 
-            // columnHeader33
-            // 
-            this.columnHeader33.Text = "Moneda";
-            this.columnHeader33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader33.Width = 70;
-            // 
-            // columnHeader34
-            // 
-            this.columnHeader34.Text = "Holder";
-            this.columnHeader34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader34.Width = 140;
-            // 
-            // columnHeader35
-            // 
-            this.columnHeader35.Text = "Tipo de Tarifa";
-            this.columnHeader35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader35.Width = 100;
-            // 
-            // columnHeader36
-            // 
-            this.columnHeader36.Text = "Observaciones";
-            this.columnHeader36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader36.Width = 200;
             // 
             // label18
             // 
@@ -1372,6 +1217,7 @@
             this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 106;
             this.label8.Text = "Holder";
+            this.label8.Visible = false;
             // 
             // fisica
             // 
@@ -1457,6 +1303,7 @@
             this.CB_holder_cliente.Size = new System.Drawing.Size(192, 21);
             this.CB_holder_cliente.TabIndex = 16;
             this.CB_holder_cliente.Text = "Seleccione";
+            this.CB_holder_cliente.Visible = false;
             // 
             // CB_idioma_cliente
             // 
@@ -1493,6 +1340,13 @@
             this.CB_proovedor_cliente_fac.Size = new System.Drawing.Size(192, 21);
             this.CB_proovedor_cliente_fac.TabIndex = 17;
             this.CB_proovedor_cliente_fac.Text = "Seleccione";
+            // 
+            // TB_observaciones_cliente
+            // 
+            this.TB_observaciones_cliente.Location = new System.Drawing.Point(105, 462);
+            this.TB_observaciones_cliente.Name = "TB_observaciones_cliente";
+            this.TB_observaciones_cliente.Size = new System.Drawing.Size(1090, 20);
+            this.TB_observaciones_cliente.TabIndex = 18;
             // 
             // tipopersona
             // 
@@ -1560,13 +1414,6 @@
             this.TB_cup.Size = new System.Drawing.Size(193, 20);
             this.TB_cup.TabIndex = 7;
             // 
-            // TB_observaciones_cliente
-            // 
-            this.TB_observaciones_cliente.Location = new System.Drawing.Point(109, 463);
-            this.TB_observaciones_cliente.Name = "TB_observaciones_cliente";
-            this.TB_observaciones_cliente.Size = new System.Drawing.Size(1090, 20);
-            this.TB_observaciones_cliente.TabIndex = 18;
-            // 
             // TB_rfc
             // 
             this.TB_rfc.Location = new System.Drawing.Point(388, 288);
@@ -1598,7 +1445,7 @@
             // 
             // Bagregar
             // 
-            this.Bagregar.Location = new System.Drawing.Point(1018, 374);
+            this.Bagregar.Location = new System.Drawing.Point(1018, 369);
             this.Bagregar.Name = "Bagregar";
             this.Bagregar.Size = new System.Drawing.Size(100, 23);
             this.Bagregar.TabIndex = 19;
@@ -1730,6 +1577,185 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Correo";
             // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader118,
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader21,
+            this.columnHeader3,
+            this.columnHeader22,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(11, 875);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(1168, 130);
+            this.listView2.TabIndex = 121;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader118
+            // 
+            this.columnHeader118.Text = "ClienteId";
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Calle";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Numero Ext.";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 102;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Numero Int";
+            this.columnHeader21.Width = 69;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Colonia";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 91;
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "Municipio";
+            this.columnHeader22.Width = 247;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.DisplayIndex = 7;
+            this.columnHeader4.Text = "CP";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 150;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.DisplayIndex = 6;
+            this.columnHeader5.Text = "Estado";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 120;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Pais";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 111;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader23,
+            this.columnHeader24,
+            this.columnHeader27,
+            this.columnHeader35,
+            this.columnHeader33,
+            this.columnHeader34,
+            this.columnHeader29,
+            this.columnHeader30,
+            this.columnHeader25,
+            this.columnHeader26,
+            this.columnHeader32,
+            this.columnHeader28,
+            this.columnHeader31,
+            this.columnHeader36});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(2, 652);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(1433, 130);
+            this.listView1.TabIndex = 120;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "Idioma";
+            this.columnHeader23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader23.Width = 120;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "Tipo Persona SAT";
+            this.columnHeader24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader24.Width = 111;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "RFC";
+            this.columnHeader25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader25.Width = 120;
+            // 
+            // columnHeader26
+            // 
+            this.columnHeader26.Text = "CURP";
+            this.columnHeader26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader26.Width = 120;
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.Text = "Tipo de Cliente";
+            this.columnHeader27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader27.Width = 100;
+            // 
+            // columnHeader28
+            // 
+            this.columnHeader28.Text = "Correo";
+            this.columnHeader28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader28.Width = 120;
+            // 
+            // columnHeader29
+            // 
+            this.columnHeader29.Text = "Comunicación";
+            this.columnHeader29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader29.Width = 100;
+            // 
+            // columnHeader30
+            // 
+            this.columnHeader30.Text = "Tipo de Envío";
+            this.columnHeader30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader30.Width = 100;
+            // 
+            // columnHeader31
+            // 
+            this.columnHeader31.Text = "Capturo";
+            this.columnHeader31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader31.Width = 100;
+            // 
+            // columnHeader32
+            // 
+            this.columnHeader32.Text = "Sitio Web";
+            this.columnHeader32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader32.Width = 100;
+            // 
+            // columnHeader33
+            // 
+            this.columnHeader33.Text = "Moneda";
+            this.columnHeader33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader33.Width = 70;
+            // 
+            // columnHeader34
+            // 
+            this.columnHeader34.Text = "Holder";
+            this.columnHeader34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader34.Width = 140;
+            // 
+            // columnHeader35
+            // 
+            this.columnHeader35.Text = "Tipo de Tarifa";
+            this.columnHeader35.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader35.Width = 100;
+            // 
+            // columnHeader36
+            // 
+            this.columnHeader36.Text = "Observaciones";
+            this.columnHeader36.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader36.Width = 200;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -1742,10 +1768,10 @@
             this.tabControl1.Controls.Add(this.Observaciones);
             this.tabControl1.Controls.Add(this.Documentos);
             this.tabControl1.Controls.Add(this.Resumen_de_casos);
-            this.tabControl1.Location = new System.Drawing.Point(7, 38);
+            this.tabControl1.Location = new System.Drawing.Point(7, 39);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1187, 758);
+            this.tabControl1.Size = new System.Drawing.Size(1209, 538);
             this.tabControl1.TabIndex = 118;
             // 
             // Instrucciones
@@ -1755,7 +1781,7 @@
             this.Instrucciones.Location = new System.Drawing.Point(4, 22);
             this.Instrucciones.Name = "Instrucciones";
             this.Instrucciones.Padding = new System.Windows.Forms.Padding(3);
-            this.Instrucciones.Size = new System.Drawing.Size(1179, 732);
+            this.Instrucciones.Size = new System.Drawing.Size(1201, 512);
             this.Instrucciones.TabIndex = 3;
             this.Instrucciones.Text = "Instrucciones";
             this.Instrucciones.UseVisualStyleBackColor = true;
@@ -1772,9 +1798,9 @@
             this.columnestadoinst});
             this.listView6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView6.HideSelection = false;
-            this.listView6.Location = new System.Drawing.Point(3, 400);
+            this.listView6.Location = new System.Drawing.Point(3, 180);
             this.listView6.Name = "listView6";
-            this.listView6.Size = new System.Drawing.Size(1173, 329);
+            this.listView6.Size = new System.Drawing.Size(1195, 329);
             this.listView6.TabIndex = 11;
             this.listView6.UseCompatibleStateImageBehavior = false;
             this.listView6.View = System.Windows.Forms.View.Details;
@@ -1981,7 +2007,7 @@
             this.Domicilio_Fiscal.Location = new System.Drawing.Point(4, 22);
             this.Domicilio_Fiscal.Name = "Domicilio_Fiscal";
             this.Domicilio_Fiscal.Padding = new System.Windows.Forms.Padding(3);
-            this.Domicilio_Fiscal.Size = new System.Drawing.Size(1179, 732);
+            this.Domicilio_Fiscal.Size = new System.Drawing.Size(1201, 512);
             this.Domicilio_Fiscal.TabIndex = 4;
             this.Domicilio_Fiscal.Text = "Domicilio Fiscal";
             this.Domicilio_Fiscal.UseVisualStyleBackColor = true;
@@ -1993,7 +2019,7 @@
             this.Casos.Location = new System.Drawing.Point(4, 22);
             this.Casos.Name = "Casos";
             this.Casos.Padding = new System.Windows.Forms.Padding(3);
-            this.Casos.Size = new System.Drawing.Size(1179, 732);
+            this.Casos.Size = new System.Drawing.Size(1201, 512);
             this.Casos.TabIndex = 5;
             this.Casos.Text = "Casos";
             this.Casos.UseVisualStyleBackColor = true;
@@ -2023,9 +2049,9 @@
             this.columnHeader70});
             this.listView7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView7.HideSelection = false;
-            this.listView7.Location = new System.Drawing.Point(3, 248);
+            this.listView7.Location = new System.Drawing.Point(3, 28);
             this.listView7.Name = "listView7";
-            this.listView7.Size = new System.Drawing.Size(1173, 481);
+            this.listView7.Size = new System.Drawing.Size(1195, 481);
             this.listView7.TabIndex = 3;
             this.listView7.UseCompatibleStateImageBehavior = false;
             this.listView7.View = System.Windows.Forms.View.Details;
@@ -2164,7 +2190,7 @@
             this.Casos_Corresponsal.Location = new System.Drawing.Point(4, 22);
             this.Casos_Corresponsal.Name = "Casos_Corresponsal";
             this.Casos_Corresponsal.Padding = new System.Windows.Forms.Padding(3);
-            this.Casos_Corresponsal.Size = new System.Drawing.Size(1179, 732);
+            this.Casos_Corresponsal.Size = new System.Drawing.Size(1201, 512);
             this.Casos_Corresponsal.TabIndex = 6;
             this.Casos_Corresponsal.Text = "Casos Corresponsal";
             this.Casos_Corresponsal.UseVisualStyleBackColor = true;
@@ -2202,9 +2228,9 @@
             this.columnHeader89});
             this.listView8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView8.HideSelection = false;
-            this.listView8.Location = new System.Drawing.Point(3, 217);
+            this.listView8.Location = new System.Drawing.Point(3, -3);
             this.listView8.Name = "listView8";
-            this.listView8.Size = new System.Drawing.Size(1173, 512);
+            this.listView8.Size = new System.Drawing.Size(1195, 512);
             this.listView8.TabIndex = 2;
             this.listView8.UseCompatibleStateImageBehavior = false;
             this.listView8.View = System.Windows.Forms.View.Details;
@@ -2327,7 +2353,7 @@
             this.Observaciones.Location = new System.Drawing.Point(4, 22);
             this.Observaciones.Name = "Observaciones";
             this.Observaciones.Padding = new System.Windows.Forms.Padding(3);
-            this.Observaciones.Size = new System.Drawing.Size(1179, 732);
+            this.Observaciones.Size = new System.Drawing.Size(1201, 512);
             this.Observaciones.TabIndex = 7;
             this.Observaciones.Text = "Observaciones";
             this.Observaciones.UseVisualStyleBackColor = true;
@@ -2341,9 +2367,9 @@
             this.columnHeader93});
             this.listView9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView9.HideSelection = false;
-            this.listView9.Location = new System.Drawing.Point(3, 338);
+            this.listView9.Location = new System.Drawing.Point(3, 118);
             this.listView9.Name = "listView9";
-            this.listView9.Size = new System.Drawing.Size(1173, 391);
+            this.listView9.Size = new System.Drawing.Size(1195, 391);
             this.listView9.TabIndex = 10;
             this.listView9.UseCompatibleStateImageBehavior = false;
             this.listView9.View = System.Windows.Forms.View.Details;
@@ -2481,7 +2507,7 @@
             this.Documentos.Location = new System.Drawing.Point(4, 22);
             this.Documentos.Name = "Documentos";
             this.Documentos.Padding = new System.Windows.Forms.Padding(3);
-            this.Documentos.Size = new System.Drawing.Size(1179, 732);
+            this.Documentos.Size = new System.Drawing.Size(1201, 512);
             this.Documentos.TabIndex = 8;
             this.Documentos.Text = "Documentos";
             this.Documentos.UseVisualStyleBackColor = true;
@@ -2497,9 +2523,9 @@
             this.columnHeader99});
             this.listView10.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView10.HideSelection = false;
-            this.listView10.Location = new System.Drawing.Point(3, 336);
+            this.listView10.Location = new System.Drawing.Point(3, 116);
             this.listView10.Name = "listView10";
-            this.listView10.Size = new System.Drawing.Size(1173, 393);
+            this.listView10.Size = new System.Drawing.Size(1195, 393);
             this.listView10.TabIndex = 7;
             this.listView10.UseCompatibleStateImageBehavior = false;
             this.listView10.View = System.Windows.Forms.View.Details;
@@ -2659,7 +2685,7 @@
             this.Resumen_de_casos.Location = new System.Drawing.Point(4, 22);
             this.Resumen_de_casos.Name = "Resumen_de_casos";
             this.Resumen_de_casos.Padding = new System.Windows.Forms.Padding(3);
-            this.Resumen_de_casos.Size = new System.Drawing.Size(1179, 732);
+            this.Resumen_de_casos.Size = new System.Drawing.Size(1201, 512);
             this.Resumen_de_casos.TabIndex = 9;
             this.Resumen_de_casos.Text = "Resumen de casos";
             this.Resumen_de_casos.UseVisualStyleBackColor = true;
@@ -2671,9 +2697,9 @@
             this.columnHeader100});
             this.listView11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView11.HideSelection = false;
-            this.listView11.Location = new System.Drawing.Point(3, 209);
+            this.listView11.Location = new System.Drawing.Point(3, -11);
             this.listView11.Name = "listView11";
-            this.listView11.Size = new System.Drawing.Size(1173, 520);
+            this.listView11.Size = new System.Drawing.Size(1195, 520);
             this.listView11.TabIndex = 1;
             this.listView11.UseCompatibleStateImageBehavior = false;
             this.listView11.View = System.Windows.Forms.View.Details;
@@ -2688,20 +2714,245 @@
             this.columnHeader100.Text = "Tipo de solicitud";
             this.columnHeader100.Width = 412;
             // 
+            // listView12
+            // 
+            this.listView12.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader102,
+            this.columnHeader103,
+            this.columnHeader106,
+            this.columnHeader114,
+            this.columnHeader112,
+            this.columnHeader113,
+            this.columnHeader108,
+            this.columnHeader109,
+            this.columnHeader104,
+            this.columnHeader105,
+            this.columnHeader111,
+            this.columnHeader107,
+            this.columnHeader110,
+            this.columnHeader115});
+            this.listView12.HideSelection = false;
+            this.listView12.Location = new System.Drawing.Point(7, 718);
+            this.listView12.Name = "listView12";
+            this.listView12.Size = new System.Drawing.Size(1433, 130);
+            this.listView12.TabIndex = 122;
+            this.listView12.UseCompatibleStateImageBehavior = false;
+            this.listView12.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader102
+            // 
+            this.columnHeader102.Text = "Idioma";
+            this.columnHeader102.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader102.Width = 120;
+            // 
+            // columnHeader103
+            // 
+            this.columnHeader103.Text = "Tipo Persona SAT";
+            this.columnHeader103.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader103.Width = 111;
+            // 
+            // columnHeader104
+            // 
+            this.columnHeader104.Text = "RFC";
+            this.columnHeader104.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader104.Width = 120;
+            // 
+            // columnHeader105
+            // 
+            this.columnHeader105.Text = "CURP";
+            this.columnHeader105.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader105.Width = 120;
+            // 
+            // columnHeader106
+            // 
+            this.columnHeader106.Text = "Tipo de Cliente";
+            this.columnHeader106.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader106.Width = 100;
+            // 
+            // columnHeader107
+            // 
+            this.columnHeader107.Text = "Correo";
+            this.columnHeader107.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader107.Width = 120;
+            // 
+            // columnHeader108
+            // 
+            this.columnHeader108.Text = "Comunicación";
+            this.columnHeader108.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader108.Width = 100;
+            // 
+            // columnHeader109
+            // 
+            this.columnHeader109.Text = "Tipo de Envío";
+            this.columnHeader109.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader109.Width = 100;
+            // 
+            // columnHeader110
+            // 
+            this.columnHeader110.Text = "Capturo";
+            this.columnHeader110.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader110.Width = 100;
+            // 
+            // columnHeader111
+            // 
+            this.columnHeader111.Text = "Sitio Web";
+            this.columnHeader111.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader111.Width = 100;
+            // 
+            // columnHeader112
+            // 
+            this.columnHeader112.Text = "Moneda";
+            this.columnHeader112.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader112.Width = 70;
+            // 
+            // columnHeader113
+            // 
+            this.columnHeader113.Text = "Holder";
+            this.columnHeader113.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader113.Width = 140;
+            // 
+            // columnHeader114
+            // 
+            this.columnHeader114.Text = "Tipo de Tarifa";
+            this.columnHeader114.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader114.Width = 100;
+            // 
+            // columnHeader115
+            // 
+            this.columnHeader115.Text = "Observaciones";
+            this.columnHeader115.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader115.Width = 200;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(131, 859);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(82, 13);
+            this.label54.TabIndex = 124;
+            this.label54.Text = "Numero Exterior";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(219, 859);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(59, 13);
+            this.label55.TabIndex = 125;
+            this.label55.Text = "Numero Int";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(305, 859);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(42, 13);
+            this.label56.TabIndex = 126;
+            this.label56.Text = "Colonia";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(396, 859);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(236, 13);
+            this.label57.TabIndex = 127;
+            this.label57.Text = "Municipio o Demarc Territorial(Ciudad Extranjera)";
+            // 
+            // listView13
+            // 
+            this.listView13.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader119,
+            this.columnHeader120,
+            this.columnHeader121,
+            this.columnHeader122});
+            this.listView13.HideSelection = false;
+            this.listView13.Location = new System.Drawing.Point(339, 572);
+            this.listView13.Name = "listView13";
+            this.listView13.Size = new System.Drawing.Size(484, 74);
+            this.listView13.TabIndex = 128;
+            this.listView13.UseCompatibleStateImageBehavior = false;
+            this.listView13.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader119
+            // 
+            this.columnHeader119.Text = "ClienteId";
+            // 
+            // columnHeader120
+            // 
+            this.columnHeader120.Text = "Nombre";
+            this.columnHeader120.Width = 111;
+            // 
+            // columnHeader121
+            // 
+            this.columnHeader121.Text = "Paterno";
+            this.columnHeader121.Width = 144;
+            // 
+            // columnHeader122
+            // 
+            this.columnHeader122.Text = "Materno";
+            this.columnHeader122.Width = 156;
+            // 
+            // listView14
+            // 
+            this.listView14.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader123,
+            this.columnHeader124});
+            this.listView14.HideSelection = false;
+            this.listView14.Location = new System.Drawing.Point(12, 572);
+            this.listView14.Name = "listView14";
+            this.listView14.Size = new System.Drawing.Size(283, 69);
+            this.listView14.TabIndex = 129;
+            this.listView14.UseCompatibleStateImageBehavior = false;
+            this.listView14.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader123
+            // 
+            this.columnHeader123.Text = "ClienteId";
+            // 
+            // columnHeader124
+            // 
+            this.columnHeader124.Text = "Razon Social";
+            this.columnHeader124.Width = 207;
+            // 
+            // Calle
+            // 
+            this.Calle.AutoSize = true;
+            this.Calle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calle.Location = new System.Drawing.Point(67, 859);
+            this.Calle.Name = "Calle";
+            this.Calle.Size = new System.Drawing.Size(30, 13);
+            this.Calle.TabIndex = 130;
+            this.Calle.Text = "Calle";
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 854);
+            this.ClientSize = new System.Drawing.Size(1474, 1061);
             this.ControlBox = false;
+            this.Controls.Add(this.Calle);
+            this.Controls.Add(this.listView14);
+            this.Controls.Add(this.listView13);
+            this.Controls.Add(this.label57);
+            this.Controls.Add(this.label56);
+            this.Controls.Add(this.label55);
+            this.Controls.Add(this.label54);
+            this.Controls.Add(this.listView12);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Clientes";
+            this.Text = "Calle";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Contacto.ResumeLayout(false);
             this.Contacto.PerformLayout();
@@ -2768,12 +3019,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader21;
-        private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.ColumnHeader columnHeader25;
@@ -3006,6 +3252,38 @@
         private System.Windows.Forms.ListView listView11;
         private System.Windows.Forms.ColumnHeader columncasos;
         private System.Windows.Forms.ColumnHeader columnHeader100;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ListView listView12;
+        private System.Windows.Forms.ColumnHeader columnHeader102;
+        private System.Windows.Forms.ColumnHeader columnHeader103;
+        private System.Windows.Forms.ColumnHeader columnHeader104;
+        private System.Windows.Forms.ColumnHeader columnHeader105;
+        private System.Windows.Forms.ColumnHeader columnHeader106;
+        private System.Windows.Forms.ColumnHeader columnHeader107;
+        private System.Windows.Forms.ColumnHeader columnHeader108;
+        private System.Windows.Forms.ColumnHeader columnHeader109;
+        private System.Windows.Forms.ColumnHeader columnHeader110;
+        private System.Windows.Forms.ColumnHeader columnHeader111;
+        private System.Windows.Forms.ColumnHeader columnHeader112;
+        private System.Windows.Forms.ColumnHeader columnHeader113;
+        private System.Windows.Forms.ColumnHeader columnHeader114;
+        private System.Windows.Forms.ColumnHeader columnHeader115;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.ColumnHeader columnHeader118;
+        private System.Windows.Forms.ListView listView13;
+        private System.Windows.Forms.ColumnHeader columnHeader119;
+        private System.Windows.Forms.ColumnHeader columnHeader120;
+        private System.Windows.Forms.ColumnHeader columnHeader121;
+        private System.Windows.Forms.ColumnHeader columnHeader122;
+        private System.Windows.Forms.ListView listView14;
+        private System.Windows.Forms.ColumnHeader columnHeader123;
+        private System.Windows.Forms.ColumnHeader columnHeader124;
+        private System.Windows.Forms.Label Calle;
     }
 }
 

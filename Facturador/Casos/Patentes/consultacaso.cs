@@ -2639,7 +2639,6 @@ namespace Facturador
                     String sFecha_vencimiento_3m_impi = objfuncionesdicss.validareader("Fecha_vencimiento_3m_impi", "Fecha_vencimiento_3m_impi", resp_tedocs).Text;
                     String sFecha_vencimiento_4m_impi = objfuncionesdicss.validareader("Fecha_vencimiento_4m_impi", "Fecha_vencimiento_4m_impi", resp_tedocs).Text;
                     String sFecha_atendio_plazo_impi = objfuncionesdicss.validareader("Fecha_atendio_plazo_impi", "Fecha_atendio_plazo_impi", resp_tedocs).Text;
-
                     String sFecha_atendio_plazo_impi_sistema = objfuncionesdicss.validareader("Fecha_atendio_plazo_impi_sistema", "Fecha_atendio_plazo_impi_sistema", resp_tedocs).Text;
                     String sDocumento_atenio_impi = objfuncionesdicss.validareader("Documento_atenio_impi", "Fecha_atendio_plazo_impi", resp_tedocs).Text;//sistema
                     String satendio_plazoimpi = objfuncionesdicss.validareader("atendio_plazoimpi", "atendio_plazoimpi", resp_tedocs).Text;
@@ -8311,37 +8310,7 @@ namespace Facturador
         {
 
             bool breinicia = false;
-            try
-            {
-                conect con_filev = new conect();
-                String sQuery = "SELECT * FROM act_version order by idact_version desc limit 1;";
-                MySqlDataReader resp_consltv = con_filev.getdatareader(sQuery);
-                String sIdversionact = "";
-                String sFechaversion = "";
-                while (resp_consltv.Read())
-                {
-                    sIdversionact = objfuncionesdicss.validareader("v_actual", "v_actual", resp_consltv).Text;
-                    sFechaversion = objfuncionesdicss.validareader("fecha", "fecha", resp_consltv).Text;
-                    if (sIdversionact != sVersion)
-                    {
-                        MessageBox.Show("Deben actualizar la versión de casos king");
-                        breinicia = true;
-                    }
-                }
-                con_filev.Cerrarconexion();
-                resp_consltv.Close();
-
-                //if (breinicia) {
-                //    buscarclienteform.Show();
-                //    this.Close();
-                //}
-                return breinicia;
-            }
-            catch (Exception exs)
-            {
-                return breinicia;
-            }
-
+            return breinicia;  
         }
 
         private void button30_Click_1(object sender, EventArgs e)

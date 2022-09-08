@@ -1,4 +1,4 @@
-﻿    using Facturador.Casos.Documentos;
+﻿using Facturador.Casos.Documentos;
 using Facturador.Casos.Oposicion;
 using Facturador.plazos_forms;
 using MySql.Data.MySqlClient;
@@ -3863,7 +3863,7 @@ try
         private void tblCliente_DoubleClick(object sender, EventArgs e)
         {
             //creamos una ventana en la que podamos buscar al cliente y asignarlo al caso
-            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, tblContacto.Text, tblCliente.Text);
+            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, tblContacto.Text, tblCliente.Text,loguin);
             if (bForm.ShowDialog() == DialogResult.OK)
             {
                 tblCliente.Text = bForm.sClienteidtext;
@@ -3875,7 +3875,7 @@ try
 
         private void label19_DoubleClick(object sender, EventArgs e)
         {
-            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, tblContacto.Text, tblCliente.Text);
+            buscarcliente bForm = new buscarcliente(sCasoId, gSTipoSolicitudId, tblContacto.Text, tblCliente.Text,loguin);
             if (bForm.ShowDialog() == DialogResult.OK)
             {
                 tblCliente.Text = bForm.sClienteidtext;
@@ -5060,7 +5060,7 @@ try
 
         private void label33_DoubleClick(object sender, EventArgs e)
         {
-            fBuscarcorresponsal bForm = new fBuscarcorresponsal(sCasoId, gSTipoSolicitudId, tblCotaccorresponsal.Text, tblCorresponsal.Text);
+            fBuscarcorresponsal bForm = new fBuscarcorresponsal(sCasoId, gSTipoSolicitudId, tblCotaccorresponsal.Text, tblCorresponsal.Text,loguin);
             if (bForm.ShowDialog() == DialogResult.OK)
             {
                 tblCorresponsal.Text = bForm.sClienteidtext;

@@ -1234,37 +1234,8 @@ namespace Facturador
         public bool validaversion(String sVersion)
         {
             bool breinicia = false;
-            try
-            {
-                conect con_filev = new conect();
-                String sQuery = "SELECT * FROM act_version order by idact_version desc limit 1;";
-                MySqlDataReader resp_consltv = con_filev.getdatareader(sQuery);
-                String sIdversionact = "";
-                String sFechaversion = "";
-                while (resp_consltv.Read())
-                {
-                    sIdversionact = validareader("v_actual", "v_actual", resp_consltv).Text;
-                    sFechaversion = validareader("fecha", "fecha", resp_consltv).Text;
-                    if (sIdversionact != sVersion)
-                    {
-                        MessageBox.Show("Deben actualizar la versión de casos king");
-                        breinicia = true;
-                    }
-                }
-                con_filev.Cerrarconexion();
-                resp_consltv.Close();
-
-                //if (breinicia) {
-                //    buscarclienteform.Show();
-                //    this.Close();
-                //}
-                return breinicia;
-            }
-            catch (Exception exs)
-            {
-                return breinicia;
-            }
-
+            return breinicia;
+           
         }
 
         private void tbAvisoprueba_TextChanged(object sender, EventArgs e)

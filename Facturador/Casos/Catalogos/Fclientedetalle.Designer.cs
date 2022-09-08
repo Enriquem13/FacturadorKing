@@ -128,9 +128,23 @@
             this.TB_contactocorreo_cd = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.TP_1cliente = new System.Windows.Forms.TabPage();
+            this.moral = new System.Windows.Forms.GroupBox();
+            this.tbNombreEmpresa = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.fisica = new System.Windows.Forms.GroupBox();
+            this.TB_apellidopaternocliente = new System.Windows.Forms.TextBox();
+            this.TB_nombrecliente = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TB_apellidomaternoclietne = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.PaisNombre = new System.Windows.Forms.ComboBox();
+            this.Nacionalidad = new System.Windows.Forms.ComboBox();
+            this.combopais = new System.Windows.Forms.ComboBox();
+            this.label55 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.CB_tarifacliente_cd = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.BT_modificarcliente_cd = new System.Windows.Forms.Button();
             this.CB_holdercliente = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -148,22 +162,17 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.CB_comunicacioncliente = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.TB_apellidomaternoclietne = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.CB_monedacliente = new System.Windows.Forms.ComboBox();
             this.CB_idiomacliente = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TB_apellidopaternocliente = new System.Windows.Forms.TextBox();
             this.TB_rfccliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CB_tipopersonacliente = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TB_nombrecliente = new System.Windows.Forms.TextBox();
             this.TB_curpcliente = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.TB_clienteid = new System.Windows.Forms.TextBox();
             this.TC_detalle_cliente = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -256,17 +265,59 @@
             this.label49 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.CB_idioma_cliente = new System.Windows.Forms.ComboBox();
-            this.PaisNombre = new System.Windows.Forms.ComboBox();
+            this.Calle = new System.Windows.Forms.Label();
+            this.listView14 = new System.Windows.Forms.ListView();
+            this.columnHeader123 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader124 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView13 = new System.Windows.Forms.ListView();
+            this.columnHeader119 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader120 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader121 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader122 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label57 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.tipopersona = new System.Windows.Forms.ComboBox();
-            this.CB_moneda = new System.Windows.Forms.ComboBox();
-            this.Nacionalidad = new System.Windows.Forms.ComboBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.combopais = new System.Windows.Forms.ComboBox();
-            this.label55 = new System.Windows.Forms.Label();
+            this.listView12 = new System.Windows.Forms.ListView();
+            this.columnHeader102 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader103 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader106 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader114 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader112 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader113 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader108 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader109 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader104 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader105 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader111 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader107 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader110 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader115 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView9 = new System.Windows.Forms.ListView();
+            this.columnHeader118 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader51 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader52 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader53 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader54 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader55 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader56 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader57 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader58 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView10 = new System.Windows.Forms.ListView();
+            this.columnHeader59 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader60 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader61 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader62 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader63 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader64 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader65 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader66 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader67 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader68 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader69 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader70 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader71 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader72 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -275,6 +326,8 @@
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.TP_1cliente.SuspendLayout();
+            this.moral.SuspendLayout();
+            this.fisica.SuspendLayout();
             this.TC_detalle_cliente.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -1182,20 +1235,25 @@
             // TP_1cliente
             // 
             this.TP_1cliente.BackColor = System.Drawing.Color.Gainsboro;
-            this.TP_1cliente.Controls.Add(this.label51);
-            this.TP_1cliente.Controls.Add(this.label52);
-            this.TP_1cliente.Controls.Add(this.CB_idioma_cliente);
-            this.TP_1cliente.Controls.Add(this.PaisNombre);
+            this.TP_1cliente.Controls.Add(this.Calle);
+            this.TP_1cliente.Controls.Add(this.listView14);
+            this.TP_1cliente.Controls.Add(this.listView13);
+            this.TP_1cliente.Controls.Add(this.label57);
+            this.TP_1cliente.Controls.Add(this.label56);
             this.TP_1cliente.Controls.Add(this.label53);
-            this.TP_1cliente.Controls.Add(this.tipopersona);
-            this.TP_1cliente.Controls.Add(this.CB_moneda);
-            this.TP_1cliente.Controls.Add(this.Nacionalidad);
             this.TP_1cliente.Controls.Add(this.label54);
+            this.TP_1cliente.Controls.Add(this.listView12);
+            this.TP_1cliente.Controls.Add(this.listView9);
+            this.TP_1cliente.Controls.Add(this.listView10);
+            this.TP_1cliente.Controls.Add(this.moral);
+            this.TP_1cliente.Controls.Add(this.fisica);
+            this.TP_1cliente.Controls.Add(this.label51);
+            this.TP_1cliente.Controls.Add(this.PaisNombre);
+            this.TP_1cliente.Controls.Add(this.Nacionalidad);
             this.TP_1cliente.Controls.Add(this.combopais);
             this.TP_1cliente.Controls.Add(this.label55);
             this.TP_1cliente.Controls.Add(this.label50);
             this.TP_1cliente.Controls.Add(this.CB_tarifacliente_cd);
-            this.TP_1cliente.Controls.Add(this.label18);
             this.TP_1cliente.Controls.Add(this.BT_modificarcliente_cd);
             this.TP_1cliente.Controls.Add(this.CB_holdercliente);
             this.TP_1cliente.Controls.Add(this.label17);
@@ -1213,35 +1271,162 @@
             this.TP_1cliente.Controls.Add(this.label11);
             this.TP_1cliente.Controls.Add(this.label10);
             this.TP_1cliente.Controls.Add(this.CB_comunicacioncliente);
-            this.TP_1cliente.Controls.Add(this.label9);
-            this.TP_1cliente.Controls.Add(this.TB_apellidomaternoclietne);
-            this.TP_1cliente.Controls.Add(this.label8);
             this.TP_1cliente.Controls.Add(this.label7);
             this.TP_1cliente.Controls.Add(this.CB_monedacliente);
             this.TP_1cliente.Controls.Add(this.CB_idiomacliente);
             this.TP_1cliente.Controls.Add(this.label6);
-            this.TP_1cliente.Controls.Add(this.TB_apellidopaternocliente);
             this.TP_1cliente.Controls.Add(this.TB_rfccliente);
             this.TP_1cliente.Controls.Add(this.label4);
             this.TP_1cliente.Controls.Add(this.CB_tipopersonacliente);
             this.TP_1cliente.Controls.Add(this.label3);
-            this.TP_1cliente.Controls.Add(this.TB_nombrecliente);
             this.TP_1cliente.Controls.Add(this.TB_curpcliente);
-            this.TP_1cliente.Controls.Add(this.label1);
             this.TP_1cliente.Controls.Add(this.label2);
-            this.TP_1cliente.Controls.Add(this.TB_clienteid);
             this.TP_1cliente.Location = new System.Drawing.Point(4, 22);
             this.TP_1cliente.Name = "TP_1cliente";
             this.TP_1cliente.Padding = new System.Windows.Forms.Padding(3);
-            this.TP_1cliente.Size = new System.Drawing.Size(1251, 557);
+            this.TP_1cliente.Size = new System.Drawing.Size(1461, 981);
             this.TP_1cliente.TabIndex = 0;
             this.TP_1cliente.Text = "Datos Generales";
+            // 
+            // moral
+            // 
+            this.moral.Controls.Add(this.tbNombreEmpresa);
+            this.moral.Controls.Add(this.label52);
+            this.moral.Location = new System.Drawing.Point(26, 271);
+            this.moral.Name = "moral";
+            this.moral.Size = new System.Drawing.Size(326, 43);
+            this.moral.TabIndex = 127;
+            this.moral.TabStop = false;
+            // 
+            // tbNombreEmpresa
+            // 
+            this.tbNombreEmpresa.Location = new System.Drawing.Point(89, 13);
+            this.tbNombreEmpresa.Name = "tbNombreEmpresa";
+            this.tbNombreEmpresa.Size = new System.Drawing.Size(218, 20);
+            this.tbNombreEmpresa.TabIndex = 6;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(-3, 16);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(95, 13);
+            this.label52.TabIndex = 0;
+            this.label52.Text = "Nombre Empresa *";
+            // 
+            // fisica
+            // 
+            this.fisica.Controls.Add(this.TB_apellidopaternocliente);
+            this.fisica.Controls.Add(this.TB_nombrecliente);
+            this.fisica.Controls.Add(this.label8);
+            this.fisica.Controls.Add(this.TB_apellidomaternoclietne);
+            this.fisica.Controls.Add(this.label9);
+            this.fisica.Controls.Add(this.label1);
+            this.fisica.Location = new System.Drawing.Point(26, 209);
+            this.fisica.Name = "fisica";
+            this.fisica.Size = new System.Drawing.Size(1034, 56);
+            this.fisica.TabIndex = 126;
+            this.fisica.TabStop = false;
+            this.fisica.Text = "groupBox6";
+            // 
+            // TB_apellidopaternocliente
+            // 
+            this.TB_apellidopaternocliente.Location = new System.Drawing.Point(428, 19);
+            this.TB_apellidopaternocliente.Name = "TB_apellidopaternocliente";
+            this.TB_apellidopaternocliente.Size = new System.Drawing.Size(201, 20);
+            this.TB_apellidopaternocliente.TabIndex = 5;
+            // 
+            // TB_nombrecliente
+            // 
+            this.TB_nombrecliente.Location = new System.Drawing.Point(77, 19);
+            this.TB_nombrecliente.Name = "TB_nombrecliente";
+            this.TB_nombrecliente.Size = new System.Drawing.Size(199, 20);
+            this.TB_nombrecliente.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(338, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Apellido Paterno";
+            // 
+            // TB_apellidomaternoclietne
+            // 
+            this.TB_apellidomaternoclietne.Location = new System.Drawing.Point(771, 19);
+            this.TB_apellidomaternoclietne.Name = "TB_apellidomaternoclietne";
+            this.TB_apellidomaternoclietne.Size = new System.Drawing.Size(199, 20);
+            this.TB_apellidomaternoclietne.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(679, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 13);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Apellido Materno";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(26, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Nombre";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(8, 14);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(27, 13);
+            this.label51.TabIndex = 120;
+            this.label51.Text = "Pais";
+            // 
+            // PaisNombre
+            // 
+            this.PaisNombre.FormattingEnabled = true;
+            this.PaisNombre.Location = new System.Drawing.Point(202, 9);
+            this.PaisNombre.Name = "PaisNombre";
+            this.PaisNombre.Size = new System.Drawing.Size(256, 21);
+            this.PaisNombre.TabIndex = 125;
+            // 
+            // Nacionalidad
+            // 
+            this.Nacionalidad.FormattingEnabled = true;
+            this.Nacionalidad.Location = new System.Drawing.Point(109, 36);
+            this.Nacionalidad.Name = "Nacionalidad";
+            this.Nacionalidad.Size = new System.Drawing.Size(284, 21);
+            this.Nacionalidad.TabIndex = 123;
+            // 
+            // combopais
+            // 
+            this.combopais.FormattingEnabled = true;
+            this.combopais.Location = new System.Drawing.Point(109, 9);
+            this.combopais.Name = "combopais";
+            this.combopais.Size = new System.Drawing.Size(54, 21);
+            this.combopais.TabIndex = 122;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(8, 39);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(69, 13);
+            this.label55.TabIndex = 121;
+            this.label55.Text = "Nacionalidad";
             // 
             // label50
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(401, 306);
+            this.label50.Location = new System.Drawing.Point(67, 150);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(34, 13);
             this.label50.TabIndex = 41;
@@ -1250,24 +1435,14 @@
             // CB_tarifacliente_cd
             // 
             this.CB_tarifacliente_cd.FormattingEnabled = true;
-            this.CB_tarifacliente_cd.Location = new System.Drawing.Point(441, 303);
+            this.CB_tarifacliente_cd.Location = new System.Drawing.Point(107, 147);
             this.CB_tarifacliente_cd.Name = "CB_tarifacliente_cd";
             this.CB_tarifacliente_cd.Size = new System.Drawing.Size(201, 21);
             this.CB_tarifacliente_cd.TabIndex = 40;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(30, 168);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(54, 13);
-            this.label18.TabIndex = 39;
-            this.label18.Text = "N° Cliente";
-            // 
             // BT_modificarcliente_cd
             // 
-            this.BT_modificarcliente_cd.Location = new System.Drawing.Point(855, 492);
+            this.BT_modificarcliente_cd.Location = new System.Drawing.Point(998, 425);
             this.BT_modificarcliente_cd.Name = "BT_modificarcliente_cd";
             this.BT_modificarcliente_cd.Size = new System.Drawing.Size(137, 23);
             this.BT_modificarcliente_cd.TabIndex = 18;
@@ -1278,7 +1453,7 @@
             // CB_holdercliente
             // 
             this.CB_holdercliente.FormattingEnabled = true;
-            this.CB_holdercliente.Location = new System.Drawing.Point(113, 533);
+            this.CB_holdercliente.Location = new System.Drawing.Point(441, 389);
             this.CB_holdercliente.Name = "CB_holdercliente";
             this.CB_holdercliente.Size = new System.Drawing.Size(201, 21);
             this.CB_holdercliente.TabIndex = 17;
@@ -1287,7 +1462,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(69, 536);
+            this.label17.Location = new System.Drawing.Point(397, 392);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(38, 13);
             this.label17.TabIndex = 38;
@@ -1295,7 +1470,7 @@
             // 
             // RTB_observacionescliente
             // 
-            this.RTB_observacionescliente.Location = new System.Drawing.Point(113, 454);
+            this.RTB_observacionescliente.Location = new System.Drawing.Point(113, 427);
             this.RTB_observacionescliente.Name = "RTB_observacionescliente";
             this.RTB_observacionescliente.Size = new System.Drawing.Size(879, 62);
             this.RTB_observacionescliente.TabIndex = 16;
@@ -1305,7 +1480,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(30, 457);
+            this.label16.Location = new System.Drawing.Point(30, 430);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 13);
             this.label16.TabIndex = 36;
@@ -1314,7 +1489,7 @@
             // CB_facturaelecliente
             // 
             this.CB_facturaelecliente.FormattingEnabled = true;
-            this.CB_facturaelecliente.Location = new System.Drawing.Point(441, 401);
+            this.CB_facturaelecliente.Location = new System.Drawing.Point(791, 384);
             this.CB_facturaelecliente.Name = "CB_facturaelecliente";
             this.CB_facturaelecliente.Size = new System.Drawing.Size(201, 21);
             this.CB_facturaelecliente.TabIndex = 14;
@@ -1323,7 +1498,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(368, 404);
+            this.label15.Location = new System.Drawing.Point(718, 387);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(67, 13);
             this.label15.TabIndex = 34;
@@ -1331,7 +1506,7 @@
             // 
             // TB_correo
             // 
-            this.TB_correo.Location = new System.Drawing.Point(793, 367);
+            this.TB_correo.Location = new System.Drawing.Point(90, 338);
             this.TB_correo.Name = "TB_correo";
             this.TB_correo.Size = new System.Drawing.Size(199, 20);
             this.TB_correo.TabIndex = 15;
@@ -1340,7 +1515,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(749, 370);
+            this.label14.Location = new System.Drawing.Point(46, 341);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 13);
             this.label14.TabIndex = 32;
@@ -1350,7 +1525,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(37, 409);
+            this.label13.Location = new System.Drawing.Point(37, 392);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(47, 13);
             this.label13.TabIndex = 31;
@@ -1358,7 +1533,7 @@
             // 
             // TB_sitioweb
             // 
-            this.TB_sitioweb.Location = new System.Drawing.Point(90, 406);
+            this.TB_sitioweb.Location = new System.Drawing.Point(90, 389);
             this.TB_sitioweb.Name = "TB_sitioweb";
             this.TB_sitioweb.Size = new System.Drawing.Size(199, 20);
             this.TB_sitioweb.TabIndex = 13;
@@ -1367,7 +1542,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(724, 318);
+            this.label12.Location = new System.Drawing.Point(40, 185);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(63, 13);
             this.label12.TabIndex = 29;
@@ -1376,7 +1551,7 @@
             // CB_tipoclientecliente
             // 
             this.CB_tipoclientecliente.FormattingEnabled = true;
-            this.CB_tipoclientecliente.Location = new System.Drawing.Point(793, 315);
+            this.CB_tipoclientecliente.Location = new System.Drawing.Point(109, 182);
             this.CB_tipoclientecliente.Name = "CB_tipoclientecliente";
             this.CB_tipoclientecliente.Size = new System.Drawing.Size(199, 21);
             this.CB_tipoclientecliente.TabIndex = 12;
@@ -1384,7 +1559,7 @@
             // CB_tipoenvio
             // 
             this.CB_tipoenvio.FormattingEnabled = true;
-            this.CB_tipoenvio.Location = new System.Drawing.Point(90, 354);
+            this.CB_tipoenvio.Location = new System.Drawing.Point(793, 338);
             this.CB_tipoenvio.Name = "CB_tipoenvio";
             this.CB_tipoenvio.Size = new System.Drawing.Size(199, 21);
             this.CB_tipoenvio.TabIndex = 10;
@@ -1393,7 +1568,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(26, 357);
+            this.label11.Location = new System.Drawing.Point(729, 341);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 13);
             this.label11.TabIndex = 26;
@@ -1403,7 +1578,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(361, 357);
+            this.label10.Location = new System.Drawing.Point(361, 341);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 25;
@@ -1412,43 +1587,16 @@
             // CB_comunicacioncliente
             // 
             this.CB_comunicacioncliente.FormattingEnabled = true;
-            this.CB_comunicacioncliente.Location = new System.Drawing.Point(441, 354);
+            this.CB_comunicacioncliente.Location = new System.Drawing.Point(441, 338);
             this.CB_comunicacioncliente.Name = "CB_comunicacioncliente";
             this.CB_comunicacioncliente.Size = new System.Drawing.Size(201, 21);
             this.CB_comunicacioncliente.TabIndex = 11;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(701, 218);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 13);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Apellido Materno";
-            // 
-            // TB_apellidomaternoclietne
-            // 
-            this.TB_apellidomaternoclietne.Location = new System.Drawing.Point(793, 215);
-            this.TB_apellidomaternoclietne.Name = "TB_apellidomaternoclietne";
-            this.TB_apellidomaternoclietne.Size = new System.Drawing.Size(199, 20);
-            this.TB_apellidomaternoclietne.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(351, 257);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 13);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Apellido Paterno";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(40, 306);
+            this.label7.Location = new System.Drawing.Point(59, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 19;
@@ -1457,7 +1605,7 @@
             // CB_monedacliente
             // 
             this.CB_monedacliente.FormattingEnabled = true;
-            this.CB_monedacliente.Location = new System.Drawing.Point(90, 303);
+            this.CB_monedacliente.Location = new System.Drawing.Point(109, 120);
             this.CB_monedacliente.Name = "CB_monedacliente";
             this.CB_monedacliente.Size = new System.Drawing.Size(199, 21);
             this.CB_monedacliente.TabIndex = 7;
@@ -1465,7 +1613,7 @@
             // CB_idiomacliente
             // 
             this.CB_idiomacliente.FormattingEnabled = true;
-            this.CB_idiomacliente.Location = new System.Drawing.Point(793, 264);
+            this.CB_idiomacliente.Location = new System.Drawing.Point(109, 90);
             this.CB_idiomacliente.Name = "CB_idiomacliente";
             this.CB_idiomacliente.Size = new System.Drawing.Size(199, 21);
             this.CB_idiomacliente.TabIndex = 9;
@@ -1474,22 +1622,15 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(749, 267);
+            this.label6.Location = new System.Drawing.Point(65, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 16;
             this.label6.Text = "Idioma";
             // 
-            // TB_apellidopaternocliente
-            // 
-            this.TB_apellidopaternocliente.Location = new System.Drawing.Point(441, 254);
-            this.TB_apellidopaternocliente.Name = "TB_apellidopaternocliente";
-            this.TB_apellidopaternocliente.Size = new System.Drawing.Size(201, 20);
-            this.TB_apellidopaternocliente.TabIndex = 5;
-            // 
             // TB_rfccliente
             // 
-            this.TB_rfccliente.Location = new System.Drawing.Point(441, 205);
+            this.TB_rfccliente.Location = new System.Drawing.Point(454, 284);
             this.TB_rfccliente.Name = "TB_rfccliente";
             this.TB_rfccliente.Size = new System.Drawing.Size(201, 20);
             this.TB_rfccliente.TabIndex = 2;
@@ -1498,7 +1639,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(407, 209);
+            this.label4.Location = new System.Drawing.Point(400, 288);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 12;
@@ -1507,7 +1648,7 @@
             // CB_tipopersonacliente
             // 
             this.CB_tipopersonacliente.FormattingEnabled = true;
-            this.CB_tipopersonacliente.Location = new System.Drawing.Point(793, 166);
+            this.CB_tipopersonacliente.Location = new System.Drawing.Point(109, 63);
             this.CB_tipopersonacliente.Name = "CB_tipopersonacliente";
             this.CB_tipopersonacliente.Size = new System.Drawing.Size(199, 21);
             this.CB_tipopersonacliente.TabIndex = 3;
@@ -1516,50 +1657,43 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(717, 170);
+            this.label3.Location = new System.Drawing.Point(26, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Tipo Persona";
             // 
-            // TB_nombrecliente
-            // 
-            this.TB_nombrecliente.Location = new System.Drawing.Point(90, 254);
-            this.TB_nombrecliente.Name = "TB_nombrecliente";
-            this.TB_nombrecliente.Size = new System.Drawing.Size(199, 20);
-            this.TB_nombrecliente.TabIndex = 4;
-            // 
             // TB_curpcliente
             // 
-            this.TB_curpcliente.Location = new System.Drawing.Point(90, 205);
+            this.TB_curpcliente.Location = new System.Drawing.Point(793, 285);
             this.TB_curpcliente.Name = "TB_curpcliente";
             this.TB_curpcliente.Size = new System.Drawing.Size(199, 20);
             this.TB_curpcliente.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 257);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 209);
+            this.label2.Location = new System.Drawing.Point(728, 285);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "CURP";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(203, 20);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(54, 13);
+            this.label18.TabIndex = 39;
+            this.label18.Text = "N° Cliente";
+            // 
             // TB_clienteid
             // 
             this.TB_clienteid.Enabled = false;
-            this.TB_clienteid.Location = new System.Drawing.Point(90, 165);
+            this.TB_clienteid.Location = new System.Drawing.Point(263, 14);
             this.TB_clienteid.Name = "TB_clienteid";
             this.TB_clienteid.Size = new System.Drawing.Size(100, 20);
             this.TB_clienteid.TabIndex = 0;
@@ -1576,10 +1710,10 @@
             this.TC_detalle_cliente.Controls.Add(this.tabPage7);
             this.TC_detalle_cliente.Controls.Add(this.tabPage8);
             this.TC_detalle_cliente.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TC_detalle_cliente.Location = new System.Drawing.Point(0, 83);
+            this.TC_detalle_cliente.Location = new System.Drawing.Point(0, 54);
             this.TC_detalle_cliente.Name = "TC_detalle_cliente";
             this.TC_detalle_cliente.SelectedIndex = 0;
-            this.TC_detalle_cliente.Size = new System.Drawing.Size(1259, 583);
+            this.TC_detalle_cliente.Size = new System.Drawing.Size(1469, 1007);
             this.TC_detalle_cliente.TabIndex = 0;
             // 
             // tabPage1
@@ -2342,108 +2476,405 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
-            // label51
+            // Calle
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(8, 14);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(27, 13);
-            this.label51.TabIndex = 120;
-            this.label51.Text = "Pais";
+            this.Calle.AutoSize = true;
+            this.Calle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calle.Location = new System.Drawing.Point(76, 779);
+            this.Calle.Name = "Calle";
+            this.Calle.Size = new System.Drawing.Size(30, 13);
+            this.Calle.TabIndex = 140;
+            this.Calle.Text = "Calle";
             // 
-            // label52
+            // listView14
             // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(60, 93);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(38, 13);
-            this.label52.TabIndex = 116;
-            this.label52.Text = "Idioma";
+            this.listView14.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader123,
+            this.columnHeader124});
+            this.listView14.HideSelection = false;
+            this.listView14.Location = new System.Drawing.Point(21, 492);
+            this.listView14.Name = "listView14";
+            this.listView14.Size = new System.Drawing.Size(283, 69);
+            this.listView14.TabIndex = 139;
+            this.listView14.UseCompatibleStateImageBehavior = false;
+            this.listView14.View = System.Windows.Forms.View.Details;
             // 
-            // CB_idioma_cliente
+            // columnHeader123
             // 
-            this.CB_idioma_cliente.FormattingEnabled = true;
-            this.CB_idioma_cliente.Location = new System.Drawing.Point(104, 90);
-            this.CB_idioma_cliente.Name = "CB_idioma_cliente";
-            this.CB_idioma_cliente.Size = new System.Drawing.Size(192, 21);
-            this.CB_idioma_cliente.TabIndex = 115;
-            this.CB_idioma_cliente.Text = "Seleccione";
+            this.columnHeader123.Text = "ClienteId";
             // 
-            // PaisNombre
+            // columnHeader124
             // 
-            this.PaisNombre.FormattingEnabled = true;
-            this.PaisNombre.Location = new System.Drawing.Point(202, 9);
-            this.PaisNombre.Name = "PaisNombre";
-            this.PaisNombre.Size = new System.Drawing.Size(256, 21);
-            this.PaisNombre.TabIndex = 125;
+            this.columnHeader124.Text = "Razon Social";
+            this.columnHeader124.Width = 207;
+            // 
+            // listView13
+            // 
+            this.listView13.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader119,
+            this.columnHeader120,
+            this.columnHeader121,
+            this.columnHeader122});
+            this.listView13.HideSelection = false;
+            this.listView13.Location = new System.Drawing.Point(348, 492);
+            this.listView13.Name = "listView13";
+            this.listView13.Size = new System.Drawing.Size(484, 74);
+            this.listView13.TabIndex = 138;
+            this.listView13.UseCompatibleStateImageBehavior = false;
+            this.listView13.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader119
+            // 
+            this.columnHeader119.Text = "ClienteId";
+            // 
+            // columnHeader120
+            // 
+            this.columnHeader120.Text = "Nombre";
+            this.columnHeader120.Width = 111;
+            // 
+            // columnHeader121
+            // 
+            this.columnHeader121.Text = "Paterno";
+            this.columnHeader121.Width = 144;
+            // 
+            // columnHeader122
+            // 
+            this.columnHeader122.Text = "Materno";
+            this.columnHeader122.Width = 156;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(405, 779);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(236, 13);
+            this.label57.TabIndex = 137;
+            this.label57.Text = "Municipio o Demarc Territorial(Ciudad Extranjera)";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(314, 779);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(42, 13);
+            this.label56.TabIndex = 136;
+            this.label56.Text = "Colonia";
             // 
             // label53
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(52, 123);
+            this.label53.Location = new System.Drawing.Point(228, 779);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(46, 13);
-            this.label53.TabIndex = 118;
-            this.label53.Text = "Moneda";
-            // 
-            // tipopersona
-            // 
-            this.tipopersona.FormattingEnabled = true;
-            this.tipopersona.Location = new System.Drawing.Point(107, 63);
-            this.tipopersona.Name = "tipopersona";
-            this.tipopersona.Size = new System.Drawing.Size(189, 21);
-            this.tipopersona.TabIndex = 124;
-            // 
-            // CB_moneda
-            // 
-            this.CB_moneda.FormattingEnabled = true;
-            this.CB_moneda.Location = new System.Drawing.Point(104, 120);
-            this.CB_moneda.Name = "CB_moneda";
-            this.CB_moneda.Size = new System.Drawing.Size(192, 21);
-            this.CB_moneda.TabIndex = 117;
-            this.CB_moneda.Text = "Seleccione";
-            // 
-            // Nacionalidad
-            // 
-            this.Nacionalidad.FormattingEnabled = true;
-            this.Nacionalidad.Location = new System.Drawing.Point(109, 36);
-            this.Nacionalidad.Name = "Nacionalidad";
-            this.Nacionalidad.Size = new System.Drawing.Size(284, 21);
-            this.Nacionalidad.TabIndex = 123;
+            this.label53.Size = new System.Drawing.Size(59, 13);
+            this.label53.TabIndex = 135;
+            this.label53.Text = "Numero Int";
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(8, 61);
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(140, 779);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(92, 13);
-            this.label54.TabIndex = 119;
-            this.label54.Text = "Tipo de Persona *";
+            this.label54.Size = new System.Drawing.Size(82, 13);
+            this.label54.TabIndex = 134;
+            this.label54.Text = "Numero Exterior";
             // 
-            // combopais
+            // listView12
             // 
-            this.combopais.FormattingEnabled = true;
-            this.combopais.Location = new System.Drawing.Point(109, 9);
-            this.combopais.Name = "combopais";
-            this.combopais.Size = new System.Drawing.Size(54, 21);
-            this.combopais.TabIndex = 122;
+            this.listView12.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader102,
+            this.columnHeader103,
+            this.columnHeader106,
+            this.columnHeader114,
+            this.columnHeader112,
+            this.columnHeader113,
+            this.columnHeader108,
+            this.columnHeader109,
+            this.columnHeader104,
+            this.columnHeader105,
+            this.columnHeader111,
+            this.columnHeader107,
+            this.columnHeader110,
+            this.columnHeader115});
+            this.listView12.HideSelection = false;
+            this.listView12.Location = new System.Drawing.Point(16, 638);
+            this.listView12.Name = "listView12";
+            this.listView12.Size = new System.Drawing.Size(1433, 130);
+            this.listView12.TabIndex = 133;
+            this.listView12.UseCompatibleStateImageBehavior = false;
+            this.listView12.View = System.Windows.Forms.View.Details;
             // 
-            // label55
+            // columnHeader102
             // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(8, 39);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(69, 13);
-            this.label55.TabIndex = 121;
-            this.label55.Text = "Nacionalidad";
+            this.columnHeader102.Text = "Idioma";
+            this.columnHeader102.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader102.Width = 120;
+            // 
+            // columnHeader103
+            // 
+            this.columnHeader103.Text = "Tipo Persona SAT";
+            this.columnHeader103.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader103.Width = 111;
+            // 
+            // columnHeader106
+            // 
+            this.columnHeader106.Text = "Tipo de Cliente";
+            this.columnHeader106.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader106.Width = 100;
+            // 
+            // columnHeader114
+            // 
+            this.columnHeader114.Text = "Tipo de Tarifa";
+            this.columnHeader114.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader114.Width = 100;
+            // 
+            // columnHeader112
+            // 
+            this.columnHeader112.Text = "Moneda";
+            this.columnHeader112.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader112.Width = 70;
+            // 
+            // columnHeader113
+            // 
+            this.columnHeader113.Text = "Holder";
+            this.columnHeader113.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader113.Width = 140;
+            // 
+            // columnHeader108
+            // 
+            this.columnHeader108.Text = "Comunicación";
+            this.columnHeader108.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader108.Width = 100;
+            // 
+            // columnHeader109
+            // 
+            this.columnHeader109.Text = "Tipo de Envío";
+            this.columnHeader109.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader109.Width = 100;
+            // 
+            // columnHeader104
+            // 
+            this.columnHeader104.Text = "RFC";
+            this.columnHeader104.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader104.Width = 120;
+            // 
+            // columnHeader105
+            // 
+            this.columnHeader105.Text = "CURP";
+            this.columnHeader105.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader105.Width = 120;
+            // 
+            // columnHeader111
+            // 
+            this.columnHeader111.Text = "Sitio Web";
+            this.columnHeader111.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader111.Width = 100;
+            // 
+            // columnHeader107
+            // 
+            this.columnHeader107.Text = "Correo";
+            this.columnHeader107.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader107.Width = 120;
+            // 
+            // columnHeader110
+            // 
+            this.columnHeader110.Text = "Capturo";
+            this.columnHeader110.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader110.Width = 100;
+            // 
+            // columnHeader115
+            // 
+            this.columnHeader115.Text = "Observaciones";
+            this.columnHeader115.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader115.Width = 200;
+            // 
+            // listView9
+            // 
+            this.listView9.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader118,
+            this.columnHeader51,
+            this.columnHeader52,
+            this.columnHeader53,
+            this.columnHeader54,
+            this.columnHeader55,
+            this.columnHeader56,
+            this.columnHeader57,
+            this.columnHeader58});
+            this.listView9.HideSelection = false;
+            this.listView9.Location = new System.Drawing.Point(20, 795);
+            this.listView9.Name = "listView9";
+            this.listView9.Size = new System.Drawing.Size(1168, 130);
+            this.listView9.TabIndex = 132;
+            this.listView9.UseCompatibleStateImageBehavior = false;
+            this.listView9.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader118
+            // 
+            this.columnHeader118.Text = "ClienteId";
+            // 
+            // columnHeader51
+            // 
+            this.columnHeader51.Text = "Calle";
+            // 
+            // columnHeader52
+            // 
+            this.columnHeader52.Text = "Numero Ext.";
+            this.columnHeader52.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader52.Width = 102;
+            // 
+            // columnHeader53
+            // 
+            this.columnHeader53.Text = "Numero Int";
+            this.columnHeader53.Width = 69;
+            // 
+            // columnHeader54
+            // 
+            this.columnHeader54.Text = "Colonia";
+            this.columnHeader54.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader54.Width = 91;
+            // 
+            // columnHeader55
+            // 
+            this.columnHeader55.Text = "Municipio";
+            this.columnHeader55.Width = 247;
+            // 
+            // columnHeader56
+            // 
+            this.columnHeader56.DisplayIndex = 7;
+            this.columnHeader56.Text = "CP";
+            this.columnHeader56.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader56.Width = 150;
+            // 
+            // columnHeader57
+            // 
+            this.columnHeader57.DisplayIndex = 6;
+            this.columnHeader57.Text = "Estado";
+            this.columnHeader57.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader57.Width = 120;
+            // 
+            // columnHeader58
+            // 
+            this.columnHeader58.Text = "Pais";
+            this.columnHeader58.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader58.Width = 111;
+            // 
+            // listView10
+            // 
+            this.listView10.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader59,
+            this.columnHeader60,
+            this.columnHeader61,
+            this.columnHeader62,
+            this.columnHeader63,
+            this.columnHeader64,
+            this.columnHeader65,
+            this.columnHeader66,
+            this.columnHeader67,
+            this.columnHeader68,
+            this.columnHeader69,
+            this.columnHeader70,
+            this.columnHeader71,
+            this.columnHeader72});
+            this.listView10.HideSelection = false;
+            this.listView10.Location = new System.Drawing.Point(11, 572);
+            this.listView10.Name = "listView10";
+            this.listView10.Size = new System.Drawing.Size(1433, 130);
+            this.listView10.TabIndex = 131;
+            this.listView10.UseCompatibleStateImageBehavior = false;
+            this.listView10.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader59
+            // 
+            this.columnHeader59.Text = "Idioma";
+            this.columnHeader59.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader59.Width = 120;
+            // 
+            // columnHeader60
+            // 
+            this.columnHeader60.Text = "Tipo Persona SAT";
+            this.columnHeader60.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader60.Width = 111;
+            // 
+            // columnHeader61
+            // 
+            this.columnHeader61.Text = "Tipo de Cliente";
+            this.columnHeader61.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader61.Width = 100;
+            // 
+            // columnHeader62
+            // 
+            this.columnHeader62.Text = "Tipo de Tarifa";
+            this.columnHeader62.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader62.Width = 100;
+            // 
+            // columnHeader63
+            // 
+            this.columnHeader63.Text = "Moneda";
+            this.columnHeader63.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader63.Width = 70;
+            // 
+            // columnHeader64
+            // 
+            this.columnHeader64.Text = "Holder";
+            this.columnHeader64.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader64.Width = 140;
+            // 
+            // columnHeader65
+            // 
+            this.columnHeader65.Text = "Comunicación";
+            this.columnHeader65.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader65.Width = 100;
+            // 
+            // columnHeader66
+            // 
+            this.columnHeader66.Text = "Tipo de Envío";
+            this.columnHeader66.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader66.Width = 100;
+            // 
+            // columnHeader67
+            // 
+            this.columnHeader67.Text = "RFC";
+            this.columnHeader67.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader67.Width = 120;
+            // 
+            // columnHeader68
+            // 
+            this.columnHeader68.Text = "CURP";
+            this.columnHeader68.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader68.Width = 120;
+            // 
+            // columnHeader69
+            // 
+            this.columnHeader69.Text = "Sitio Web";
+            this.columnHeader69.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader69.Width = 100;
+            // 
+            // columnHeader70
+            // 
+            this.columnHeader70.Text = "Correo";
+            this.columnHeader70.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader70.Width = 120;
+            // 
+            // columnHeader71
+            // 
+            this.columnHeader71.Text = "Capturo";
+            this.columnHeader71.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader71.Width = 100;
+            // 
+            // columnHeader72
+            // 
+            this.columnHeader72.Text = "Observaciones";
+            this.columnHeader72.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader72.Width = 200;
             // 
             // Fclientedetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 666);
+            this.ClientSize = new System.Drawing.Size(1469, 1061);
             this.ControlBox = false;
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -2451,6 +2882,8 @@
             this.Controls.Add(this.label48);
             this.Controls.Add(this.BT_detalleclientemenu);
             this.Controls.Add(this.TC_detalle_cliente);
+            this.Controls.Add(this.TB_clienteid);
+            this.Controls.Add(this.label18);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Fclientedetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2467,6 +2900,10 @@
             this.groupBox1.PerformLayout();
             this.TP_1cliente.ResumeLayout(false);
             this.TP_1cliente.PerformLayout();
+            this.moral.ResumeLayout(false);
+            this.moral.PerformLayout();
+            this.fisica.ResumeLayout(false);
+            this.fisica.PerformLayout();
             this.TC_detalle_cliente.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
@@ -2711,15 +3148,66 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.ComboBox CB_idioma_cliente;
         private System.Windows.Forms.ComboBox PaisNombre;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.ComboBox tipopersona;
-        private System.Windows.Forms.ComboBox CB_moneda;
         private System.Windows.Forms.ComboBox Nacionalidad;
-        private System.Windows.Forms.Label label54;
         private System.Windows.Forms.ComboBox combopais;
         private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.GroupBox fisica;
+        private System.Windows.Forms.GroupBox moral;
+        private System.Windows.Forms.TextBox tbNombreEmpresa;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label Calle;
+        private System.Windows.Forms.ListView listView14;
+        private System.Windows.Forms.ColumnHeader columnHeader123;
+        private System.Windows.Forms.ColumnHeader columnHeader124;
+        private System.Windows.Forms.ListView listView13;
+        private System.Windows.Forms.ColumnHeader columnHeader119;
+        private System.Windows.Forms.ColumnHeader columnHeader120;
+        private System.Windows.Forms.ColumnHeader columnHeader121;
+        private System.Windows.Forms.ColumnHeader columnHeader122;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.ListView listView12;
+        private System.Windows.Forms.ColumnHeader columnHeader102;
+        private System.Windows.Forms.ColumnHeader columnHeader103;
+        private System.Windows.Forms.ColumnHeader columnHeader106;
+        private System.Windows.Forms.ColumnHeader columnHeader114;
+        private System.Windows.Forms.ColumnHeader columnHeader112;
+        private System.Windows.Forms.ColumnHeader columnHeader113;
+        private System.Windows.Forms.ColumnHeader columnHeader108;
+        private System.Windows.Forms.ColumnHeader columnHeader109;
+        private System.Windows.Forms.ColumnHeader columnHeader104;
+        private System.Windows.Forms.ColumnHeader columnHeader105;
+        private System.Windows.Forms.ColumnHeader columnHeader111;
+        private System.Windows.Forms.ColumnHeader columnHeader107;
+        private System.Windows.Forms.ColumnHeader columnHeader110;
+        private System.Windows.Forms.ColumnHeader columnHeader115;
+        private System.Windows.Forms.ListView listView9;
+        private System.Windows.Forms.ColumnHeader columnHeader118;
+        private System.Windows.Forms.ColumnHeader columnHeader51;
+        private System.Windows.Forms.ColumnHeader columnHeader52;
+        private System.Windows.Forms.ColumnHeader columnHeader53;
+        private System.Windows.Forms.ColumnHeader columnHeader54;
+        private System.Windows.Forms.ColumnHeader columnHeader55;
+        private System.Windows.Forms.ColumnHeader columnHeader56;
+        private System.Windows.Forms.ColumnHeader columnHeader57;
+        private System.Windows.Forms.ColumnHeader columnHeader58;
+        private System.Windows.Forms.ListView listView10;
+        private System.Windows.Forms.ColumnHeader columnHeader59;
+        private System.Windows.Forms.ColumnHeader columnHeader60;
+        private System.Windows.Forms.ColumnHeader columnHeader61;
+        private System.Windows.Forms.ColumnHeader columnHeader62;
+        private System.Windows.Forms.ColumnHeader columnHeader63;
+        private System.Windows.Forms.ColumnHeader columnHeader64;
+        private System.Windows.Forms.ColumnHeader columnHeader65;
+        private System.Windows.Forms.ColumnHeader columnHeader66;
+        private System.Windows.Forms.ColumnHeader columnHeader67;
+        private System.Windows.Forms.ColumnHeader columnHeader68;
+        private System.Windows.Forms.ColumnHeader columnHeader69;
+        private System.Windows.Forms.ColumnHeader columnHeader70;
+        private System.Windows.Forms.ColumnHeader columnHeader71;
+        private System.Windows.Forms.ColumnHeader columnHeader72;
     }
 }

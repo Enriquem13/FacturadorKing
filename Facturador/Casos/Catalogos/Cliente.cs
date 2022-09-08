@@ -24,7 +24,9 @@ namespace Facturador
         String iddireccion;
         String idInstruccion;
         String IdObservacion;
+        public String rpaiss;
         private Consulacliente consulacliente;
+        public String Usuario;
         public Cliente(Form1 form, captura Formcap, Form fBusquedan)
         {
             fBusquedanuevo = fBusquedan;
@@ -36,6 +38,10 @@ namespace Facturador
             item.Value = oFormlogin.sId;
             fisica.Visible = false;
             moral.Visible = false;
+            listView12.Visible = false;
+            listView13.Visible = false;
+            listView14.Visible = false;
+            listView1.Visible = false;
             conect conect_1 = new conect();
             CB_responsable.Text = oFormlogin.sUsername;
 
@@ -80,6 +86,7 @@ namespace Facturador
             {
                 CB_interesadoDpais.Items.Add(validareader("PaisNombre", "PaisId", respuestastringpaisdireccion));
             }
+            respuestastringpaisdireccion.Close();
             conectdireccionpais.Cerrarconexion();
 
             conect con4 = new conect();
@@ -2051,15 +2058,33 @@ namespace Facturador
 
             conect coninsert = new conect();
 
-            if (tipopersona.SelectedItem != null  && CB_idioma_cliente.SelectedItem != null && CB_comunicacion.SelectedItem != null
-                && CB_cliente_tipo.SelectedItem != null && CB_moneda.SelectedItem != null && TB_interesadoDcalle.Text != null && CB_interesadoDpais.SelectedItem as ComboboxItem != null)
+            if (combopais.SelectedItem != null)
             {
+                //Se agrega validacionnes
+                if (CB_idioma_cliente.SelectedItem == null)
+                {
+                    MessageBox.Show("El idioma del cliente no puede estar vacio");
+                    return;
+                }
+                if (tipopersona.SelectedItem == null)
+                {
+                    MessageBox.Show("El Tipo persona no puede ir vacio");
+                    return;
+                }
+                if (CB_cliente_tipo.SelectedItem == null)
+                {
+                    MessageBox.Show("El Tipo de Cliente no puede ir vacio");
+                    return;
+                }
+                //
+
+                /*
                 String Mexico = (CB_interesadoDpais.SelectedItem as ComboboxItem).Value.ToString();
                 if ( Mexico == "148" )
                 {
                     MessageBox.Show("Los campos de direccion no pueden estar vacios.");
                  
-                }
+                }*/
                 String ClienteId = "";
                 String sIdioma = "NULL";
                 String sTipoPersona = "NULL";
@@ -2133,11 +2158,22 @@ namespace Facturador
                             TipoP = "FN";
                         }
 
+                        conect conect_1 = new conect();
+
+                        String sQresponsable = "select UsuarioName, UsuarioId from usuario where UsuarioId =" + oFormlogin.sId;
+                        MySqlDataReader respuresponsable = conect_1.getdatareader(sQresponsable);
+                        while (respuresponsable.Read())
+                        {
+                           Usuario = validareader("UsuarioName", "UsuarioId", respuresponsable).Text;
+                        }
+                        respuresponsable.Close();
+                        conect_1.Cerrarconexion();
+
                         conect con1 = new conect();
                         String PersonaUtil = TB_nombre_cliente.Text + " " + TB_apellidoclientep.Text + " " + TB_apellidoclientem.Text;
 
 
-                        String queryinsert = "INSERT INTO `cliente`" +
+                            String queryinsert = "INSERT INTO `cliente`" +
                         "(`ClienteId`," +
                         "`ClienteClave`," +
                         "`PaisId`," +
@@ -2163,7 +2199,9 @@ namespace Facturador
                         "`ClienteRecPatente`," +
                         "`ClienteFechaAlta`," +
                         "`UsuarioCaptura`," +
+                       
                         "`TipoTarifaId`," +
+                         "`UsuarioFechaCapturo`," +
                         "`HolderId`)" +
                         "VALUES(NULL," +
                               " NULL, '" +
@@ -2205,7 +2243,8 @@ namespace Facturador
                               sResponsable +
                               ",'" +
                               sTipoTarifa +
-                              "'," +
+                              "','" +
+                               fechaactual + "'," +
                               sHolder + " );";
                         MySqlDataReader respuestastringinsert = coninsert.getdatareader(queryinsert);
                         if (respuestastringinsert == null)
@@ -2215,73 +2254,17 @@ namespace Facturador
                         else
                         {
 
-                            MessageBox.Show("Se cliente correctamente");
+                            MessageBox.Show("Se creo el cliente correctamente");
                             //Se agrega codigo para agregar domicilio
 
 
-                            conect conectinteresado = new conect();
-                            String query2 = "SELECT ClienteId FROM Cliente order by ClienteId DESC  limit 1 ";
-                            MySqlDataReader respuestastring20 = conectinteresado.getdatareader(query2);
-
-                            if (respuestastring20 != null)
-                            {
-                                respuestastring20.Read();
-
-                                ClienteId = validareader("ClienteId", "ClienteId", respuestastring20).Text;
-
-                                conect conectinsert2 = new conect();
-                                String kweryinsert2 = "INSERT INTO `direccion` " +
-                                                                " (`DireccionID`, " +
-                                                                " `DireccionCalle`, " +
-                                                                " `DireccionNumExt`, " +
-                                                                " `DireccionNumInt`, " +
-                                                                " `DireccionColonia`, " +
-                                                                " `DireccionPoblacion`, " +
-                                                                " `DireccionEstado`, " +
-                                                                " `DireccionCP`, " +
-                                                                " `DireccionIndAct`, " +
-                                                                " `PaisId`, " +
-                                                                " `ClienteId`) " +
-                                                             
-                                                                " VALUES " +
-                                                                "(NULL,'" +
-                                                                 TB_interesadoDcalle.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDnumext.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDnumint.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDcolonia.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDpoblacion.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDestado.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDcp.Text.Replace("'", "´") +
-                                                                 "', 1, " +
-                                                                 (CB_interesadoDpais.SelectedItem as ComboboxItem).Value +
-                                                                 ", " +
-                                                                 ClienteId +");";
-                                MySqlDataReader respuestastringinsert2 = conectinsert2.getdatareader(kweryinsert2);
-                                if (respuestastringinsert2 == null)
-                                {
-                                    MessageBox.Show("No se pudo agregar un nuevo cliente domicilio (direccion), Verifique los datos de la dirección");
-                                    new filelog("error: ", " direccion: ->" + kweryinsert2);
-                                }
-                                else
-                                {
-
-                                    respuestastringinsert2.Close();
-                                    conectinsert2.Cerrarconexion();
-                                }
-
-
-                                respuestastring20.Close();
-                                conectinteresado.Cerrarconexion();
-                            }
 
 
 
+                            listView12.Visible = true;
+                            listView13.Visible = true;
+                            listView1.Visible = false;
+                            listView14.Visible = false;
 
 
 
@@ -2291,14 +2274,14 @@ namespace Facturador
                             conect conlista = new conect();
                             String Querylista = "SELECT " +
                                                   "cliente.ClienteId, " +
-                                                  "cliente.NombreUtilClient, " +
+                                                  "cliente.ClienteNombre, " +
                                                   "cliente.ClienteApellidoPaterno, " +
                                                   "cliente.ClienteApellidoMaterno, " +
                                                   "DameelIdioma(cliente.IdiomaId) AS Idioma, " +
                                                   "cliente.ClienteTipoPersonaSAT, " +
                                                   "cliente.ClienteRFC, " +
                                                   "cliente.ClienteCurp, " +
-                                                  "Dameelclientetipo(cliente.TipoClienteId) AS TipoCliente, " +
+                                                  "Damelasociedad(cliente.TipoClienteId) AS TipoCliente, " +
                                                   "cliente.ClienteEmail, " +
                                                   "Dameeltipodecomunicacion(cliente.TipoComunicacionId) AS TipoComunicacion, " +
                                                   "Dameeltipodeenvio(cliente.TipoEnvioFacId) AS TipoEnvio,  " +
@@ -2317,27 +2300,35 @@ namespace Facturador
                                 while (respuestlistaaqwery.Read())
                                 {
                                     //ListViewItem listaitems = new ListViewItem(validareader("PaisClave", "CasoId", respuestastring3).Text);
-                                    ListViewItem listaagregar = new ListViewItem(validareader("ClienteId", "ClienteId", respuestlistaaqwery).Text);//cliente id
-                                    listaagregar.SubItems.Add(validareader("NombreUtilClient", "ClienteId", respuestlistaaqwery).Text);// NOMBRE
-                                    listaagregar.SubItems.Add(validareader("ClienteApellidoPaterno", "ClienteId", respuestlistaaqwery).Text);// apeliido paterno
-                                    listaagregar.SubItems.Add(validareader("ClienteApellidoMaterno", "ClienteId", respuestlistaaqwery).Text); // apellido materno
-                                    listaagregar.SubItems.Add(validareader("Idioma", "ClienteId", respuestlistaaqwery).Text);  //idioma***
+                                    ListViewItem listaagregar2 = new ListViewItem(validareader("ClienteId", "ClienteId", respuestlistaaqwery).Text);//cliente id
+                                    listaagregar2.SubItems.Add(validareader("ClienteNombre", "ClienteId", respuestlistaaqwery).Text);// NOMBRE
+                                    listaagregar2.SubItems.Add(validareader("ClienteApellidoPaterno", "ClienteId", respuestlistaaqwery).Text);// NOMBRE
+                                    listaagregar2.SubItems.Add(validareader("ClienteApellidoMaterno", "ClienteId", respuestlistaaqwery).Text);// NOMBRE
+                                    ListViewItem listaagregar = new ListViewItem(validareader("Idioma", "ClienteId", respuestlistaaqwery).Text);  //idioma***
                                     listaagregar.SubItems.Add(validareader("ClienteTipoPersonaSAT", "ClienteId", respuestlistaaqwery).Text);  //tipopersona***
-                                    listaagregar.SubItems.Add(validareader("ClienteRFC", "ClienteId", respuestlistaaqwery).Text); // rfc
-                                    listaagregar.SubItems.Add(validareader("ClienteCurp", "ClienteId", respuestlistaaqwery).Text); // curp
                                     listaagregar.SubItems.Add(validareader("TipoCliente", "ClienteId", respuestlistaaqwery).Text);  // cliente tipo
-                                    listaagregar.SubItems.Add(validareader("ClienteEmail", "ClienteId", respuestlistaaqwery).Text); // correo
-                                    listaagregar.SubItems.Add(validareader("TipoComunicacion", "ClienteId", respuestlistaaqwery).Text); // comunicacion
-                                    listaagregar.SubItems.Add(validareader("TipoEnvio", "ClienteId", respuestlistaaqwery).Text); // tipoenvio
                                     listaagregar.SubItems.Add(validareader("TipoFactura", "ClienteId", respuestlistaaqwery).Text); // tipo tarifa
-                                    listaagregar.SubItems.Add(validareader("Responsable", "ClienteId", respuestlistaaqwery).Text); // responsable
-                                    listaagregar.SubItems.Add(validareader("ClienteWebSite", "ClienteId", respuestlistaaqwery).Text); // sitio web
                                     listaagregar.SubItems.Add(validareader("Moneda", "ClienteId", respuestlistaaqwery).Text); // moneda
                                     listaagregar.SubItems.Add(validareader("Holder", "ClienteId", respuestlistaaqwery).Text); // holder
-                                    listaagregar.SubItems.Add(validareader("FacturaElectronica", "ClienteId", respuestlistaaqwery).Text); // tipo factura
+                                    listaagregar.SubItems.Add(validareader("TipoComunicacion", "ClienteId", respuestlistaaqwery).Text); // comunicacion
+                                    listaagregar.SubItems.Add(validareader("TipoEnvio", "ClienteId", respuestlistaaqwery).Text); // tipoenvio
+                                    listaagregar.SubItems.Add(validareader("ClienteRFC", "ClienteId", respuestlistaaqwery).Text); // rfc
+                                    listaagregar.SubItems.Add(validareader("ClienteCurp", "ClienteId", respuestlistaaqwery).Text); // curp
+
+                                    listaagregar.SubItems.Add(validareader("ClienteEmail", "ClienteId", respuestlistaaqwery).Text); // correo
+
+
+
+                                    //listaagregar.SubItems.Add(validareader("FacturaElectronica", "ClienteId", respuestlistaaqwery).Text); // tipo factura
+                                    listaagregar.SubItems.Add(validareader("ClienteWebSite", "ClienteId", respuestlistaaqwery).Text); // sitio web
+                                    listaagregar.SubItems.Add(validareader("ClienteEmail", "ClienteId", respuestlistaaqwery).Text); // correo
+
+                                    listaagregar.SubItems.Add(Usuario); // responsable
                                     listaagregar.SubItems.Add(validareader("ClienteObservacion", "ClienteId", respuestlistaaqwery).Text); // observaciones
-                                    listView1.Items.Add(listaagregar);
-                                    this.listView1.FullRowSelect = true;
+                                    listView12.Items.Add(listaagregar);
+                                    listView13.Items.Add(listaagregar2);
+                                    this.listView12.FullRowSelect = true;
+                                    this.listView13.FullRowSelect = true;
 
 
                                 }
@@ -2346,43 +2337,19 @@ namespace Facturador
                                 limpiarcasillas();
                             }
 
-                            conect conlista2 = new conect();
-                            String Querylista2 = "SELECT " +
-                                                  "direccion.DireccionCalle, " +
-                                                   "direccion.ClienteId, " +
-                                                  "direccion.DireccionNumExt, " +
-                                                  "direccion.DireccionColonia, " +
-                                                  "direccion.DireccionCP, " +
-                                                  "direccion.DireccionEstado, " +
-                                                  "direccion.PaisId, " +
-                                                  "direccion.DireccionID " +
-                                                  "FROM direccion order by ClienteId desc limit 1";
-                            MySqlDataReader respuestlistaaqwery2 = conlista.getdatareader(Querylista2);
-
-                            if (respuestlistaaqwery2 != null)
+                            DialogResult results = MessageBox.Show("¿Desea agregar Domicilio?", "Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (results == DialogResult.Yes)
                             {
-                                while (respuestlistaaqwery2.Read())
-                                {
-                                    //ListViewItem listaitems = new ListViewItem(validareader("PaisClave", "CasoId", respuestastring3).Text);
-                                    ListViewItem listaagregar2 = new ListViewItem(validareader("ClienteId", "DireccionID", respuestlistaaqwery2).Text);//cliente id
-                                    listaagregar2.SubItems.Add(validareader("DireccionCalle", "DireccionID", respuestlistaaqwery2).Text);// NOMBRE
-                                    listaagregar2.SubItems.Add(validareader("DireccionNumExt", "DireccionID", respuestlistaaqwery2).Text);// apeliido paterno
-                                    listaagregar2.SubItems.Add(validareader("DireccionColonia", "DireccionID", respuestlistaaqwery2).Text); // apellido materno
-                                    listaagregar2.SubItems.Add(validareader("DireccionCP", "ClienteId", respuestlistaaqwery2).Text);  //idioma***
-                                    listaagregar2.SubItems.Add(validareader("DireccionEstado", "DireccionID", respuestlistaaqwery2).Text);  //tipopersona***
-                                    listaagregar2.SubItems.Add(validareader("PaisId", "DireccionID", respuestlistaaqwery2).Text); // rfc
-
-                                    listView2.Items.Add(listaagregar2);
-                                    this.listView2.FullRowSelect = true;
-
-
-                                }
-                                respuestlistaaqwery2.Close();
-                                conlista2.Cerrarconexion();
-                                limpiarcasillas();
+                                //code for Yes
+                                tabControl1.SelectedIndex = 1;
+                                tabControl1.Show();
                             }
-
-
+                            else if (results == DialogResult.No)
+                            {
+                                //code for No
+                              
+                         
+                            }
 
                         }
                         respuestastringinsert.Close();
@@ -2401,6 +2368,20 @@ namespace Facturador
                             TipoP = "ME";
                         }
 
+                        listView1.Visible = true;
+                        listView12.Visible = false;
+                        listView13.Visible = false;
+                        listView14.Visible = true;
+                        conect conect_1 = new conect();
+
+                        String sQresponsable = "select UsuarioName, UsuarioId from usuario where UsuarioId =" + oFormlogin.sId;
+                        MySqlDataReader respuresponsable = conect_1.getdatareader(sQresponsable);
+                        while (respuresponsable.Read())
+                        {
+                            Usuario = validareader("UsuarioName", "UsuarioId", respuresponsable).Text;
+                        }
+                        respuresponsable.Close();
+                        conect_1.Cerrarconexion();
 
                         conect con1 = new conect();
                         String PersonaUtil = TB_nombre_cliente.Text + " " + TB_apellidoclientep.Text + " " + TB_apellidoclientem.Text;
@@ -2431,6 +2412,7 @@ namespace Facturador
                         "`ClienteFechaAlta`," +
                         "`UsuarioCaptura`," +
                         "`TipoTarifaId`," +
+                        "`UsuarioFechaCapturo`," +
                         "`HolderId`)" +
                         "VALUES(NULL," +
                               " NULL, '" +
@@ -2468,7 +2450,8 @@ namespace Facturador
                               sResponsable +
                               ",'" +
                               sTipoTarifa +
-                              "'," +
+                                                            "','" +
+                               fechaactual + "'," +
                               sHolder + " );";
                         MySqlDataReader respuestastringinsert = coninsert.getdatareader(queryinsert);
                         if (respuestastringinsert == null)
@@ -2482,86 +2465,11 @@ namespace Facturador
 
 
 
-                            conect conectinteresado = new conect();
-                            String query2 = "SELECT ClienteId FROM Cliente order by ClienteId DESC  limit 1 ";
-                            MySqlDataReader respuestastring20 = conectinteresado.getdatareader(query2);
-
-                            if (respuestastring20 != null)
-                            {
-                                respuestastring20.Read();
-
-                                ClienteId = validareader("ClienteId", "ClienteId", respuestastring20).Text;
-
-                                conect conectinsert2 = new conect();
-                                String kweryinsert2 = "INSERT INTO `direccion` " +
-                                                                " (`DireccionID`, " +
-                                                                " `DireccionCalle`, " +
-                                                                " `DireccionNumExt`, " +
-                                                                " `DireccionNumInt`, " +
-                                                                " `DireccionColonia`, " +
-                                                                " `DireccionPoblacion`, " +
-                                                                " `DireccionEstado`, " +
-                                                                " `DireccionCP`, " +
-                                                                " `DireccionIndAct`, " +
-                                                                " `PaisId`, " +
-                                                                " `ClienteId`) " +
-                                                        
-                                                                " VALUES " +
-                                                                "(NULL,'" +
-                                                                 TB_interesadoDcalle.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDnumext.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDnumint.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDcolonia.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDpoblacion.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDestado.Text.Replace("'", "´") +
-                                                                 "', '" +
-                                                                 TB_interesadoDcp.Text.Replace("'", "´") +
-                                                                 "', 1, " +
-                                                                 (CB_interesadoDpais.SelectedItem as ComboboxItem).Value +
-                                                                 ", " +
-                                                                 ClienteId +
-                                                                 ");";
-                                MySqlDataReader respuestastringinsert2 = conectinsert2.getdatareader(kweryinsert2);
-                                if (respuestastringinsert2 == null)
-                                {
-                                    MessageBox.Show("No se pudo agregar un nuevo cliente interesado (direccion), Verifique los datos de la dirección");
-                                    new filelog("error: ", " direccion: ->" + kweryinsert2);
-                                }
-                                else
-                                {
-
-                                    respuestastringinsert2.Close();
-                                    conectinsert2.Cerrarconexion();
-                                }
-
-
-                                respuestastring20.Close();
-                                conectinteresado.Cerrarconexion();
-                            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                             //
 
-                            MessageBox.Show("Se cliente correctamente");
+                            MessageBox.Show("Se agrego el cliente correctamente");
                             respuestastringinsert.Close();
                             coninsert.Cerrarconexion();
                             conect conlista = new conect();
@@ -2592,28 +2500,34 @@ namespace Facturador
                             {
                                 while (respuestlistaaqwery.Read())
                                 {
+   
                                     //ListViewItem listaitems = new ListViewItem(validareader("PaisClave", "CasoId", respuestastring3).Text);
-                                    ListViewItem listaagregar = new ListViewItem(validareader("ClienteId", "ClienteId", respuestlistaaqwery).Text);//cliente id
-                                    listaagregar.SubItems.Add(validareader("NombreUtilClient", "ClienteId", respuestlistaaqwery).Text);// NOMBRE
-                                    listaagregar.SubItems.Add(validareader("ClienteApellidoPaterno", "ClienteId", respuestlistaaqwery).Text);// apeliido paterno
-                                    listaagregar.SubItems.Add(validareader("ClienteApellidoMaterno", "ClienteId", respuestlistaaqwery).Text); // apellido materno
-                                    listaagregar.SubItems.Add(validareader("Idioma", "ClienteId", respuestlistaaqwery).Text);  //idioma***
+                                    ListViewItem listaagregar2 = new ListViewItem(validareader("ClienteId", "ClienteId", respuestlistaaqwery).Text);//cliente id
+                                    listaagregar2.SubItems.Add(validareader("NombreUtilClient", "ClienteId", respuestlistaaqwery).Text);// NOMBRE
+                                    ListViewItem listaagregar = new ListViewItem(validareader("Idioma", "ClienteId", respuestlistaaqwery).Text);  //idioma***
                                     listaagregar.SubItems.Add(validareader("ClienteTipoPersonaSAT", "ClienteId", respuestlistaaqwery).Text);  //tipopersona***
-                                    listaagregar.SubItems.Add(validareader("ClienteRFC", "ClienteId", respuestlistaaqwery).Text); // rfc
-                                    listaagregar.SubItems.Add(validareader("ClienteCurp", "ClienteId", respuestlistaaqwery).Text); // curp
                                     listaagregar.SubItems.Add(validareader("TipoCliente", "ClienteId", respuestlistaaqwery).Text);  // cliente tipo
-                                    listaagregar.SubItems.Add(validareader("ClienteEmail", "ClienteId", respuestlistaaqwery).Text); // correo
-                                    listaagregar.SubItems.Add(validareader("TipoComunicacion", "ClienteId", respuestlistaaqwery).Text); // comunicacion
-                                    listaagregar.SubItems.Add(validareader("TipoEnvio", "ClienteId", respuestlistaaqwery).Text); // tipoenvio
                                     listaagregar.SubItems.Add(validareader("TipoFactura", "ClienteId", respuestlistaaqwery).Text); // tipo tarifa
-                                    listaagregar.SubItems.Add(validareader("Responsable", "ClienteId", respuestlistaaqwery).Text); // responsable
-                                    listaagregar.SubItems.Add(validareader("ClienteWebSite", "ClienteId", respuestlistaaqwery).Text); // sitio web
                                     listaagregar.SubItems.Add(validareader("Moneda", "ClienteId", respuestlistaaqwery).Text); // moneda
                                     listaagregar.SubItems.Add(validareader("Holder", "ClienteId", respuestlistaaqwery).Text); // holder
-                                    listaagregar.SubItems.Add(validareader("FacturaElectronica", "ClienteId", respuestlistaaqwery).Text); // tipo factura
+                                    listaagregar.SubItems.Add(validareader("TipoComunicacion", "ClienteId", respuestlistaaqwery).Text); // comunicacion
+                                    listaagregar.SubItems.Add(validareader("TipoEnvio", "ClienteId", respuestlistaaqwery).Text); // tipoenvio
+                                    listaagregar.SubItems.Add(validareader("ClienteRFC", "ClienteId", respuestlistaaqwery).Text); // rfc
+                                    listaagregar.SubItems.Add(validareader("ClienteCurp", "ClienteId", respuestlistaaqwery).Text); // curp
+                                    
+                                    listaagregar.SubItems.Add(validareader("ClienteEmail", "ClienteId", respuestlistaaqwery).Text); // correo
+                                    
+                                    
+                                    
+                                    //listaagregar.SubItems.Add(validareader("FacturaElectronica", "ClienteId", respuestlistaaqwery).Text); // tipo factura
+                                    listaagregar.SubItems.Add(validareader("ClienteWebSite", "ClienteId", respuestlistaaqwery).Text); // sitio web
+
+                                    listaagregar.SubItems.Add(Usuario); // responsable
                                     listaagregar.SubItems.Add(validareader("ClienteObservacion", "ClienteId", respuestlistaaqwery).Text); // observaciones
                                     listView1.Items.Add(listaagregar);
                                     this.listView1.FullRowSelect = true;
+                                    listView14.Items.Add(listaagregar2);
+                                    this.listView14.FullRowSelect = true;
 
 
                                 }
@@ -2622,41 +2536,19 @@ namespace Facturador
                                 limpiarcasillas();
                             }
 
-
-                            conect conlista2 = new conect();
-                            String Querylista2 = "SELECT " +
-                                                  "direccion.DireccionCalle, " +
-                                                   "direccion.ClienteId, " +
-                                                  "direccion.DireccionNumExt, " +
-                                                  "direccion.DireccionColonia, " +
-                                                  "direccion.DireccionCP, " +
-                                                  "direccion.DireccionEstado, " +
-                                                  "direccion.PaisId, " +
-                                                  "direccion.DireccionID " +
-                                                  "FROM direccion order by ClienteId desc limit 1";
-                            MySqlDataReader respuestlistaaqwery2 = conlista.getdatareader(Querylista2);
-
-                            if (respuestlistaaqwery2 != null)
+                            DialogResult results = MessageBox.Show("¿Desea agregar Domicilio?", "Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (results == DialogResult.Yes)
                             {
-                                while (respuestlistaaqwery2.Read())
-                                {
-                                    //ListViewItem listaitems = new ListViewItem(validareader("PaisClave", "CasoId", respuestastring3).Text);
-                                    ListViewItem listaagregar2 = new ListViewItem(validareader("ClienteId", "DireccionID", respuestlistaaqwery2).Text);//cliente id
-                                    listaagregar2.SubItems.Add(validareader("DireccionCalle", "DireccionID", respuestlistaaqwery2).Text);// NOMBRE
-                                    listaagregar2.SubItems.Add(validareader("DireccionNumExt", "DireccionID", respuestlistaaqwery2).Text);// apeliido paterno
-                                    listaagregar2.SubItems.Add(validareader("DireccionColonia", "DireccionID", respuestlistaaqwery2).Text); // apellido materno
-                                    listaagregar2.SubItems.Add(validareader("DireccionCP", "ClienteId", respuestlistaaqwery2).Text);  //idioma***
-                                    listaagregar2.SubItems.Add(validareader("DireccionEstado", "DireccionID", respuestlistaaqwery2).Text);  //tipopersona***
-                                    listaagregar2.SubItems.Add(validareader("PaisId", "DireccionID", respuestlistaaqwery2).Text); // rfc
+                                //code for Yes
+                                tabControl1.SelectedIndex = 1;
+                                tabControl1.Show();
 
-                                    listView2.Items.Add(listaagregar2);
-                                    this.listView2.FullRowSelect = true;
+                            }
+                            else if (results == DialogResult.No)
+                            {
+                                //code for No
 
-
-                                }
-                                respuestlistaaqwery2.Close();
-                                conlista2.Cerrarconexion();
-                                limpiarcasillas();
+                           
                             }
 
 
@@ -2675,7 +2567,7 @@ namespace Facturador
             }
             else
             {
-                MessageBox.Show("Debe llenar todos los campos");
+                MessageBox.Show("Debe llenar el pais");
             }
 
             
@@ -2717,7 +2609,7 @@ namespace Facturador
             {
                 PaisNombre.SelectedIndex = PaisNombre.Items.Add(validareader("PaisNombre", "PaisId", respuestastrings));
             }
-
+            CB_proovedor_cliente_fac.Items.Add("Todos");
             conect con8 = new conect();
             String kwery8 = "SELECT proveedorfacelec.ProveedorFacElecId , proveedorfacelec.ProveedorFacElecDescrip FROM  proveedorfacelec where ProveedorFacElecId=3 ";
             MySqlDataReader respuestastring8 = con8.getdatareader(kwery8);
@@ -2989,6 +2881,129 @@ namespace Facturador
         private void TB_interesadoDestado_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            String ClienteId = "";
+            conect conectinteresado = new conect();
+            String query2 = "SELECT ClienteId FROM Cliente order by ClienteId DESC  limit 1 ";
+            MySqlDataReader respuestastring20 = conectinteresado.getdatareader(query2);
+            if (CB_interesadoDpais.SelectedItem != null)
+            {
+                if (respuestastring20 != null)
+                {
+                    respuestastring20.Read();
+
+                    ClienteId = validareader("ClienteId", "ClienteId", respuestastring20).Text;
+
+                    conect conectinsert2 = new conect();
+                    String DireccionUtil = TB_interesadoDcalle.Text.Replace("'", "´") + " " + TB_interesadoDnumext.Text.Replace("'", "´") + " " + TB_interesadoDnumint.Text.Replace("'", "´") + " " + TB_interesadoDcolonia.Text.Replace("'", "´") + " " + TB_interesadoDpoblacion.Text.Replace("'", "´") + TB_interesadoDestado.Text.Replace("'", "´");
+                    String kweryinsert2 = "INSERT INTO `direccion` " +
+                                                    " (`DireccionID`, " +
+                                                    " `DireccionUtil`, " +
+                                                    " `DireccionCalle`, " +
+                                                    " `DireccionNumExt`, " +
+                                                    " `DireccionNumInt`, " +
+                                                    " `DireccionColonia`, " +
+                                                    " `DireccionPoblacion`, " +
+                                                    " `DireccionEstado`, " +
+                                                    " `DireccionCP`, " +
+                                                    " `DireccionIndAct`, " +
+                                                    " `PaisId`, " +
+                                                    " `ClienteId`) " +
+
+                                                    " VALUES " +
+                                                    "(NULL,'" +
+                                                    DireccionUtil +
+                                                    "','" +
+                                                     TB_interesadoDcalle.Text.Replace("'", "´") +
+                                                     "', '" +
+                                                     TB_interesadoDnumext.Text.Replace("'", "´") +
+                                                     "', '" +
+                                                     TB_interesadoDnumint.Text.Replace("'", "´") +
+                                                     "', '" +
+                                                     TB_interesadoDcolonia.Text.Replace("'", "´") +
+                                                     "', '" +
+                                                     TB_interesadoDpoblacion.Text.Replace("'", "´") +
+                                                     "', '" +
+                                                     TB_interesadoDestado.Text.Replace("'", "´") +
+                                                     "', '" +
+                                                     TB_interesadoDcp.Text.Replace("'", "´") +
+                                                     "', 1, " +
+                                                     (CB_interesadoDpais.SelectedItem as ComboboxItem).Value +
+                                                     ", " +
+                                                     ClienteId + ");";
+                    MySqlDataReader respuestastringinsert2 = conectinsert2.getdatareader(kweryinsert2);
+                    if (respuestastringinsert2 == null)
+                    {
+                        MessageBox.Show("No se pudo agregar un nuevo cliente domicilio (direccion), Verifique los datos de la dirección");
+                        new filelog("error: ", " direccion: ->" + kweryinsert2);
+                    }
+                    else
+                    {
+
+                        respuestastringinsert2.Close();
+                        conectinsert2.Cerrarconexion();
+                    }
+
+
+                    respuestastring20.Close();
+                    conectinteresado.Cerrarconexion();
+                }
+
+                conect conlista2 = new conect();
+                String Querylista2 = "SELECT " +
+                                      "direccion.DireccionCalle, " +
+                                       "direccion.ClienteId, " +
+                                      "direccion.DireccionNumExt, " +
+                                      "direccion.DireccionNumInt, " +
+                                      "direccion.DireccionColonia, " +
+                                      "direccion.DireccionPoblacion, " +
+                                      "direccion.DireccionCP, " +
+                                      "direccion.DireccionEstado, " +
+                                      "direccion.PaisId, " +
+                                      "direccion.DireccionID " +
+                                      "FROM direccion order by ClienteId desc limit 1";
+                MySqlDataReader respuestlistaaqwery2 = conlista2.getdatareader(Querylista2);
+
+                if (respuestlistaaqwery2 != null)
+                {
+                    while (respuestlistaaqwery2.Read())
+                    {
+                        String Pais = validareader("PaisId", "DireccionID", respuestlistaaqwery2).Text;
+                        conect conect_1 = new conect();
+
+                        String rpais_q = "select PaisNombre, PaisId from pais where PaisId =" + Pais;
+                        MySqlDataReader rpais = conect_1.getdatareader(rpais_q);
+                        while (rpais.Read())
+                        {
+                            rpaiss = validareader("PaisNombre", "PaisId", rpais).Text;
+                        }
+                        rpais.Close();
+                        conect_1.Cerrarconexion();
+                        //ListViewItem listaitems = new ListViewItem(validareader("PaisClave", "CasoId", respuestastring3).Text);
+                        ListViewItem listaagregar2 = new ListViewItem(validareader("ClienteId", "DireccionID", respuestlistaaqwery2).Text);//cliente id
+                        listaagregar2.SubItems.Add(validareader("DireccionCalle", "DireccionID", respuestlistaaqwery2).Text);// NOMBRE
+                        listaagregar2.SubItems.Add(validareader("DireccionNumExt", "DireccionID", respuestlistaaqwery2).Text);// apeliido paterno
+                        listaagregar2.SubItems.Add(validareader("DireccionNumInt", "DireccionID", respuestlistaaqwery2).Text);
+                        listaagregar2.SubItems.Add(validareader("DireccionColonia", "DireccionID", respuestlistaaqwery2).Text);
+                        listaagregar2.SubItems.Add(validareader("DireccionPoblacion", "DireccionID", respuestlistaaqwery2).Text);
+                        listaagregar2.SubItems.Add(validareader("DireccionEstado", "DireccionID", respuestlistaaqwery2).Text);
+  // apellido materno
+                        listaagregar2.SubItems.Add(validareader("DireccionCP", "ClienteId", respuestlistaaqwery2).Text);  //idioma***
+                        listaagregar2.SubItems.Add(rpaiss); // rfc
+
+                        listView2.Items.Add(listaagregar2);
+                        this.listView2.FullRowSelect = true;
+
+
+                    }
+                    respuestlistaaqwery2.Close();
+                    conlista2.Cerrarconexion();
+                    limpiarcasillas();
+                }
+            }
         }
     }
 
