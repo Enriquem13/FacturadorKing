@@ -282,7 +282,7 @@ namespace Facturador
                     //Datos del Encabezado
                     tbTituloHeader.Text = validareader("CasoTituloespanol", "CasoId", respuestastring3).Text;
                     tbCasoHeader.Text = validareader("CasoNumero", "CasoId", respuestastring3).Text;
-                    tbExpedienteHeader.Text = validareader("CasoNumeroExpedienteLargo", "CasoId", respuestastring3).Text;
+                    tbExpedienteHeader.Text = validareader  ("CasoNumeroExpedienteLargo", "CasoId", respuestastring3).Text;
                     tbTitularHeader.Text = validareader("NombreUtilInt", "CasoId", respuestastring3).Text;
 
                     //Buscaremos el status del interesado para saber si es o no vigilado
