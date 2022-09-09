@@ -21,6 +21,8 @@ namespace Facturador
         String iddireccion;
         String idInstruccion;
         String IdObservacion;
+        public String PaisId;
+        String estatuspais;
         public Fclientedetalle(String datocliente, Form1 form, captura Formcap)
         {
             oFormlogin = form;
@@ -142,6 +144,121 @@ namespace Facturador
             {
                 while (respuestastring20.Read())
                 {
+
+                    //Guardamos el pais para usarlo en llenar los demas combos
+                    PaisId = validareader("PaisId", "ClienteId", respuestastring20).Text;
+                    if (PaisId != "")
+                    {
+                        estatuspais = "1";
+                        conect cons = new conect();
+
+                        String querys = "select * from pais where PaisId=" + PaisId;
+
+                        MySqlDataReader respuestastrings = cons.getdatareader(querys);
+                        while (respuestastrings.Read())
+                        {
+                            combopais.SelectedIndex = combopais.Items.Add(validareader("PaisClave", "PaisId", respuestastrings));
+                        }
+
+                        respuestastrings.Close();
+                        cons.Cerrarconexion();
+
+                        conect cons2 = new conect();
+
+                        String querys2 = "select * from pais where PaisId !=" + PaisId;
+
+                        MySqlDataReader respuestastrings2 = cons2.getdatareader(querys2);
+                        while (respuestastrings2.Read())
+                        {
+                            combopais.Items.Add(validareader("PaisClave", "PaisId", respuestastrings2));
+                        }
+
+                        respuestastrings2.Close();
+                        cons2.Cerrarconexion();
+
+
+                        conect conss = new conect();
+                        String querys1 = "select * from pais where PaisId=" + PaisId;
+                        MySqlDataReader respuestastringss = conss.getdatareader(querys1);
+                        while (respuestastringss.Read())
+                        {
+                            PaisNombre.SelectedIndex = PaisNombre.Items.Add(validareader("PaisNombre", "PaisId", respuestastringss));
+         
+                        }
+
+                        respuestastringss.Close();
+                        conss.Cerrarconexion();
+
+
+                        conect conss2 = new conect();
+                        String queryss2 = "select * from pais where PaisId=";
+                        MySqlDataReader respuestastringss2 = conss2.getdatareader(queryss2);
+                        while (respuestastringss2.Read())
+                        {
+                            PaisNombre.SelectedIndex = PaisNombre.Items.Add(validareader("PaisNombre", "PaisId", respuestastringss2));
+
+                        }
+
+                        respuestastringss.Close();
+                        conss2.Cerrarconexion();
+
+                        //
+                        conect con = new conect();
+
+                        String queryn = "select * from pais where PaisId=" + PaisId;
+
+                        MySqlDataReader respuestastringn = con.getdatareader(queryn);
+                        while (respuestastringn.Read())
+                        {
+                            Nacionalidad.SelectedIndex = Nacionalidad.Items.Add(validareader("PaisNacionalidad", "PaisId", respuestastringn));
+                        }
+                        //tipopersona_SelectedIndexChanged(seccion);
+                        respuestastringn.Close();
+                        con.Cerrarconexion();
+
+
+                    }
+                    else
+                    {
+                        //En algunos casos los clientes no traen el paisid y nacionalidad
+   
+                        if (PaisId == null || PaisId == "")
+                        {
+                            estatuspais = "2";
+                            conect cons = new conect();
+
+                            String querys = "select * from pais";
+
+                            MySqlDataReader respuestastrings = cons.getdatareader(querys);
+                            while (respuestastrings.Read())
+                            {
+                                combopais.Items.Add(validareader("PaisClave", "PaisId", respuestastrings));
+                            }
+                            respuestastrings.Close();
+                            cons.Cerrarconexion();
+                            conect conss = new conect();
+                            MySqlDataReader respuestastringss = conss.getdatareader(querys);
+                            while (respuestastringss.Read())
+                            {
+                               PaisNombre.Items.Add(validareader("PaisNombre", "PaisId", respuestastringss));
+                            }
+                            respuestastringss.Close();
+                            conss.Cerrarconexion();
+                            conect con = new conect();
+                            String query = "select * from pais";
+
+                            MySqlDataReader respuestastringn = con.getdatareader(query);
+                            while (respuestastringn.Read())
+                            {
+                                Nacionalidad.Items.Add(validareader("PaisNacionalidad", "PaisId", respuestastringn));
+                            }
+                            //tipopersona_SelectedIndexChanged(seccion);
+                            respuestastringn.Close();
+                            con.Cerrarconexion();
+
+                        }
+                
+                    }
 
                     TB_clienteid.Text = validareader("ClienteId", "ClienteId", respuestastring20).Text;
                     label49.Text = validareader("NombreUtilClient", "ClienteId", respuestastring20).Text;
@@ -266,6 +383,7 @@ namespace Facturador
                 }
                 respuestastring20.Close();
                 conectw2.Cerrarconexion();
+
             }
 
 
@@ -1699,6 +1817,10 @@ namespace Facturador
             respuestastringusuariodoc.Close();
             contecusuariodoc.Cerrarconexion();
 
+            if (estatuspais == "2")
+            {
+                MessageBox.Show("Este cliente no tiene asignado un pais, favor de asignar(Datos Generales)");
+            }
 
         }
 
@@ -3276,6 +3398,189 @@ namespace Facturador
             capFormcap.Show();
             this.Close();
         }
-                
+        private void combopais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                String Combo = PaisNombre.Text;
+                String Combo2 = combopais.Text;
+
+                if (Combo != "" && Combo2 != "")
+                {
+                    repeticion_pais();
+                    return;
+                }
+                else
+                {
+                    repeticion_pais();
+                }
+
+            }
+            catch (Exception E)
+            {
+
+
+            }
+
+        }
+
+        public void repeticion_pais()
+        {
+            conect cons = new conect();
+
+            string valor = (combopais.SelectedItem as ComboboxItem).Value.ToString();
+            String querys = "select * from pais where PaisId=" + valor;
+
+            MySqlDataReader respuestastrings = cons.getdatareader(querys);
+            while (respuestastrings.Read())
+            {
+                PaisNombre.SelectedIndex = PaisNombre.Items.Add(validareader("PaisNombre", "PaisId", respuestastrings));
+            }
+            respuestastrings.Close();
+            cons.Cerrarconexion();
+            conect con8 = new conect();
+            String kwery8 = "SELECT proveedorfacelec.ProveedorFacElecId , proveedorfacelec.ProveedorFacElecDescrip FROM  proveedorfacelec where ProveedorFacElecId=3 ";
+            MySqlDataReader respuestastring8 = con8.getdatareader(kwery8);
+            while (respuestastring8.Read())
+            {
+                CB_facturaelecliente.SelectedIndex = CB_facturaelecliente.Items.Add(validareader("ProveedorFacElecDescrip", "ProveedorFacElecId", respuestastring8));
+            }
+            respuestastring8.Close();
+            con8.Cerrarconexion();
+
+            conect con5 = new conect();
+            String kwery5 = "SELECT tipoenviofac.TipoEnvioFacId , tipoenviofac.TipoEnvioFacDescrip FROM  tipoenviofac where TipoEnvioFacId=3";
+            MySqlDataReader respuestastring5 = con5.getdatareader(kwery5);
+            while (respuestastring5.Read())
+            {
+                CB_tipoenvio.SelectedIndex = CB_tipoenvio.Items.Add(validareader("TipoEnvioFacDescrip", "TipoEnvioFacId", respuestastring5));
+            }
+            respuestastring5.Close();
+            con5.Cerrarconexion();
+
+            conect con3 = new conect();
+            String kwery3 = "SELECT tipocomunicacion.TipoComunicacionId , tipocomunicacion.TipoComunicacionDescrip  FROM  tipocomunicacion where TipoComunicacionId=1";
+            MySqlDataReader respuestastring3 = con3.getdatareader(kwery3);
+            while (respuestastring3.Read())
+            {
+                CB_comunicacioncliente.SelectedIndex = CB_comunicacioncliente.Items.Add(validareader("TipoComunicacionDescrip", "TipoComunicacionId", respuestastring3));
+            }
+            respuestastring3.Close();
+            con3.Cerrarconexion();
+
+            //tipopersona_SelectedIndexChanged(seccion);
+
+            //tipopersona_SelectedIndexChanged(seccion);
+            Nacionalidad.Items.Clear();
+            Nacionalidad.Text = "";
+            //string tipo = (comboTiposolicitud.SelectedItem as ComboboxItem).Value.ToString();
+            conect con = new conect();
+
+            //string valor = (combopais.SelectedItem as ComboboxItem).Value.ToString();
+            String query = "select * from pais where PaisId=" + valor;
+
+            MySqlDataReader respuestastring = con.getdatareader(query);
+            while (respuestastring.Read())
+            {
+                Nacionalidad.SelectedIndex = Nacionalidad.Items.Add(validareader("PaisNacionalidad", "PaisId", respuestastring));
+            }
+            string seccion = valor;
+            //tipopersona_SelectedIndexChanged(seccion);
+            respuestastring.Close();
+            con.Cerrarconexion();
+            conect consp = new conect();
+            String queryss = "select * from pais where PaisId=" + valor;
+
+            MySqlDataReader respuestastringss = consp.getdatareader(queryss);
+            while (respuestastringss.Read())
+            {
+                CB_direccionpais_cd.SelectedIndex = CB_direccionpais_cd.Items.Add(validareader("PaisNombre", "PaisId", respuestastringss));
+            }
+            respuestastringss.Close();
+            consp.Cerrarconexion();
+
+            if (valor == "148")
+            {
+                CB_tipopersonacliente.Text = "";
+                CB_tipopersonacliente.Items.Clear();
+
+                String querytipo = "Select * from tipo_persona where id_tipo_persona in(1,3) ";
+
+                MySqlDataReader respuestatipo = con.getdatareader(querytipo);
+                while (respuestatipo.Read())
+                {
+                    CB_tipopersonacliente.Items.Add(validareader("nombre_tipopersona", "id_tipo_persona", respuestatipo));
+                }
+                //tipopersona_SelectedIndexChanged(seccion);
+                respuestatipo.Close();
+                con.Cerrarconexion();
+
+
+                conect conect4 = new conect();
+                String kwery4 = "SELECT moneda.MonedaId , moneda.MonedaDescrip FROM  moneda where MonedaId=2";
+                MySqlDataReader respuestastring4 = conect4.getdatareader(kwery4);
+                while (respuestastring4.Read())
+                {
+                    CB_monedacliente.SelectedIndex = CB_monedacliente.Items.Add(validareader("MonedaDescrip", "MonedaId", respuestastring4));
+                }
+                respuestastring4.Close();
+                conect4.Cerrarconexion();
+                label32.Visible = true;
+                TB_direccioncolonia_cd.Visible = true;
+            }
+            else
+            {
+                CB_tipopersonacliente.Items.Clear();
+                CB_tipopersonacliente.Text = "";
+                String querytipo = "Select * from tipo_persona where id_tipo_persona in(2,4) ";
+
+                MySqlDataReader respuestatipo = con.getdatareader(querytipo);
+                while (respuestatipo.Read())
+                {
+                    CB_tipopersonacliente.Items.Add(validareader("nombre_tipopersona", "id_tipo_persona", respuestatipo));
+                }
+                //tipopersona_SelectedIndexChanged(seccion);
+                respuestatipo.Close();
+                con.Cerrarconexion();
+
+                label32.Visible = false;
+                TB_direccioncolonia_cd.Visible = false;
+            }
+            //Si el pais es alguno de estos IDPais entonces el valor predeterminado sera ingles
+            if (valor == "45" || valor == "213" || valor == "74" || valor == "104")
+            {
+                String kwery2 = "SELECT * FROM  idioma where IdiomaId=1";
+                MySqlDataReader respuestastring2 = con.getdatareader(kwery2);
+                while (respuestastring2.Read())
+                {
+                    CB_idiomacliente.SelectedIndex = CB_idiomacliente.Items.Add(validareader("IdiomaDescripcion", "IdiomaId", respuestastring2));
+                    //CB_idioma_cliente.Items
+                }
+                respuestastring2.Close();
+            }
+            else if (valor == "148" || valor == "46" || valor == "10" || valor == "60" || valor == "162" || valor == "43")
+            {
+                String kwery2 = "SELECT * FROM  idioma where IdiomaId=2";
+                MySqlDataReader respuestastring2 = con.getdatareader(kwery2);
+                while (respuestastring2.Read())
+                {
+                    CB_idiomacliente.SelectedIndex = CB_idiomacliente.Items.Add(validareader("IdiomaDescripcion", "IdiomaId", respuestastring2));
+                    //CB_idioma_cliente.Items
+                }
+                respuestastring2.Close();
+            }
+            else
+            {
+                String kwery2 = "SELECT * FROM  idioma";
+                MySqlDataReader respuestastring2 = con.getdatareader(kwery2);
+                while (respuestastring2.Read())
+                {
+                    CB_idiomacliente.Items.Add(validareader("IdiomaDescripcion", "IdiomaId", respuestastring2));
+                    //CB_idioma_cliente.Items
+                }
+                respuestastring2.Close();
+            }
+            return;
+        }
     }
 }
