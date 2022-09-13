@@ -21,12 +21,17 @@ namespace Facturador.plazos_forms
         public String sgPlazosid = "";
         public String sgUsuarioid = "";
         public String sInsertrespuesta = "";
+        public String ParejaId;
+        public String IdGrupoPlazo;
+        public String SubtipoSolicitud;
         public int ipGrupo = 0;
+        public String Tipo;
         public agregaplazo(String sCasoid, String sTiposolicitudid, String sCasonumero, String sUsuarioid, int iGrupo)
         {//deberemos recibir el casoid, tiposolicitudid, casonumero, usuarioidformloguin
             //cone estos datos debe obtener 
             InitializeComponent();
             sgCasoid = sCasoid;
+            //SubtipoSolicitud = gSSubTipoSolicitudId;
             sgTiposolicitudid = sTiposolicitudid;
             sgCasonumero = sCasonumero;
             sgUsuarioid = sUsuarioid;
@@ -54,7 +59,72 @@ namespace Facturador.plazos_forms
                 }
                 resp_plazos.Close();
                 con_plazos.Cerrarconexion();
+                String srfecha = "4";
+                rfecha.Text = srfecha;
+                if (sgTiposolicitudid == "1" || sgTiposolicitudid == "2")
+                {
+                    conect cons = new conect();
+                    String querys = "select * from tipoplazo where TipoPlazoId in (6,4)";
 
+                    MySqlDataReader respuestastrings = cons.getdatareader(querys);
+                    while (respuestastrings.Read())
+                    {
+                        cbTipo_plazo.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings));
+                    }
+                    respuestastrings.Close();
+                    cons.Cerrarconexion();
+                }
+                else if (sgTiposolicitudid == "3" || sgTiposolicitudid == "4")
+                {
+                    conect cons2 = new conect();
+                    String querys2 = "select * from tipoplazo where CasoDisenoClasificacion in (40,4)";
+              
+                    MySqlDataReader respuestastrings2 = cons2.getdatareader(querys2);
+                    while (respuestastrings2.Read())
+                    {
+                        Tipo = validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings2).Text;
+                    }
+                    respuestastrings2.Close();
+                    cons2.Cerrarconexion();
+                    if (Tipo =="5") {
+                        conect cons = new conect();
+                        String querys = "select * from tipoplazo where TipoPlazoId in (40,4)";
+
+                        MySqlDataReader respuestastrings = cons.getdatareader(querys);
+                        while (respuestastrings.Read())
+                        {
+                            cbTipo_plazo.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings));
+                        }
+                        respuestastrings.Close();
+                        cons.Cerrarconexion();
+                    }
+                    else
+                    {
+                        conect cons = new conect();
+                        String querys = "select * from tipoplazo where TipoPlazoId in (40)";
+
+                        MySqlDataReader respuestastrings = cons.getdatareader(querys);
+                        while (respuestastrings.Read())
+                        {
+                            cbTipo_plazo.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings));
+                        }
+                        respuestastrings.Close();
+                        cons.Cerrarconexion();
+                    }
+                }
+                else
+                {
+                    conect cons = new conect();
+                    String querys = "select * from tipoplazo where TipoPlazoId in (4)";
+
+                    MySqlDataReader respuestastrings = cons.getdatareader(querys);
+                    while (respuestastrings.Read())
+                    {
+                        cbTipo_plazo.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings));
+                    }
+                    respuestastrings.Close();
+                    cons.Cerrarconexion();
+                }
 
                 //dgdocumentos
                 conect con_docs = new conect();
@@ -163,6 +233,16 @@ namespace Facturador.plazos_forms
                 }
                 resp_estatus_plazo.Close();
                 con_estatus_plazo.Cerrarconexion();
+
+                conect con_estatus_plazo2 = new conect();
+                String squery_estatus_plazo2 = "select * from estatusplazo ";
+                MySqlDataReader resp_estatus_plazo2 = con_estatus_plazo2.getdatareader(squery_estatus_plazo2);
+                while (resp_estatus_plazo2.Read())
+                {
+                 EstatusIdPareja.Items.Add(funcionesgenerales.validareader("EstatusPlazoDescrip", "EstatusPlazoId", resp_estatus_plazo2));
+                }
+                resp_estatus_plazo2.Close();
+                con_estatus_plazo2.Cerrarconexion();
             } catch (Exception exs) { 
             }
         }
@@ -220,7 +300,7 @@ namespace Facturador.plazos_forms
 
         private void cbgrupo_plazo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
+          /*  try
             {
                 cbTipo_plazo.Text = "";
                 ComboboxItem cGrupo_Seleccionado = (cbGrupo.SelectedItem as ComboboxItem);
@@ -252,7 +332,7 @@ namespace Facturador.plazos_forms
             catch (Exception ex)
             {
                 new filelog("plazos.cs <--", ex.ToString());
-            }
+            }*/
         }
 
         private void agregaplazo_FormClosing(object sender, FormClosingEventArgs e)
@@ -342,24 +422,65 @@ namespace Facturador.plazos_forms
             //aqui validaremos todos los datos para hacer el insert dentro del caso
             try
             {
-                if (cbTipo_plazo.SelectedItem is null || cbEstadosplazos.SelectedItem is null || tbFechadVencimineto.Text == "" || tbCasonumero.Text == "")
+                if (cbTipo_plazo.SelectedItem is null || cbEstadosplazos.SelectedItem is null || tbCasonumero.Text == "")
                 { //validmos los campos obligtorios para agregar un plazodetalle
-                    MessageBox.Show("Debe llenar los campos obligatorios pra poder agregar un plazo.");
+                    MessageBox.Show("Debe llenar los campos obligatorios para poder agregar un plazo.");
+                    return;
+                }
+                if ((cbEstadosplazos.SelectedItem as ComboboxItem).Value.ToString() != "1")
+                {
+                    if (tbFechadVencimineto.Text == "" || FechaVencimientoPareja.Text == "")
+                    {
+                        MessageBox.Show("No puede tener el  Campo Fecha vacio, favor de colocar una fecha");
+                        return;
+                    }
+                }
+                if ((cbEstadosplazos.SelectedItem as ComboboxItem).Value.ToString() != (EstatusIdPareja.SelectedItem as ComboboxItem).Value.ToString())
+                {
+                    MessageBox.Show("El estado del plazo no puede ser diferente, por favor corrigelo");
                     return;
                 }
                 //una vez validado que todos los campos estén llenos entonces pasamos a tomarlos para poder insertarlos
-                String sPlazsoid = "", sDocumentoid = "", sTipoplzadoid = "", sEstatusid = "", sFechavencimiento = "", sFechaatendio = "", sAnualidadid = "", sFechanotificacion ="";
+                String sPlazsoid = "", sgrupopatentes="", sFechaAtendioPlazoPareja="", sEstatusIdPareja = "", sFechavencimientoPareja ="", sTipoPlazoPareja ="", sDocumentoid = "", sTipoplzadoid = "", sEstatusid = "", sFechavencimiento = "", sFechaatendio = "", sAnualidadid = "", sFechanotificacion ="", sFechaAtendioPlazo = "", sFechaVencimientoPareja ="";
+
                 sTipoplzadoid = (cbTipo_plazo.SelectedItem as ComboboxItem).Value.ToString();
                 sEstatusid = (cbEstadosplazos.SelectedItem as ComboboxItem).Value.ToString();
+                sEstatusIdPareja = (EstatusIdPareja.SelectedItem as ComboboxItem).Value.ToString();//Segundo group
                 sFechavencimiento = tbFechadVencimineto.Text;
                 sFechaatendio = tbFechaatendioplazo.Text;
                 sAnualidadid = tbAnualidadid.Text;
                 sFechanotificacion = tbFechaNotificacion.Text;
+                sFechavencimientoPareja = FechaVencimientoPareja.Text;
+                sFechaAtendioPlazo = FechaAtendioPlazo.Text;
+                sFechaAtendioPlazoPareja = FechaAtendioPlazoPareja.Text;
+                if (sFechaAtendioPlazoPareja != "" && sFechaAtendioPlazo !="")
+                {
+                    var fecha1 = DateTime.Parse(sFechaAtendioPlazoPareja);
+                    var fecha2 = DateTime.Parse(sFechaAtendioPlazo);
+                    if (fecha1 > DateTime.Today)
+                    {
+                        MessageBox.Show("No puede tener una fecha vencimiento Pareja mayor a la fecha actual");
+                        return;
+                    }
+                    if (fecha2 > DateTime.Today)
+                    {
+                        MessageBox.Show("No puede tener una fecha Atendio Plazo mayor a la fecha actual");
+                        return;
+                    }
+                }
+
+                sTipoPlazoPareja = (TipoPlazoPareja.SelectedItem as ComboboxItem).Value.ToString();// Segundo group
+                //sgrupopatentes = (grupopatentes.SelectedItem as ComboboxItem).Value.ToString();//Segundo group
+                sFechaVencimientoPareja = FechaVencimientoPareja.Text;//Segundo group
+                //Validamos que la fecha atendio Pareja sea menor o igual a la fecha actual
+
+                //Validamos que la fecha atendio sea menor o igual a la fecha actual
 
                 if (!(cbDocumentos.SelectedItem is null))
                 {//si no es null entonces lo tomamos del combobox
-                    sDocumentoid = (cbDocumentos.SelectedItem as ComboboxItem).Value.ToString();
+                    sDocumentoid = (cbDocumentos.SelectedItem as ComboboxItem).Value.ToString();    
                 }
+                
                 //el primer dato que validaremos es si está relacionado con otro plazo
                 if (cbPlazosdelcaso.SelectedItem is null)
                 {
@@ -414,10 +535,16 @@ namespace Facturador.plazos_forms
                 //                                    CultureInfo.InvariantCulture).ToString("yyyy'/'MM'/'dd");
                 //    sFechaatendio = "'" + sFechaformatocrrecto + "'";
                 //}
-
+                // Fechas del primer group by
                 sFechanotificacion = sValidafechaparainsert(sFechanotificacion);
                 sFechavencimiento = sValidafechaparainsert(sFechavencimiento);
                 sFechaatendio = sValidafechaparainsert(sFechaatendio);
+                sFechaAtendioPlazoPareja = sValidafechaparainsert(sFechaAtendioPlazoPareja);
+                sFechaAtendioPlazo = sValidafechaparainsert(sFechaAtendioPlazo);
+                sFechavencimientoPareja = sValidafechaparainsert(sFechavencimientoPareja);
+                //Fechas del segundo group by
+
+
 
                 //hasta aquí ya tenemos el dato del plazosid con el que va relacionado y quien nos dice a que tipos de caso y caso pertenece
                 //ahora insertaremos todos los datos disponibles en el formulario y el plazosid ya sea nuevo o relacionado con uno antiguo
@@ -441,30 +568,66 @@ namespace Facturador.plazos_forms
                                                         " '" + sEstatusid + "', " +
                                                         " " + sFechanotificacion + ", " +
                                                         " " + sFechavencimiento + ", " +
-                                                        " " + sFechaatendio + ", " +
+                                                        " " + sFechaAtendioPlazo + ", " +
                                                         " " + sAnualidadid + " " +
                                                         " ); ";
                 MySqlDataReader resp_grupo_plazo = con_grupo_plazo.getdatareader(squery_grupo_plazo);
                 resp_grupo_plazo.Read();
                 if (resp_grupo_plazo.RecordsAffected > 0)
                 {
-                    MessageBox.Show("Plazo agreado correctamente.");
+                    MessageBox.Show(" Primer Plazo agreado correctamente.");
                     this.DialogResult = System.Windows.Forms.DialogResult.OK;
                     this.Close();
                 }
                 resp_grupo_plazo.Close();
                 con_grupo_plazo.Cerrarconexion();
-            }catch (Exception exs){
+                conect con_grupo_plazo2 = new conect();
+                String squery_grupo_plazo2 = " INSERT INTO `plazos_detalle` " +
+                                                        " (`Plazosid`, " +
+                                                        " `documentoid`, " +
+                                                        " `usuario_creo_plazodetalle`, " +
+                                                        " `Tipo_plazoid`, " +
+                                                        " `Estatus_plazoid`, " +
+                                                        " `Fecha_notificacion`, " +
+                                                        " `Fecha_Vencimiento`, " +
+                                                        " `Fecha_atendio_plazo`, " +
+                                                        " `AnualidadId`) " +
+                                                        " VALUES " +
+                                                        " ( " +
+                                                        " '" + sPlazsoid + "', " +
+                                                        " " + sDocumentoid + ", " +
+                                                        " '" + sgUsuarioid + "', " +
+                                                        " '" + sTipoPlazoPareja + "', " +
+                                                        " '" + sEstatusIdPareja + "', " +
+                                                        " " + sFechanotificacion + ", " +
+                                                        " " + sFechavencimientoPareja + ", " +
+                                                        " " + sFechaAtendioPlazoPareja + ", " +
+                                                        " " + sAnualidadid + " " +
+                                                        " ); ";
+                MySqlDataReader resp_grupo_plazo2 = con_grupo_plazo.getdatareader(squery_grupo_plazo2);
+                resp_grupo_plazo2.Read();
+                if (resp_grupo_plazo2.RecordsAffected > 0)
+                {
+                    MessageBox.Show(" Segundo Plazo agreado correctamente.");
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    this.Close();
+                }
+                resp_grupo_plazo2.Close();
+                con_grupo_plazo2.Cerrarconexion();
+            }
+            catch (Exception exs){
                 new filelog("excepcion en insertar plazodetalleid", " mensaje: "+exs.Message);
                 sInsertrespuesta = "cancel";
             }
+            //Empieza el insert para el segundo grupo de campos
+
         }
 
         public String sValidafechaparainsert(String sFechaddmmyyyy) {
             String sFechaatendio = "null";
             try {
                 String sFechaformatocrrecto = DateTime.ParseExact(sFechaddmmyyyy, "dd-MM-yyyy",
-                                                    CultureInfo.InvariantCulture).ToString("yyyy'/'MM'/'dd");
+                CultureInfo.InvariantCulture).ToString("yyyy'/'MM'/'dd");
                 sFechaatendio = "'" + sFechaformatocrrecto + "'";
             }
             catch (Exception exs) { 
@@ -534,6 +697,192 @@ namespace Facturador.plazos_forms
             {
                 tbFechaNotificacion.Text = tbFechaNotificacion.Text + "-";
                 tbFechaNotificacion.SelectionStart = tbFechaNotificacion.Text.Length;
+            }
+        }
+
+        public ComboboxItem validareader(String campoText, String campoValue, MySqlDataReader mresultado)
+        {
+            ComboboxItem cItemresult = new ComboboxItem();
+            try
+            {
+
+                if (!mresultado.IsDBNull(mresultado.GetOrdinal(campoText)))
+                {
+                    cItemresult.Text = mresultado.GetString(mresultado.GetOrdinal(campoText));
+                }
+                else
+                {
+                    cItemresult.Text = "";
+                }
+
+                if (!mresultado.IsDBNull(mresultado.GetOrdinal(campoValue)))
+                {
+                    cItemresult.Value = mresultado.GetString(mresultado.GetOrdinal(campoValue));
+                }
+                else
+                {
+                    cItemresult.Value = "";
+                }
+            }
+            catch (Exception Ex)
+            {
+                cItemresult.Text = "";
+                cItemresult.Value = "";
+            }
+
+            return cItemresult;
+        }
+
+
+        private void cbTipo_plazo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+            TipoPlazoPareja.Items.Clear();
+
+            String combotipoplazo = (cbTipo_plazo.SelectedItem as ComboboxItem).Value.ToString();
+            conect cons2 = new conect();
+            String querys2 = "select * from tipoplazo where TipoPlazoId=" + combotipoplazo;
+            MySqlDataReader respuestastrings2 = cons2.getdatareader(querys2);
+            while (respuestastrings2.Read())
+            {
+                IdGrupoPlazo = validareader("ParejaId", "TipoPlazoId", respuestastrings2).Text;
+                //TipoPlazoPareja.SelectedIndex = TipoPlazoPareja.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings2));
+            }
+            respuestastrings2.Close();
+            cons2.Cerrarconexion();
+            if (IdGrupoPlazo =="22")
+            {
+                conect cons3 = new conect();
+                String querys3 = "select * from tipoplazo where TipoPlazoId in(" + IdGrupoPlazo +",13)";
+                MySqlDataReader respuestastrings3 = cons3.getdatareader(querys3);
+                while (respuestastrings3.Read())
+                {
+                    this.TipoPlazoPareja.Enabled = true;
+                    TipoPlazoPareja.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings3));
+                }
+                respuestastrings3.Close();
+                cons3.Cerrarconexion();
+            }
+            else {
+                conect cons3 = new conect();
+                String querys3 = "select * from tipoplazo where TipoPlazoId in(" + IdGrupoPlazo + ")";
+                MySqlDataReader respuestastrings3 = cons3.getdatareader(querys3);
+                while (respuestastrings3.Read())
+                {
+                    this.TipoPlazoPareja.Enabled = false;
+                    TipoPlazoPareja.SelectedIndex = TipoPlazoPareja.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings3));
+                }
+                respuestastrings3.Close();
+                cons3.Cerrarconexion();
+            }
+            if (combotipoplazo == "6")
+            {
+                conect con_estatus_plazo = new conect();
+                String squery_estatus_plazo = "select * from estatusplazo where EstatusPlazoId=1";
+                MySqlDataReader resp_estatus_plazo = con_estatus_plazo.getdatareader(squery_estatus_plazo);
+                while (resp_estatus_plazo.Read())
+                {
+                
+                    cbEstadosplazos.SelectedIndex = cbEstadosplazos.Items.Add(funcionesgenerales.validareader("EstatusPlazoDescrip", "EstatusPlazoId", resp_estatus_plazo));
+                }
+                resp_estatus_plazo.Close();
+                con_estatus_plazo.Cerrarconexion();
+                conect con_estatus_plazo2 = new conect();
+                String squery_estatus_plazo2 = "select * from estatusplazo where EstatusPlazoId=1";
+                MySqlDataReader resp_estatus_plazo2 = con_estatus_plazo2.getdatareader(squery_estatus_plazo2);
+                while (resp_estatus_plazo2.Read())
+                {
+                    EstatusIdPareja.SelectedIndex = EstatusIdPareja.Items.Add(funcionesgenerales.validareader("EstatusPlazoDescrip", "EstatusPlazoId", resp_estatus_plazo2));
+                }
+                resp_estatus_plazo2.Close();
+                con_estatus_plazo2.Cerrarconexion();
+            }
+        }
+
+        private void tbFechadVencimineto_TextChanged(object sender, EventArgs e)
+        {
+
+            try {
+                String sFechavencimiento = "", sFechaVencimientoPareja = "";
+                int srfecha = 0;
+
+                sFechavencimiento = tbFechadVencimineto.Text;
+                srfecha = Convert.ToInt32(rfecha.Text);
+                var Fecha1 = DateTime.Parse(sFechavencimiento).AddMonths(-srfecha);
+                sFechaVencimientoPareja = Fecha1.ToString("dd-MM-yyyy"); //Segundo Group
+                FechaVencimientoPareja.Text = sFechaVencimientoPareja;
+            }
+            catch
+            {
+                if (rfecha.Text == "")
+                {
+                    MessageBox.Show("Debe llenar el campo Meses a restar" + "");
+                }
+                
+            }
+
+        }
+
+        private void cbEstadosplazos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            conect con_estatus_plazo2 = new conect();
+            String squery_estatus_plazo2 = "select * from estatusplazo where EstatusPlazoId =" + (cbEstadosplazos.SelectedItem as ComboboxItem).Value.ToString();
+            MySqlDataReader resp_estatus_plazo2 = con_estatus_plazo2.getdatareader(squery_estatus_plazo2);
+            while (resp_estatus_plazo2.Read())
+            {
+                EstatusIdPareja.SelectedIndex = EstatusIdPareja.Items.Add(funcionesgenerales.validareader("EstatusPlazoDescrip", "EstatusPlazoId", resp_estatus_plazo2));
+            }
+            resp_estatus_plazo2.Close();
+            con_estatus_plazo2.Cerrarconexion();
+            if ((cbEstadosplazos.SelectedItem as ComboboxItem).Value.ToString() == "1")
+            {
+                tbFechaNotificacion.Visible = false;
+                label16.Visible = false;
+                FechaAtendioPlazo.Visible = false;
+                label20.Visible = false;
+                label26.Visible = false;
+                FechaAtendioPlazoPareja.Visible = false;
+            }
+            else
+            {
+                tbFechaNotificacion.Visible = true;
+                label16.Visible = true;
+                FechaAtendioPlazo.Visible = true;
+                label20.Visible = true;
+                label26.Visible = true;
+                FechaAtendioPlazoPareja.Visible = true;
+            }
+        }
+
+        private void EstatusIdPareja_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((cbEstadosplazos.SelectedItem as ComboboxItem).Value.ToString() != (EstatusIdPareja.SelectedItem as ComboboxItem).Value.ToString())
+            {
+                MessageBox.Show("El estado del plazo no puede ser diferente, por favor corrigelo");
+                return;
+            }
+        }
+
+        private void tbFechadVencimineto_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                String sFechavencimiento = "", sFechaVencimientoPareja = "";
+                int srfecha = 0;
+
+                sFechavencimiento = tbFechadVencimineto.Text;
+                srfecha = Convert.ToInt32(rfecha.Text);
+                var Fecha1 = DateTime.Parse(sFechavencimiento).AddMonths(-srfecha);
+                sFechaVencimientoPareja = Fecha1.ToString("dd-MM-yyyy"); //Segundo Group
+                FechaVencimientoPareja.Text = sFechaVencimientoPareja;
+            }
+            catch
+            {
+                if (rfecha.Text == "")
+                {
+                    MessageBox.Show("Debe llenar el campo Meses a restar" + "");
+                }
+
             }
         }
     }
