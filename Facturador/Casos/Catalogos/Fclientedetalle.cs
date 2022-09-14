@@ -3431,13 +3431,12 @@ namespace Facturador
             string valor = (combopais.SelectedItem as ComboboxItem).Value.ToString();
             String querys = "select * from pais where PaisId=" + valor;
 
+
             MySqlDataReader respuestastrings = cons.getdatareader(querys);
             while (respuestastrings.Read())
             {
                 PaisNombre.SelectedIndex = PaisNombre.Items.Add(validareader("PaisNombre", "PaisId", respuestastrings));
             }
-            respuestastrings.Close();
-            cons.Cerrarconexion();
             conect con8 = new conect();
             String kwery8 = "SELECT proveedorfacelec.ProveedorFacElecId , proveedorfacelec.ProveedorFacElecDescrip FROM  proveedorfacelec where ProveedorFacElecId=3 ";
             MySqlDataReader respuestastring8 = con8.getdatareader(kwery8);
