@@ -77,6 +77,8 @@ namespace Facturador.plazos_forms
             this.label24 = new System.Windows.Forms.Label();
             this.grupopatentes = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.fechanotificacionpareja = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +87,7 @@ namespace Facturador.plazos_forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(637, 55);
+            this.label6.Location = new System.Drawing.Point(656, 28);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(14, 18);
             this.label6.TabIndex = 25;
@@ -134,7 +136,7 @@ namespace Facturador.plazos_forms
             // cbEstadosplazos
             // 
             this.cbEstadosplazos.FormattingEnabled = true;
-            this.cbEstadosplazos.Location = new System.Drawing.Point(553, 76);
+            this.cbEstadosplazos.Location = new System.Drawing.Point(572, 49);
             this.cbEstadosplazos.Name = "cbEstadosplazos";
             this.cbEstadosplazos.Size = new System.Drawing.Size(121, 21);
             this.cbEstadosplazos.TabIndex = 22;
@@ -152,7 +154,7 @@ namespace Facturador.plazos_forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(591, 55);
+            this.label4.Location = new System.Drawing.Point(610, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 23;
@@ -216,6 +218,8 @@ namespace Facturador.plazos_forms
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label27);
+            this.groupBox1.Controls.Add(this.tbFechaNotificacion);
+            this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.rfecha);
             this.groupBox1.Controls.Add(this.label20);
@@ -271,7 +275,7 @@ namespace Facturador.plazos_forms
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(753, 57);
+            this.label20.Location = new System.Drawing.Point(753, 15);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(104, 13);
             this.label20.TabIndex = 39;
@@ -279,7 +283,7 @@ namespace Facturador.plazos_forms
             // 
             // FechaAtendioPlazo
             // 
-            this.FechaAtendioPlazo.Location = new System.Drawing.Point(744, 77);
+            this.FechaAtendioPlazo.Location = new System.Drawing.Point(744, 35);
             this.FechaAtendioPlazo.Name = "FechaAtendioPlazo";
             this.FechaAtendioPlazo.Size = new System.Drawing.Size(121, 20);
             this.FechaAtendioPlazo.TabIndex = 38;
@@ -289,7 +293,7 @@ namespace Facturador.plazos_forms
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(677, 104);
+            this.label15.Location = new System.Drawing.Point(696, 77);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(14, 18);
             this.label15.TabIndex = 35;
@@ -298,7 +302,7 @@ namespace Facturador.plazos_forms
             // lFechavencimiento
             // 
             this.lFechavencimiento.AutoSize = true;
-            this.lFechavencimiento.Location = new System.Drawing.Point(558, 104);
+            this.lFechavencimiento.Location = new System.Drawing.Point(577, 77);
             this.lFechavencimiento.Name = "lFechavencimiento";
             this.lFechavencimiento.Size = new System.Drawing.Size(113, 13);
             this.lFechavencimiento.TabIndex = 32;
@@ -306,7 +310,7 @@ namespace Facturador.plazos_forms
             // 
             // tbFechadVencimineto
             // 
-            this.tbFechadVencimineto.Location = new System.Drawing.Point(553, 124);
+            this.tbFechadVencimineto.Location = new System.Drawing.Point(572, 97);
             this.tbFechadVencimineto.Name = "tbFechadVencimineto";
             this.tbFechadVencimineto.Size = new System.Drawing.Size(121, 20);
             this.tbFechadVencimineto.TabIndex = 31;
@@ -412,7 +416,7 @@ namespace Facturador.plazos_forms
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(756, 416);
+            this.label16.Location = new System.Drawing.Point(753, 77);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(96, 13);
             this.label16.TabIndex = 38;
@@ -420,7 +424,7 @@ namespace Facturador.plazos_forms
             // 
             // tbFechaNotificacion
             // 
-            this.tbFechaNotificacion.Location = new System.Drawing.Point(871, 415);
+            this.tbFechaNotificacion.Location = new System.Drawing.Point(744, 97);
             this.tbFechaNotificacion.Name = "tbFechaNotificacion";
             this.tbFechaNotificacion.Size = new System.Drawing.Size(121, 20);
             this.tbFechaNotificacion.TabIndex = 39;
@@ -429,6 +433,8 @@ namespace Facturador.plazos_forms
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.fechanotificacionpareja);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.TipoPlazoPareja);
             this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.FechaAtendioPlazoPareja);
@@ -444,10 +450,9 @@ namespace Facturador.plazos_forms
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(35, 253);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(987, 121);
+            this.groupBox2.Size = new System.Drawing.Size(987, 155);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             // 
             // TipoPlazoPareja
             // 
@@ -460,7 +465,7 @@ namespace Facturador.plazos_forms
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(829, 47);
+            this.label26.Location = new System.Drawing.Point(821, 33);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(137, 13);
             this.label26.TabIndex = 43;
@@ -468,7 +473,7 @@ namespace Facturador.plazos_forms
             // 
             // FechaAtendioPlazoPareja
             // 
-            this.FechaAtendioPlazoPareja.Location = new System.Drawing.Point(836, 67);
+            this.FechaAtendioPlazoPareja.Location = new System.Drawing.Point(828, 53);
             this.FechaAtendioPlazoPareja.Name = "FechaAtendioPlazoPareja";
             this.FechaAtendioPlazoPareja.Size = new System.Drawing.Size(121, 20);
             this.FechaAtendioPlazoPareja.TabIndex = 42;
@@ -478,7 +483,7 @@ namespace Facturador.plazos_forms
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(618, 77);
+            this.label21.Location = new System.Drawing.Point(786, 90);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(14, 18);
             this.label21.TabIndex = 41;
@@ -487,7 +492,7 @@ namespace Facturador.plazos_forms
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(466, 74);
+            this.label22.Location = new System.Drawing.Point(634, 87);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(146, 13);
             this.label22.TabIndex = 40;
@@ -495,7 +500,7 @@ namespace Facturador.plazos_forms
             // 
             // FechaVencimientoPareja
             // 
-            this.FechaVencimientoPareja.Location = new System.Drawing.Point(648, 74);
+            this.FechaVencimientoPareja.Location = new System.Drawing.Point(637, 119);
             this.FechaVencimientoPareja.Name = "FechaVencimientoPareja";
             this.FechaVencimientoPareja.Size = new System.Drawing.Size(121, 20);
             this.FechaVencimientoPareja.TabIndex = 39;
@@ -505,7 +510,7 @@ namespace Facturador.plazos_forms
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(618, 44);
+            this.label23.Location = new System.Drawing.Point(761, 11);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(14, 18);
             this.label23.TabIndex = 38;
@@ -514,7 +519,7 @@ namespace Facturador.plazos_forms
             // EstatusIdPareja
             // 
             this.EstatusIdPareja.FormattingEnabled = true;
-            this.EstatusIdPareja.Location = new System.Drawing.Point(648, 41);
+            this.EstatusIdPareja.Location = new System.Drawing.Point(637, 33);
             this.EstatusIdPareja.Name = "EstatusIdPareja";
             this.EstatusIdPareja.Size = new System.Drawing.Size(121, 21);
             this.EstatusIdPareja.TabIndex = 36;
@@ -523,7 +528,7 @@ namespace Facturador.plazos_forms
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(502, 44);
+            this.label24.Location = new System.Drawing.Point(645, 11);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(73, 13);
             this.label24.TabIndex = 37;
@@ -546,6 +551,24 @@ namespace Facturador.plazos_forms
             this.label18.Size = new System.Drawing.Size(81, 13);
             this.label18.TabIndex = 26;
             this.label18.Text = "Grupo Patentes";
+            this.label18.Visible = false;
+            // 
+            // fechanotificacionpareja
+            // 
+            this.fechanotificacionpareja.Location = new System.Drawing.Point(828, 119);
+            this.fechanotificacionpareja.Name = "fechanotificacionpareja";
+            this.fechanotificacionpareja.Size = new System.Drawing.Size(121, 20);
+            this.fechanotificacionpareja.TabIndex = 45;
+            this.fechanotificacionpareja.Validating += new System.ComponentModel.CancelEventHandler(this.fechanotificacionpareja_Validating);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(837, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 13);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Fecha Notificación";
             // 
             // agregaplazo
             // 
@@ -553,8 +576,6 @@ namespace Facturador.plazos_forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 599);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.tbFechaNotificacion);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbFechaatendioplazo);
@@ -630,5 +651,7 @@ namespace Facturador.plazos_forms
         private System.Windows.Forms.TextBox FechaAtendioPlazoPareja;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox TipoPlazoPareja;
+        private System.Windows.Forms.TextBox fechanotificacionpareja;
+        private System.Windows.Forms.Label label5;
     }
 }

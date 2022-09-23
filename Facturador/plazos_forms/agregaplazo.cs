@@ -53,8 +53,8 @@ namespace Facturador.plazos_forms
                 while (resp_plazos.Read())
                 {
                     ComboboxItem cbItme = new ComboboxItem();
-                    cbItme.Value = funcionesgenerales.validareader("Plazosid", "Plazosid", resp_plazos).ToString();
-                    cbItme.Text = funcionesgenerales.validareader("Tipo_plazo_IMPI", "Tipo_plazo_IMPI", resp_plazos).ToString()+ " Doc: "+ funcionesgenerales.validareader("Documento", "Documento", resp_plazos).ToString();
+                    cbItme.Value =  funcionesgenerales.validareader("Plazosid", "Plazosid", resp_plazos).ToString();
+                    cbItme.Text = sgCasoid + "-" + funcionesgenerales.validareader("Tipo_plazo_IMPI", "Tipo_plazo_IMPI", resp_plazos).ToString()+ " Doc: "+ funcionesgenerales.validareader("Documento", "Documento", resp_plazos).ToString();
                     cbPlazosdelcaso.Items.Add(cbItme);
                 }
                 resp_plazos.Close();
@@ -76,19 +76,28 @@ namespace Facturador.plazos_forms
                 }
                 else if (sgTiposolicitudid == "3" || sgTiposolicitudid == "4")
                 {
+                    //conect cons2 = new conect();
+                    //String querys2 = "select * from tipoplazo where TipoPlazoId in (40,4)";
+                    //MySqlDataReader respuestastrings2 = cons2.getdatareader(querys2);
+                    //while (respuestastrings2.Read())
+                    //{
+                    //cbTipo_plazo.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings2));
+                    //}
+                    //respuestastrings2.Close();
+                    //cons2.Cerrarconexion();
                     conect cons2 = new conect();
-                    String querys2 = "select * from tipoplazo where CasoDisenoClasificacion in (40,4)";
-              
+                    String querys2 = "select * from caso_patente where CasoId =" + sgCasoid;
                     MySqlDataReader respuestastrings2 = cons2.getdatareader(querys2);
                     while (respuestastrings2.Read())
                     {
-                        Tipo = validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings2).Text;
+                    Tipo = validareader("CasoDisenoClasificacion", "CasoId", respuestastrings2).Text;
                     }
                     respuestastrings2.Close();
                     cons2.Cerrarconexion();
+
                     if (Tipo =="5") {
                         conect cons = new conect();
-                        String querys = "select * from tipoplazo where TipoPlazoId in (40,4)";
+                        String querys = "select * from tipoplazo where TipoPlazoId in (40)";
 
                         MySqlDataReader respuestastrings = cons.getdatareader(querys);
                         while (respuestastrings.Read())
@@ -100,16 +109,40 @@ namespace Facturador.plazos_forms
                     }
                     else
                     {
-                        conect cons = new conect();
-                        String querys = "select * from tipoplazo where TipoPlazoId in (40)";
+                        conect cons10 = new conect();
+                        String Resultado;
+                        String FechaVencimientoPareja = "0000-00-00";
+                        String querys10 = "select * from anualidad  where TipoSolicitudId in (3,4) and AnualidadSecuencia in(14,15) and AnualidadFechaPago ='" + FechaVencimientoPareja +"' and CasoID=" +sgCasoid;
+                        MySqlDataReader respuestastrings10 = cons10.getdatareader(querys10);
 
-                        MySqlDataReader respuestastrings = cons.getdatareader(querys);
-                        while (respuestastrings.Read())
-                        {
-                            cbTipo_plazo.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings));
+
+                        if (respuestastrings10.Read()) { 
+                            conect cons = new conect();
+                            String querys = "select * from tipoplazo where TipoPlazoId in (4)";
+
+                            MySqlDataReader respuestastrings = cons.getdatareader(querys);
+                            while (respuestastrings.Read())
+                            {
+                                cbTipo_plazo.SelectedIndex = cbTipo_plazo.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings));
+                            }
+                            respuestastrings.Close();
+                            cons.Cerrarconexion();
                         }
-                        respuestastrings.Close();
-                        cons.Cerrarconexion();
+                        else
+                        {
+                            conect cons = new conect();
+                            String querys = "select * from tipoplazo where TipoPlazoId in (40)";
+
+                            MySqlDataReader respuestastrings = cons.getdatareader(querys);
+                            while (respuestastrings.Read())
+                            {
+                                cbTipo_plazo.SelectedIndex = cbTipo_plazo.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings));
+                            }
+                            respuestastrings.Close();
+                            cons.Cerrarconexion();
+                        }
+                        respuestastrings10.Close();
+                        cons10.Cerrarconexion();
                     }
                 }
                 else
@@ -441,7 +474,7 @@ namespace Facturador.plazos_forms
                     return;
                 }
                 //una vez validado que todos los campos estén llenos entonces pasamos a tomarlos para poder insertarlos
-                String sPlazsoid = "", sgrupopatentes="", sFechaAtendioPlazoPareja="", sEstatusIdPareja = "", sFechavencimientoPareja ="", sTipoPlazoPareja ="", sDocumentoid = "", sTipoplzadoid = "", sEstatusid = "", sFechavencimiento = "", sFechaatendio = "", sAnualidadid = "", sFechanotificacion ="", sFechaAtendioPlazo = "", sFechaVencimientoPareja ="";
+                String sPlazsoid = "", sgrupopatentes="", sfechanotificacionpareja="", sFechaAtendioPlazoPareja="", sEstatusIdPareja = "", sFechavencimientoPareja ="", sTipoPlazoPareja ="", sDocumentoid = "", sTipoplzadoid = "", sEstatusid = "", sFechavencimiento = "", sFechaatendio = "", sAnualidadid = "", sFechanotificacion ="", sFechaAtendioPlazo = "", sFechaVencimientoPareja ="";
 
                 sTipoplzadoid = (cbTipo_plazo.SelectedItem as ComboboxItem).Value.ToString();
                 sEstatusid = (cbEstadosplazos.SelectedItem as ComboboxItem).Value.ToString();
@@ -450,6 +483,7 @@ namespace Facturador.plazos_forms
                 sFechaatendio = tbFechaatendioplazo.Text;
                 sAnualidadid = tbAnualidadid.Text;
                 sFechanotificacion = tbFechaNotificacion.Text;
+                sfechanotificacionpareja = fechanotificacionpareja.Text;
                 sFechavencimientoPareja = FechaVencimientoPareja.Text;
                 sFechaAtendioPlazo = FechaAtendioPlazo.Text;
                 sFechaAtendioPlazoPareja = FechaAtendioPlazoPareja.Text;
@@ -542,6 +576,7 @@ namespace Facturador.plazos_forms
                 sFechaAtendioPlazoPareja = sValidafechaparainsert(sFechaAtendioPlazoPareja);
                 sFechaAtendioPlazo = sValidafechaparainsert(sFechaAtendioPlazo);
                 sFechavencimientoPareja = sValidafechaparainsert(sFechavencimientoPareja);
+                sfechanotificacionpareja = sValidafechaparainsert(sfechanotificacionpareja);
                 //Fechas del segundo group by
 
 
@@ -599,12 +634,12 @@ namespace Facturador.plazos_forms
                                                         " '" + sgUsuarioid + "', " +
                                                         " '" + sTipoPlazoPareja + "', " +
                                                         " '" + sEstatusIdPareja + "', " +
-                                                        " " + sFechanotificacion + ", " +
+                                                        " " + sfechanotificacionpareja + ", " +
                                                         " " + sFechavencimientoPareja + ", " +
                                                         " " + sFechaAtendioPlazoPareja + ", " +
                                                         " " + sAnualidadid + " " +
                                                         " ); ";
-                MySqlDataReader resp_grupo_plazo2 = con_grupo_plazo.getdatareader(squery_grupo_plazo2);
+                MySqlDataReader resp_grupo_plazo2 = con_grupo_plazo2.getdatareader(squery_grupo_plazo2);
                 resp_grupo_plazo2.Read();
                 if (resp_grupo_plazo2.RecordsAffected > 0)
                 {
@@ -736,7 +771,7 @@ namespace Facturador.plazos_forms
 
         private void cbTipo_plazo_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
             TipoPlazoPareja.Items.Clear();
 
             String combotipoplazo = (cbTipo_plazo.SelectedItem as ComboboxItem).Value.ToString();
@@ -752,11 +787,15 @@ namespace Facturador.plazos_forms
             cons2.Cerrarconexion();
             if (IdGrupoPlazo =="22")
             {
+                TipoPlazoPareja.Items.Clear();
+                TipoPlazoPareja.Text = "";
                 conect cons3 = new conect();
+
                 String querys3 = "select * from tipoplazo where TipoPlazoId in(" + IdGrupoPlazo +",13)";
                 MySqlDataReader respuestastrings3 = cons3.getdatareader(querys3);
                 while (respuestastrings3.Read())
                 {
+                    
                     this.TipoPlazoPareja.Enabled = true;
                     TipoPlazoPareja.Items.Add(validareader("TipoPlazoDescrip", "TipoPlazoId", respuestastrings3));
                 }
@@ -764,6 +803,7 @@ namespace Facturador.plazos_forms
                 cons3.Cerrarconexion();
             }
             else {
+                TipoPlazoPareja.Items.Clear();
                 conect cons3 = new conect();
                 String querys3 = "select * from tipoplazo where TipoPlazoId in(" + IdGrupoPlazo + ")";
                 MySqlDataReader respuestastrings3 = cons3.getdatareader(querys3);
@@ -775,7 +815,7 @@ namespace Facturador.plazos_forms
                 respuestastrings3.Close();
                 cons3.Cerrarconexion();
             }
-            if (combotipoplazo == "6")
+            if (combotipoplazo == "6" || combotipoplazo == "4")
             {
                 conect con_estatus_plazo = new conect();
                 String squery_estatus_plazo = "select * from estatusplazo where EstatusPlazoId=1";
@@ -834,7 +874,7 @@ namespace Facturador.plazos_forms
             }
             resp_estatus_plazo2.Close();
             con_estatus_plazo2.Cerrarconexion();
-            if ((cbEstadosplazos.SelectedItem as ComboboxItem).Value.ToString() == "1")
+            if ((cbEstadosplazos.SelectedItem as ComboboxItem).Value.ToString() == "1" )
             {
                 tbFechaNotificacion.Visible = false;
                 label16.Visible = false;
@@ -842,6 +882,10 @@ namespace Facturador.plazos_forms
                 label20.Visible = false;
                 label26.Visible = false;
                 FechaAtendioPlazoPareja.Visible = false;
+                cbPlazosdelcaso.Visible = false;
+                cbDocumentos.Visible = false;
+                label10.Visible = false;
+                label13.Visible = false;
             }
             else
             {
@@ -851,6 +895,10 @@ namespace Facturador.plazos_forms
                 label20.Visible = true;
                 label26.Visible = true;
                 FechaAtendioPlazoPareja.Visible = true;
+                cbPlazosdelcaso.Visible = true;
+                cbDocumentos.Visible = true;
+                label10.Visible = true;
+                label13.Visible = true;
             }
         }
 
@@ -884,6 +932,11 @@ namespace Facturador.plazos_forms
                 }
 
             }
+        }
+
+        private void fechanotificacionpareja_Validating(object sender, CancelEventArgs e)
+        {
+            funcionesgenerales.validafecha(fechanotificacionpareja);
         }
     }
 }

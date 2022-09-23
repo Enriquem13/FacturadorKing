@@ -311,6 +311,7 @@
     <Compile Include="Casos\Patentes\CasoNuevoTransferido.Designer.cs">
       <DependentUpon>CasoNuevoTransferido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Casos\Patentes\cursor.cs" />
     <Compile Include="Casos\ReservaDerecho\casoNuevoReservadederechos.cs">
       <SubType>Form</SubType>
     </Compile>

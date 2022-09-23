@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTcontencioso));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lCasoID = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -321,6 +321,7 @@
             this.Servicio_uno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Servicio_dos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Servicio_tres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.tbFecharesolucion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -381,6 +382,8 @@
             this.tbPendientesread = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.pbDimage = new System.Windows.Forms.PictureBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -644,11 +647,10 @@
             this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Controls.Add(this.tabPage12);
             this.tabControl1.Controls.Add(this.tabPage13);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabControl1.Location = new System.Drawing.Point(0, 392);
+            this.tabControl1.Location = new System.Drawing.Point(0, 393);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1511, 369);
+            this.tabControl1.Size = new System.Drawing.Size(1512, 373);
             this.tabControl1.TabIndex = 131;
             // 
             // tabPage1
@@ -677,7 +679,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage1.Size = new System.Drawing.Size(1504, 347);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Generales";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -885,7 +887,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage2.Size = new System.Drawing.Size(1504, 347);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Derechos Involucrados";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1015,7 +1017,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage3.Size = new System.Drawing.Size(1504, 347);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Referencias";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1131,7 +1133,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage4.Size = new System.Drawing.Size(1504, 347);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Interesados";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1241,9 +1243,9 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage5.Size = new System.Drawing.Size(1504, 347);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Documentos";
+            this.tabPage5.Text = "Documentos IMPI";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // button43
@@ -1290,7 +1292,11 @@
             // 
             // dGV_docimentos_IMPI
             // 
+            this.dGV_docimentos_IMPI.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.dGV_docimentos_IMPI.AllowDrop = true;
             this.dGV_docimentos_IMPI.AllowUserToDeleteRows = false;
+            this.dGV_docimentos_IMPI.AllowUserToOrderColumns = true;
+            this.dGV_docimentos_IMPI.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGV_docimentos_IMPI.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dGV_docimentos_IMPI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV_docimentos_IMPI.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1314,177 +1320,197 @@
             this.documento_relacion,
             this.subtipodocumentoid_documento,
             this.documentoid_id});
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_docimentos_IMPI.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_docimentos_IMPI.DefaultCellStyle = dataGridViewCellStyle22;
             this.dGV_docimentos_IMPI.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dGV_docimentos_IMPI.Location = new System.Drawing.Point(3, 137);
+            this.dGV_docimentos_IMPI.Location = new System.Drawing.Point(3, 113);
             this.dGV_docimentos_IMPI.Name = "dGV_docimentos_IMPI";
+            this.dGV_docimentos_IMPI.ReadOnly = true;
             this.dGV_docimentos_IMPI.RowHeadersWidth = 62;
-            this.dGV_docimentos_IMPI.Size = new System.Drawing.Size(1497, 203);
+            this.dGV_docimentos_IMPI.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_docimentos_IMPI.Size = new System.Drawing.Size(1498, 231);
             this.dGV_docimentos_IMPI.TabIndex = 11;
             this.dGV_docimentos_IMPI.DoubleClick += new System.EventHandler(this.dGV_docimentos_IMPI_DoubleClick);
+            this.dGV_docimentos_IMPI.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dGV_docimentos_IMPI_MouseClick);
             // 
             // lnk
             // 
             this.lnk.HeaderText = "lnk";
             this.lnk.MinimumWidth = 8;
             this.lnk.Name = "lnk";
+            this.lnk.ReadOnly = true;
             this.lnk.Visible = false;
-            this.lnk.Width = 150;
             // 
             // tipo_documento
             // 
+            this.tipo_documento.FillWeight = 66.00124F;
             this.tipo_documento.HeaderText = "Tipo";
             this.tipo_documento.MinimumWidth = 8;
             this.tipo_documento.Name = "tipo_documento";
-            this.tipo_documento.Width = 150;
+            this.tipo_documento.ReadOnly = true;
             // 
             // cod_barras
             // 
+            this.cod_barras.FillWeight = 97.21249F;
             this.cod_barras.HeaderText = "CodBarras";
             this.cod_barras.MinimumWidth = 8;
             this.cod_barras.Name = "cod_barras";
-            this.cod_barras.Width = 150;
+            this.cod_barras.ReadOnly = true;
             // 
             // folio
             // 
+            this.folio.FillWeight = 61.08408F;
             this.folio.HeaderText = "Folio";
             this.folio.MinimumWidth = 8;
             this.folio.Name = "folio";
-            this.folio.Width = 150;
+            this.folio.ReadOnly = true;
             // 
             // fecha_notificacion
             // 
-            dataGridViewCellStyle33.Format = "d";
-            dataGridViewCellStyle33.NullValue = null;
-            this.fecha_notificacion.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle17.Format = "d";
+            dataGridViewCellStyle17.NullValue = null;
+            this.fecha_notificacion.DefaultCellStyle = dataGridViewCellStyle17;
+            this.fecha_notificacion.FillWeight = 137.3881F;
             this.fecha_notificacion.HeaderText = "Fecha Notificación";
             this.fecha_notificacion.MinimumWidth = 8;
             this.fecha_notificacion.Name = "fecha_notificacion";
-            this.fecha_notificacion.Width = 150;
+            this.fecha_notificacion.ReadOnly = true;
             // 
             // vencimiento
             // 
-            dataGridViewCellStyle34.Format = "d";
-            dataGridViewCellStyle34.NullValue = null;
-            this.vencimiento.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle18.Format = "d";
+            dataGridViewCellStyle18.NullValue = null;
+            this.vencimiento.DefaultCellStyle = dataGridViewCellStyle18;
+            this.vencimiento.FillWeight = 100.3714F;
             this.vencimiento.HeaderText = "Vencimiento";
             this.vencimiento.MinimumWidth = 8;
             this.vencimiento.Name = "vencimiento";
-            this.vencimiento.Width = 80;
+            this.vencimiento.ReadOnly = true;
             // 
             // vencimiento_4_meses
             // 
-            dataGridViewCellStyle35.Format = "d";
-            dataGridViewCellStyle35.NullValue = null;
-            this.vencimiento_4_meses.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle19.Format = "d";
+            dataGridViewCellStyle19.NullValue = null;
+            this.vencimiento_4_meses.DefaultCellStyle = dataGridViewCellStyle19;
+            this.vencimiento_4_meses.FillWeight = 146.5232F;
             this.vencimiento_4_meses.HeaderText = "Vencimiento 4 meses";
             this.vencimiento_4_meses.MinimumWidth = 8;
             this.vencimiento_4_meses.Name = "vencimiento_4_meses";
-            this.vencimiento_4_meses.Width = 150;
+            this.vencimiento_4_meses.ReadOnly = true;
             // 
             // mes_antiguedad_plazo
             // 
+            this.mes_antiguedad_plazo.FillWeight = 55.47778F;
             this.mes_antiguedad_plazo.HeaderText = "Mes";
             this.mes_antiguedad_plazo.MinimumWidth = 8;
             this.mes_antiguedad_plazo.Name = "mes_antiguedad_plazo";
-            this.mes_antiguedad_plazo.Width = 40;
+            this.mes_antiguedad_plazo.ReadOnly = true;
             // 
             // Fecha_Impi
             // 
-            dataGridViewCellStyle36.Format = "d";
-            dataGridViewCellStyle36.NullValue = null;
-            this.Fecha_Impi.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle20.Format = "d";
+            dataGridViewCellStyle20.NullValue = null;
+            this.Fecha_Impi.DefaultCellStyle = dataGridViewCellStyle20;
+            this.Fecha_Impi.FillWeight = 123.7997F;
             this.Fecha_Impi.HeaderText = "Fecha  Sello Impi";
             this.Fecha_Impi.MinimumWidth = 8;
             this.Fecha_Impi.Name = "Fecha_Impi";
-            this.Fecha_Impi.Width = 150;
+            this.Fecha_Impi.ReadOnly = true;
             // 
             // escrito_doc
             // 
+            this.escrito_doc.FillWeight = 116.3673F;
             this.escrito_doc.HeaderText = "Escrito Contestó";
             this.escrito_doc.MinimumWidth = 8;
             this.escrito_doc.Name = "escrito_doc";
-            this.escrito_doc.Width = 150;
+            this.escrito_doc.ReadOnly = true;
             // 
             // documento
             // 
+            this.documento.FillWeight = 88.96565F;
             this.documento.HeaderText = "Documento";
             this.documento.MinimumWidth = 8;
             this.documento.Name = "documento";
-            this.documento.Width = 150;
+            this.documento.ReadOnly = true;
             // 
             // estatus_documentos_impi
             // 
+            this.estatus_documentos_impi.FillWeight = 99.22319F;
             this.estatus_documentos_impi.HeaderText = "Estatus Oficio";
             this.estatus_documentos_impi.MinimumWidth = 8;
             this.estatus_documentos_impi.Name = "estatus_documentos_impi";
-            this.estatus_documentos_impi.Width = 150;
+            this.estatus_documentos_impi.ReadOnly = true;
             // 
             // observacion_documento
             // 
+            this.observacion_documento.FillWeight = 91.95511F;
             this.observacion_documento.HeaderText = "Observación";
             this.observacion_documento.MinimumWidth = 8;
             this.observacion_documento.Name = "observacion_documento";
-            this.observacion_documento.Width = 150;
+            this.observacion_documento.ReadOnly = true;
             // 
             // aviso_cliente_documento
             // 
+            this.aviso_cliente_documento.FillWeight = 91.56765F;
             this.aviso_cliente_documento.HeaderText = "Aviso Cliente";
             this.aviso_cliente_documento.MinimumWidth = 8;
             this.aviso_cliente_documento.Name = "aviso_cliente_documento";
-            this.aviso_cliente_documento.Width = 150;
+            this.aviso_cliente_documento.ReadOnly = true;
             // 
             // mot_cancelacion
             // 
+            this.mot_cancelacion.FillWeight = 126.6091F;
             this.mot_cancelacion.HeaderText = "Motivo cancelación";
             this.mot_cancelacion.MinimumWidth = 8;
             this.mot_cancelacion.Name = "mot_cancelacion";
-            this.mot_cancelacion.Width = 150;
+            this.mot_cancelacion.ReadOnly = true;
             // 
             // usr_prorrogo
             // 
+            this.usr_prorrogo.FillWeight = 109.2473F;
             this.usr_prorrogo.HeaderText = "Usuario Prorrogo";
             this.usr_prorrogo.MinimumWidth = 8;
             this.usr_prorrogo.Name = "usr_prorrogo";
-            this.usr_prorrogo.Width = 150;
+            this.usr_prorrogo.ReadOnly = true;
             // 
             // fecha_firma
             // 
-            dataGridViewCellStyle37.Format = "d";
-            dataGridViewCellStyle37.NullValue = null;
-            this.fecha_firma.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle21.Format = "d";
+            dataGridViewCellStyle21.NullValue = null;
+            this.fecha_firma.DefaultCellStyle = dataGridViewCellStyle21;
+            this.fecha_firma.FillWeight = 88.20655F;
             this.fecha_firma.HeaderText = "Fecha Firma";
             this.fecha_firma.MinimumWidth = 8;
             this.fecha_firma.Name = "fecha_firma";
-            this.fecha_firma.Width = 150;
+            this.fecha_firma.ReadOnly = true;
             // 
             // documento_relacion
             // 
             this.documento_relacion.HeaderText = "documento_relaciona";
             this.documento_relacion.MinimumWidth = 8;
             this.documento_relacion.Name = "documento_relacion";
+            this.documento_relacion.ReadOnly = true;
             this.documento_relacion.Visible = false;
-            this.documento_relacion.Width = 150;
             // 
             // subtipodocumentoid_documento
             // 
             this.subtipodocumentoid_documento.HeaderText = "subtipodocumentoid_documento";
             this.subtipodocumentoid_documento.MinimumWidth = 8;
             this.subtipodocumentoid_documento.Name = "subtipodocumentoid_documento";
+            this.subtipodocumentoid_documento.ReadOnly = true;
             this.subtipodocumentoid_documento.Visible = false;
-            this.subtipodocumentoid_documento.Width = 150;
             // 
             // documentoid_id
             // 
             this.documentoid_id.HeaderText = "documentoid_id";
             this.documentoid_id.Name = "documentoid_id";
+            this.documentoid_id.ReadOnly = true;
             this.documentoid_id.Visible = false;
             // 
             // button16
@@ -1657,7 +1683,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage6.Size = new System.Drawing.Size(1504, 347);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Plazos";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1705,6 +1731,9 @@
             // dgPlazos
             // 
             this.dgPlazos.AllowUserToDeleteRows = false;
+            this.dgPlazos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgPlazos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgPlazos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPlazos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1726,19 +1755,19 @@
             this.fechacancelacionimpi,
             this.usuariocancelo,
             this.fecha_capturo});
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPlazos.DefaultCellStyle = dataGridViewCellStyle45;
-            this.dgPlazos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgPlazos.Location = new System.Drawing.Point(3, 105);
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPlazos.DefaultCellStyle = dataGridViewCellStyle29;
+            this.dgPlazos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dgPlazos.Location = new System.Drawing.Point(3, 173);
             this.dgPlazos.Name = "dgPlazos";
-            this.dgPlazos.RowHeadersWidth = 62;
-            this.dgPlazos.Size = new System.Drawing.Size(1497, 235);
+            this.dgPlazos.RowHeadersWidth = 31;
+            this.dgPlazos.Size = new System.Drawing.Size(1497, 193);
             this.dgPlazos.TabIndex = 12;
             // 
             // plazoid
@@ -1803,9 +1832,9 @@
             // 
             // fechaplazo
             // 
-            dataGridViewCellStyle39.Format = "d";
-            dataGridViewCellStyle39.NullValue = null;
-            this.fechaplazo.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle23.Format = "d";
+            dataGridViewCellStyle23.NullValue = null;
+            this.fechaplazo.DefaultCellStyle = dataGridViewCellStyle23;
             this.fechaplazo.HeaderText = "Fecha Notificación";
             this.fechaplazo.MinimumWidth = 8;
             this.fechaplazo.Name = "fechaplazo";
@@ -1814,9 +1843,9 @@
             // 
             // fechavencimientoplazouno
             // 
-            dataGridViewCellStyle40.Format = "d";
-            dataGridViewCellStyle40.NullValue = null;
-            this.fechavencimientoplazouno.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle24.Format = "d";
+            dataGridViewCellStyle24.NullValue = null;
+            this.fechavencimientoplazouno.DefaultCellStyle = dataGridViewCellStyle24;
             this.fechavencimientoplazouno.HeaderText = "Fecha Vencimiento Regular";
             this.fechavencimientoplazouno.MinimumWidth = 8;
             this.fechavencimientoplazouno.Name = "fechavencimientoplazouno";
@@ -1825,9 +1854,9 @@
             // 
             // fechavencimiento4meses
             // 
-            dataGridViewCellStyle41.Format = "d";
-            dataGridViewCellStyle41.NullValue = null;
-            this.fechavencimiento4meses.DefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle25.Format = "d";
+            dataGridViewCellStyle25.NullValue = null;
+            this.fechavencimiento4meses.DefaultCellStyle = dataGridViewCellStyle25;
             this.fechavencimiento4meses.HeaderText = "Fecha Vencimineto 4 meses";
             this.fechavencimiento4meses.MinimumWidth = 8;
             this.fechavencimiento4meses.Name = "fechavencimiento4meses";
@@ -1835,9 +1864,9 @@
             // 
             // fechaatendioplazouno
             // 
-            dataGridViewCellStyle42.Format = "d";
-            dataGridViewCellStyle42.NullValue = null;
-            this.fechaatendioplazouno.DefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle26.Format = "d";
+            dataGridViewCellStyle26.NullValue = null;
+            this.fechaatendioplazouno.DefaultCellStyle = dataGridViewCellStyle26;
             this.fechaatendioplazouno.HeaderText = "Fecha atendió plazo";
             this.fechaatendioplazouno.MinimumWidth = 8;
             this.fechaatendioplazouno.Name = "fechaatendioplazouno";
@@ -1867,9 +1896,9 @@
             // 
             // fechacancelacionimpi
             // 
-            dataGridViewCellStyle43.Format = "d";
-            dataGridViewCellStyle43.NullValue = null;
-            this.fechacancelacionimpi.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle27.Format = "d";
+            dataGridViewCellStyle27.NullValue = null;
+            this.fechacancelacionimpi.DefaultCellStyle = dataGridViewCellStyle27;
             this.fechacancelacionimpi.HeaderText = "Fecha Cancelación Plazo";
             this.fechacancelacionimpi.MinimumWidth = 8;
             this.fechacancelacionimpi.Name = "fechacancelacionimpi";
@@ -1884,9 +1913,9 @@
             // 
             // fecha_capturo
             // 
-            dataGridViewCellStyle44.Format = "d";
-            dataGridViewCellStyle44.NullValue = null;
-            this.fecha_capturo.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle28.Format = "d";
+            dataGridViewCellStyle28.NullValue = null;
+            this.fecha_capturo.DefaultCellStyle = dataGridViewCellStyle28;
             this.fecha_capturo.HeaderText = "Fecha Capturó";
             this.fecha_capturo.MinimumWidth = 8;
             this.fecha_capturo.Name = "fecha_capturo";
@@ -2026,7 +2055,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage7.Size = new System.Drawing.Size(1504, 347);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Instrucciones";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -2236,7 +2265,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage8.Size = new System.Drawing.Size(1504, 347);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Observaciones";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -2392,7 +2421,7 @@
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage9.Size = new System.Drawing.Size(1504, 347);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Edocs";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -2409,14 +2438,14 @@
             // 
             // dgDocumentoselectronicos
             // 
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDocumentoselectronicos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDocumentoselectronicos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgDocumentoselectronicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDocumentoselectronicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.documentoelectronicoid,
@@ -2425,26 +2454,26 @@
             this.tipo_doc,
             this.Descripcion,
             this.ruta});
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgDocumentoselectronicos.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgDocumentoselectronicos.DefaultCellStyle = dataGridViewCellStyle31;
             this.dgDocumentoselectronicos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgDocumentoselectronicos.Location = new System.Drawing.Point(3, 141);
+            this.dgDocumentoselectronicos.Location = new System.Drawing.Point(3, 145);
             this.dgDocumentoselectronicos.Name = "dgDocumentoselectronicos";
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDocumentoselectronicos.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
-            this.dgDocumentoselectronicos.Size = new System.Drawing.Size(1497, 199);
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDocumentoselectronicos.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            this.dgDocumentoselectronicos.Size = new System.Drawing.Size(1498, 199);
             this.dgDocumentoselectronicos.TabIndex = 20;
             this.dgDocumentoselectronicos.DoubleClick += new System.EventHandler(this.dgDocumentoselectronicos_DoubleClick);
             // 
@@ -2577,7 +2606,7 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage10.Size = new System.Drawing.Size(1504, 347);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "Cartas";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -2673,7 +2702,7 @@
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage11.Size = new System.Drawing.Size(1504, 347);
             this.tabPage11.TabIndex = 10;
             this.tabPage11.Text = "Escritos";
             this.tabPage11.UseVisualStyleBackColor = true;
@@ -2775,7 +2804,7 @@
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage12.Size = new System.Drawing.Size(1504, 347);
             this.tabPage12.TabIndex = 11;
             this.tabPage12.Text = "Formatos";
             this.tabPage12.UseVisualStyleBackColor = true;
@@ -2815,7 +2844,7 @@
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(1503, 343);
+            this.tabPage13.Size = new System.Drawing.Size(1504, 347);
             this.tabPage13.TabIndex = 12;
             this.tabPage13.Text = "Facturas";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -2839,10 +2868,10 @@
             this.Servicio_dos,
             this.Servicio_tres});
             this.dgview_facturas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgview_facturas.Location = new System.Drawing.Point(3, 29);
+            this.dgview_facturas.Location = new System.Drawing.Point(3, 33);
             this.dgview_facturas.Name = "dgview_facturas";
             this.dgview_facturas.RowHeadersWidth = 62;
-            this.dgview_facturas.Size = new System.Drawing.Size(1497, 311);
+            this.dgview_facturas.Size = new System.Drawing.Size(1498, 311);
             this.dgview_facturas.TabIndex = 3;
             // 
             // fac_pdf
@@ -2929,6 +2958,15 @@
             this.Servicio_tres.MinimumWidth = 8;
             this.Servicio_tres.Name = "Servicio_tres";
             this.Servicio_tres.Width = 150;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1078, 74);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(101, 21);
+            this.comboBox1.TabIndex = 16;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -3084,6 +3122,7 @@
             // 
             this.bgdatosg.Controls.Add(this.ID_Seguimiento);
             this.bgdatosg.Controls.Add(this.label44);
+            this.bgdatosg.Controls.Add(this.comboBox1);
             this.bgdatosg.Controls.Add(this.label43);
             this.bgdatosg.Controls.Add(this.label34);
             this.bgdatosg.Controls.Add(this.label24);
@@ -3518,13 +3557,36 @@
             this.pbDimage.TabIndex = 156;
             this.pbDimage.TabStop = false;
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(1237, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(89, 23);
+            this.btnSave.TabIndex = 157;
+            this.btnSave.Text = "guardar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(1332, 3);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(90, 23);
+            this.btnLoad.TabIndex = 158;
+            this.btnLoad.Text = "cargar";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
             // fTcontencioso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Yellow;
-            this.ClientSize = new System.Drawing.Size(1511, 761);
+            this.ClientSize = new System.Drawing.Size(1511, 811);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pbDimage);
             this.Controls.Add(this.label37);
             this.Controls.Add(this.tbPendientesread);
@@ -3580,7 +3642,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta caso (Procedimiento contencioso):";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fTcontencioso_FormClosing);
-            this.Load += new System.EventHandler(this.fTcontencioso_Load);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -3942,6 +4004,7 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox tbPendienteswrite;
         private System.Windows.Forms.TextBox tbPendientesread;
+             
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.DataGridViewTextBoxColumn documentoelectronicoid;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
@@ -3959,5 +4022,8 @@
         private System.Windows.Forms.ComboBox ID_Seguimiento;
         public System.Windows.Forms.PictureBox pbDimage;
         private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnLoad;
     }
 }

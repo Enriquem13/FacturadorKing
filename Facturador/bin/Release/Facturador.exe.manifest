@@ -54,26 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Facturador King.exe" size="40965120">
-      <assemblyIdentity name="Facturador King" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>a7VY9+V6lv2bMWBqKIwHjngeJkZAlBef4PuzE0WAcMI=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Facturador.exe" size="19761664">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Facturador.exe" size="20672000">
       <assemblyIdentity name="Facturador" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RnhLdamOYQfFLoBMZolWlpOrXP/om25qzXex+arDeYY=</dsig:DigestValue>
+        <dsig:DigestValue>+plB6A9V/4XDUYbqpFDrhc0m01fn2tipfXRbOxE8ci4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -126,14 +114,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualBasic.PowerPacks.dll" size="352256">
-      <assemblyIdentity name="Microsoft.VisualBasic.PowerPacks" version="9.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.QualityTools.Testing.Fakes.dll" size="302352">
+      <assemblyIdentity name="Microsoft.QualityTools.Testing.Fakes" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ge3qaWpdQthkHqvQPFfRHEI2kVtIQVfVJ0MEY0RDClA=</dsig:DigestValue>
+        <dsig:DigestValue>TjrH+gTkbtrQs5i/a4UkL4YVdpzNfOMpFmGzsuGOxj0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.QualityTools.Testing.Fakes.resources.dll" size="23872">
+      <assemblyIdentity name="Microsoft.QualityTools.Testing.Fakes.resources" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>u7vBkW9WUZCu+is03sEGkzVftYhbZ1DShDPXNoDav9o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1385,13 +1385,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Facturador.exe.config" size="539">
+  <file name="Facturador.exe.config" size="525">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>OYPdVMZAO6heJfjbvjlt3TbfedeSbxtDG8ZW1wzOvaM=</dsig:DigestValue>
+      <dsig:DigestValue>6mQdAX5+miqNrJVLyTp6mpXHDDsTB0YmMcbs2+lxqv8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="iconopng.ico" size="144494">

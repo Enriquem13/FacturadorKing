@@ -15,6 +15,8 @@ using Facturador.plazos_forms;
 using System.Diagnostics;
 using SpreadsheetLight;
 using Facturador.Casos.Documentos;
+using Facturador.Casos.Patentes;
+
 
 namespace Facturador
 {
@@ -83,19 +85,24 @@ namespace Facturador
         public bool Fecha_Pendiente_update = false;
         public bool seguimiento_update = false;
         public bool bFechaConcesion_update = false;
+        public String NombreUsuario;
+        public String IdUsuario;
         //public bool bTituloIngles_update = false;
 
         //20220328FSV
 
-        public fTcontencioso(Form1 loguinp, captura cap, bContencioso consul, String sCasoIdcaso)
+
+            public fTcontencioso(Form1 loguinp, captura cap, bContencioso consul, String sCasoIdcaso)
         {
             loguin = loguinp;
             cap = captura;
             //sTipogrupoglobal = consul.sGTipocaso;
             consultacaso = consul;
             sCasoId = sCasoIdcaso;
+            NombreUsuario = loguin.sUsername;
+            IdUsuario = loguin.sId;
             InitializeComponent();
-
+  
             conect con = new conect();
             String sIds = "select count(*) as numpatentes from caso_contencioso";
             MySqlDataReader resp_numids = con.getdatareader(sIds);
@@ -120,8 +127,9 @@ namespace Facturador
             //20220327GSV No sabemos porque viene desactivado, pero lo reactivamos
             iIndiceids_global = Array.IndexOf(sArrayids, sCasoIdcaso);
             //20220327FSV Reactivar
-
-
+            comboBox1.Items.Add("ajustar y mover");
+            comboBox1.Items.Add("mover");
+            comboBox1.Items.Add("ajustar");
             //20220309 Llenamos la sección Edocs
             //consultamos los tipos de documentos para el combo edocs
             try
@@ -147,10 +155,42 @@ namespace Facturador
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private string controlsInfoStr;
+        private void button10_Click(object sender, EventArgs e)
         {
+            controlsInfoStr = cursor.GetSizeAndPositionOfControlsToString(this);
         }
-        public void limpiarcontenido()
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    cursor.WorkType = cursor.MoveOrResize.Resize;
+                    break;
+                case 1:
+                    cursor.WorkType = cursor.MoveOrResize.Move;
+                    break;
+                case 2:
+                    cursor.WorkType = cursor.MoveOrResize.MoveAndResize;
+
+                    break;
+            }
+        }
+
+        public void Form1_Load(object sender, EventArgs e)
+        {
+            cursor.Init(dGV_docimentos_IMPI);
+            comboBox1.SelectedIndex = 0;
+ 
+        }
+  
+
+
+            public void limpiarcontenido()
         {
 
             tbTituloHeader.Text = "";
@@ -3075,6 +3115,90 @@ namespace Facturador
 
         }
 
+        private void dGV_docimentos_IMPI_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+        }
 
+        private void Form1_Load(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            cursor.Init(tabPage6);
+            cursor.WorkType = cursor.MoveOrResize.MoveAndResize;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            controlsInfoStr = cursor.GetSizeAndPositionOfControlsToString(this);
+            String control ="";
+            conect usuario = new conect();
+            String queryusuario = "Select * from ccursor where IdUsuario= '" + IdUsuario + "' AND NombreUsuario ='" + NombreUsuario + "';";
+            MySqlDataReader cursorusuario = usuario.getdatareader(queryusuario);
+            while (cursorusuario.Read())
+            {
+               control = (objfuncionesdicss.validareader("IdCursor", "IdCursor", cursorusuario).Text);
+            }
+               
+            if (control == null || control =="")
+            {
+
+                conect q_cursor = new conect();
+                String query_cursor = " INSERT INTO `CCursor`  (`IdCursor`,`NCursor`,`IdUsuario`,`NombreUsuario`) VALUES(null,'" + controlsInfoStr + "','" + IdUsuario + "','" + NombreUsuario + "')";
+                MySqlDataReader readerCursor = q_cursor.getdatareader(query_cursor);
+                if (readerCursor.RecordsAffected == 1)
+                {
+                    MessageBox.Show("Se guardo la configuracion.");
+                }
+                readerCursor.Close();
+                q_cursor.Cerrarconexion();
+
+            }
+            else
+            {
+                conect q_cursor = new conect();
+                String query_cursor = " UPDATE `CCursor`  SET `NCursor`='" + controlsInfoStr + "' where `IdUsuario`='"+ IdUsuario + "' AND `NombreUsuario`='" + NombreUsuario + "'";
+                MySqlDataReader readerCursor = q_cursor.getdatareader(query_cursor);
+                if (readerCursor.RecordsAffected == 1)
+                {
+                    MessageBox.Show("Se actualizo la configuracion.");
+                }
+                readerCursor.Close();
+                q_cursor.Cerrarconexion();
+            }
+            cursorusuario.Close();
+            usuario.Cerrarconexion();
+            }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String control = "";
+                conect usuario = new conect();
+                String queryusuario = "Select * from ccursor where IdUsuario= '" + IdUsuario + "' AND NombreUsuario ='" + NombreUsuario + "';";
+                MySqlDataReader cursorusuario = usuario.getdatareader(queryusuario);
+                while (cursorusuario.Read())
+                {
+                    control = (objfuncionesdicss.validareader("NCursor", "IdCursor", cursorusuario).Text);
+                }
+
+                if (control != "")
+                {
+                    cursor.SetSizeAndPositionOfControlsFromString(this, control);
+                    MessageBox.Show("Se cargo la configuracion.");
+                }
+                else
+                {
+                    MessageBox.Show("No tiene ninguna configuracion guardada.");
+                }
+            }
+            catch{
+
+            }
+
+           /* if (!string.IsNullOrWhiteSpace(controlsInfoStr))
+            {
+                cursor.SetSizeAndPositionOfControlsFromString(this, controlsInfoStr);
+            }*/
+        }
     }
 }

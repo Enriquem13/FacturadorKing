@@ -29,6 +29,7 @@ namespace Facturador
         public String[] sArrayids;
         public String sTipogrupoglobal = "";
         public String sTipoSolicitudId = "";
+        public String subTipoSolicitudId = "";
         public String curp_1 = "";
         public String nombre_1 = "";
         public String appl1_1 = "";

@@ -15,6 +15,7 @@ using System.Globalization;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Text.RegularExpressions;
 using Facturador.Casos.Documentos;
+
 //using raiz;
 using Facturador.plazos_forms;
 using SpreadsheetLight;
@@ -171,87 +172,7 @@ namespace Facturador
                 resp_areaimpi.Close();
                 con_3.Cerrarconexion();
                 iIndiceids_global = Array.IndexOf(sArrayids, CasoId);
-                /*
-                
-                //int iCasoid = sArrayids.IndexOf<String>(sArrayids, CasoId);
-                string[] ubicacion = Directory.GetFiles(@"C:\Pclientes\Cartas");//<--aqui va la ruta de la carpeta donde estan los documentos
-                for (int i = 0; i < ubicacion.Length; i++)
-                {
-                    cbCartas.Items.Add(Path.GetFileName(ubicacion[i]));//combobox el que mostrara todos los nombres
-                }*/
-
-                //iIndiceids_global = Array.IndexOf(sArrayids, CasoId);
-                //int iCasoid = sArrayids.IndexOf<String>(sArrayids, CasoId);
-                //String strRutaArchivo = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-                //String[] ubicacions;
-                //String[] nombre;
-                //String sNombresfiles = "";
-                //String sNombresfilesUbic = "";
-                //string[] ubicacion = Directory.GetFiles(strRutaArchivo + @"\casosking\Cartas");//<--aqui va la ruta de la carpeta donde estan los documentos
-                //for (int i = 0; i < ubicacion.Length; i++)
-                //{
-                //    cbCartas.Items.Add(Path.GetFileName(ubicacion[i]));//combobox el que mostrara todos los nombres
-                //    ubicacions = Path.GetFileName(ubicacion[i]).Split('\\');
-                //    nombre = ubicacions[ubicacions.Length - 1].Split('.');
-                //    sNombresfilesUbic += ""+ Path.GetFileName(ubicacion[i]) + " \n";
-                //    //sNombresfiles += "" + nombre[i] + " \n";
-                //    //new filelog(loguin.sId, nombre[0]);
-                //}
-
-                //para los mails
-                //if (loguin.sCorreousr != "" && loguin.sContrasenacorreo != "" && loguin.sUsuarioCodigo=="1")
-                //{
-                //    MailBee.Global.LicenseKey = "MN110-8B8932A44B8239779277420FE843-E158";
-                //    Pop3 pop = new Pop3();
-                //    try
-                //    {
-                //        String sServermail = "";
-                //        bool b = loguin.sCorreousr.Contains("gmail");
-                //        if (b)
-                //        {//si el servidor es gmail entonces debe apuntar a uno diferente
-                //            sServermail = "pop.gmail.com";
-                //        }else{
-                //            sServermail = "mail.dicss.com.mx";
-                //        }
-                //        pop.Connect(sServermail);
-                //        pop.Login(loguin.sCorreousr, loguin.sContrasenacorreo);
-                //        Console.WriteLine("Successfully logged in. __mail dicss ");
-                //    }
-                //    catch (MailBeePop3LoginNegativeResponseException ex)
-                //    {
-                //        Console.WriteLine("POP3 server replied with a negative response at login:" + ex.ToString());
-                //    }
-
-                //    //for (int y = correos.Length - 1; y >= 0; y--)
-                //    //{
-                //    //    Mesageemail = pop.DownloadEntireMessage(pop.GetMessageIndexFromUid(correos[y]));
-                //    //    Console.WriteLine("Asunto: " + Mesageemail.Subject);
-                //    //    Console.WriteLine("Mensaje: " + Mesageemail.BodyPlainText);
-                //    //    Console.WriteLine(pop.GetMessageIndexFromUid(correos[y]));
-
-                //    //    ListViewItem newitem = new ListViewItem(correos[y]);
-                //    //    newitem.SubItems.Add(pop.GetMessageIndexFromUid(correos[y]).ToString());
-                //    //    newitem.SubItems.Add(Mesageemail.Subject);
-                //    //    newitem.SubItems.Add(Mesageemail.BodyPlainText);
-                //    //    newitem.SubItems.Add("Adjutno");
-                //    //    listView1.Items.Add(newitem);
-                //    //}
-                //}
-
-                //for (int y = correos.Length - 1; y >= 0; y--)
-                //{
-                //    Mesageemail = pop.DownloadEntireMessage(pop.GetMessageIndexFromUid(correos[y]));
-                //    Console.WriteLine("Asunto: " + Mesageemail.Subject);
-                //    Console.WriteLine("Mensaje: " + Mesageemail.BodyPlainText);
-                //    Console.WriteLine(pop.GetMessageIndexFromUid(correos[y]));
-
-                //    ListViewItem newitem = new ListViewItem(correos[y]);
-                //    newitem.SubItems.Add(pop.GetMessageIndexFromUid(correos[y]).ToString());
-                //    newitem.SubItems.Add(Mesageemail.Subject);
-                //    newitem.SubItems.Add(Mesageemail.BodyPlainText);
-                //    newitem.SubItems.Add("Adjutno");
-                //    listView1.Items.Add(newitem);
-                //}
+ 
 
                 ComboboxItem combouno = new ComboboxItem();//IMPI-00-002_B.docx
                 combouno.Text = "Solicitud de Renovación y Declaración de Uso Real y Efectivo de Signos Distintivos";
@@ -284,18 +205,6 @@ namespace Facturador
                 ComboboxItem comboocho = new ComboboxItem();
                 comboocho.Text = "Declaración de Uso Real y Efectivo de Signos Distintivos";
                 comboocho.Value = 8;
-
-                   
-
-                //cbFormatosnuevos.Items.Add(combouno);
-                //cbFormatosnuevos.Items.Add(combodos);
-                //cbFormatosnuevos.Items.Add(combotres);
-                //cbFormatosnuevos.Items.Add(combocuatro);
-                //cbFormatosnuevos.Items.Add(combocinco);
-                //cbFormatosnuevos.Items.Add(comboseis);
-                //cbFormatosnuevos.Items.Add(combosiete);
-                //cbFormatosnuevos.Items.Add(comboocho);
-                
                 
                 generadom(CasoId);
             }
@@ -376,28 +285,6 @@ namespace Facturador
                 if (loguin.sUsuarioCodigo=="1" || loguin.sUsuarioCodigo == "3") {
                     bAgregarplazo.Visible = true;
                 }
-                //bAgregarplazo
-                //conect con = new conect();
-                //String kwery = "SELECT * FROM tiposolicitud";
-                //MySqlDataReader respuestastring = con.getdatareader(kwery);
-
-                //ComboboxItem cbitem_viejo = new ComboboxItem();
-                //cbitem_viejo.Text = "Solicitud de Patente";
-                //cbitem_viejo.Value = "99";
-                //CB_formatoscc.Items.Add(cbitem_viejo);
-
-                //ComboboxItem cbitem = new ComboboxItem();
-                //cbitem.Text = "Solicitud de Patente (Nuevo Formato)";
-                //cbitem.Value = "100";
-                //this.Enabled = false;
-                //progressBar1.Value = 10;
-                //CB_formatoscc.Items.Add(cbitem);
-                //while (respuestastring.Read())
-                //{
-                //    CB_formatoscc.Items.Add(objfuncionesdicss.validareader("TipoSolicitudDescripcion", "TipoSolicitudId", respuestastring));
-                //}
-                //respuestastring.Close();
-                //con.Cerrarconexion();
 
                 conect con_datoscaso = new conect();
                 String sQuery = "SELECT "+
@@ -455,7 +342,7 @@ namespace Facturador
                     gsDivicionalid = objfuncionesdicss.validareader("Divicionalid", "CasoId", respuestastring3).Text;
                     //Tipo Solicitud
                     cbAreaimpi.Text = objfuncionesdicss.validareader("AreaImpiId", "CasoId", respuestastring3).Text;//cbAreaimpi
-                    //2 Modelos de utilidada
+                                                                                                                    //2 Modelos de utilidada
 
                     //3Diseño Industrial (Modelo)
 
@@ -465,8 +352,19 @@ namespace Facturador
 
                     //Para Diseños
 
+                    tbRegistro.Text = objfuncionesdicss.validareader("CasoNumConcedida", "CasoId", respuestastring3).Text;
+                    tbFechaconcesion.Text = validafechavacia(objfuncionesdicss.validareader("CasoFechaConcesion", "CasoId", respuestastring3).Text);//fechaconsesion 
+                    tbFechaconcesion_2.Text = validafechavacia(objfuncionesdicss.validareader("CasoFechaConcesion", "CasoId", respuestastring3).Text);//fechaconsesion 
 
-                    try {//Consultamos las facturas
+                    tbFechavigencia.Text = validafechavacia(objfuncionesdicss.validareader("CasoFechaVigencia", "CasoId", respuestastring3).Text);
+                    tbFechavigencia__2.Text = validafechavacia(objfuncionesdicss.validareader("CasoFechaVigencia", "CasoId", respuestastring3).Text);
+                    tbFechapublicacion.Text = validafechavacia(objfuncionesdicss.validareader("CasoFechaPublicacionSolicitud", "CasoId", respuestastring3).Text);
+
+                    lCasoNumero_texbox.Text = objfuncionesdicss.validareader("CasoNumero", "CasoId", respuestastring3).Text;
+
+
+                    try
+                    {//Consultamos las facturas
                         dgview_facturas.Rows.Clear();
                         //consultamos las facturas disponibles si es que las hay
                         conect_facturas con_facturas = new conect_facturas();
@@ -644,38 +542,6 @@ namespace Facturador
 
                     tbCasodiseno.Text = objfuncionesdicss.validareader("CasoDisenoClasificacion", "CasoDisenoClasificacion", respuestastring3).Text;
 
-                    
-                    //gSTipoSolicitudId
-                    //dganualidadesMD
-                    //Leemos las dos tab de anualidades
-
-                    
-
-
-                    //tabcontrolall.TabPages.Remove();
-
-
-                    // A PARTIR DE LA FECHA PRESENTACION SI ES MAYOR A 
-                    // 13 DE MARZO DE 2018 DEBEN SER RENOVACIONES
-                    // CON LA NUEVA PESTAÑA
-
-                    /*
-                     SELECT 
-                        documento.*
-                     FROM
-                            documento,
-                            relaciondocumento,
-                            caso_patente
-                     WHERE
-	                        caso_patente.CasoNumero like '%7402%'
-	                        and	(documento.SubTipoDocumentoId = 115
-                            or documento.SubTipoDocumentoId = 116 
-                            or documento.SubTipoDocumentoId = 1246)
-                            and documento.DocumentoId = relaciondocumento.DocumentoId
-                            and relaciondocumento.CasoId = caso_patente.CasoId
-                            and relaciondocumento.TipoSolicitudId = caso_patente.TipoSolicitudId;
-                     */
-
                     //13 marzo de 2018
                     bool bAnualidapestaña = false;
                     switch (gSTipoSolicitudId)
@@ -697,11 +563,6 @@ namespace Facturador
                         }break;
                         default:
                             bAnualidapestaña = true;
-                            //tabcontrolall.TabPages.Remove(tab_anualidades);
-                            //
-                            //TabPage objtab = tab_anualidades;
-                            //tabcontrolall.TabPages.Remove();
-                            //tabcontrolall.TabPages.Insert(11, objtab);
                             break;
                     }
                     sanualidadesnuevas = "";
@@ -764,7 +625,7 @@ namespace Facturador
                             dgRow.Cells[3].Value = sEstatusAnualidadDescrip;
                             dgRow.Cells[4].Value = sfechalimite;
                             dgRow.Cells[5].Value = sFechaPgao;
-                            if (sEstatusAnualidadDescrip == "Pendiente")
+                           if (sEstatusAnualidadDescrip == "Pendiente")
                             {
                                 if (bRangoanualidad)
                                 {
@@ -920,29 +781,7 @@ namespace Facturador
                         new filelog("Consultamos datos del caso linea 873", ExsDatoscaso.StackTrace.ToString());
                     }
 
-                    
-
-                    //conect con_idiomas= new conect();
-                    //String sIdiomas = "select * from Idioma";
-                    //MySqlDataReader resp_idiomas = con_idiomas.getdatareader(sIdiomas);
-                    //while (resp_idiomas.Read())
-                    //{
-                    //    cbIdioma.Items.Add(objfuncionesdicss.validareader("IdiomaDescripcion", "idiomaId", resp_idiomas));//consultar idioma
-                    //    //cbIdioma.Text = objfuncionesdicss.validareader("IdiomaDescripcion", "CasoId", respuestastring3).Text;//consultar idioma
-                    //}
-                    //resp_idiomas.Close();
-                    //con_idiomas.Cerrarconexion();
-
-                    //buscamos los tipos de prioridad 
-                    /*conect con_tipoprioridadcat = new conect();
-                    String sTipoprioridad = "select * from Idioma";
-                    MySqlDataReader resp_tipoprioridad = con_tipoprioridadcat.getdatareader(sTipoprioridad);
-                    while (resp_tipoprioridad.Read())
-                    {
-                        cbTiposolprio.Items.Add(objfuncionesdicss.validareader("IdiomaDescripcion", "idiomaId", resp_tipoprioridad));//consultar idioma
-                    }
-                    resp_tipoprioridad.Close();
-                    con_tipoprioridadcat.Cerrarconexion();*/
+                   
                     ComboboxItem comboTipodos = new ComboboxItem();
                     comboTipodos.Text = "PCT";
                     comboTipodos.Value = "1";
@@ -1105,16 +944,6 @@ namespace Facturador
                     Svariablelinea = "Consultamos los usuarios o la información del responsable linea 1049";
 
 
-                    tbRegistro.Text = objfuncionesdicss.validareader("CasoNumConcedida", "CasoId", respuestastring3).Text;
-                    tbFechaconcesion.Text = validafechavacia(objfuncionesdicss.validareader("CasoFechaConcesion", "CasoId", respuestastring3).Text);//fechaconsesion 
-                    tbFechaconcesion_2.Text = validafechavacia(objfuncionesdicss.validareader("CasoFechaConcesion", "CasoId", respuestastring3).Text);//fechaconsesion 
-
-                    tbFechavigencia.Text = validafechavacia(objfuncionesdicss.validareader("CasoFechaVigencia", "CasoId", respuestastring3).Text);
-                    tbFechavigencia__2.Text = validafechavacia(objfuncionesdicss.validareader("CasoFechaVigencia", "CasoId", respuestastring3).Text);
-                    tbFechapublicacion.Text = validafechavacia(objfuncionesdicss.validareader("CasoFechaPublicacionSolicitud", "CasoId", respuestastring3).Text);
-
-                    lCasoNumero_texbox.Text = objfuncionesdicss.validareader("CasoNumero", "CasoId", respuestastring3).Text;
-
 
                     if (tbFechainternacional.Text != "")
                     {
@@ -1191,103 +1020,9 @@ namespace Facturador
                 int iNum = 0;
                 String [,]sArray; //= new String[iNum, 29];
                 //Fin contamos los plazos
-                conect conin_plazos = new conect();
+                //conect conin_plazos = new conect();
                 //MySqlDataReader respuestastrig_plazos = conin_plazos.getdatareader(sConsultaplazos);
                 int iRows = 0;
-                    /*using (loadinprocess form = new loadinprocess(consultamoslosplazos))
-                    {
-                        form.ShowDialog();
-                    }*/
-                    //while (respuestastrig_plazos.Read())
-                    //{
-                    //    //String[] saRow = new String[28];
-                    //    String sNumplazos = objfuncionesdicss.validareader("numplazos", "CasoId", respuestastrig_plazos).Text;
-                    //    /*iNum = Int32.Parse(sNumplazos);
-                    //    sArray = new String[iNum, 29];*/
-                    //    String sCasoNumero = objfuncionesdicss.validareader("CasoNumero", "CasoId", respuestastrig_plazos).Text;
-                    //    String scasoId = objfuncionesdicss.validareader("casoId", "CasoId", respuestastrig_plazos).Text;
-                    //    String sNombreUtilClient = objfuncionesdicss.validareader("NombreUtilClient", "CasoId", respuestastrig_plazos).Text;
-                    //    String sCasoTitular = objfuncionesdicss.validareader("CasoTitular", "CasoId", respuestastrig_plazos).Text;
-                    //    String sDocumentoFechaRecepcion = objfuncionesdicss.validareader("DocumentoFechaRecepcion", "CasoId", respuestastrig_plazos).Text.Substring(0, 10);
-                    //    String sEstatusCasoDescrip = objfuncionesdicss.validareader("EstatusCasoDescrip", "CasoId", respuestastrig_plazos).Text;
-                    //    String sDocumentoId = objfuncionesdicss.validareader("DocumentoId", "CasoId", respuestastrig_plazos).Text;
-                    //    String sDocumentoCodigoBarras = objfuncionesdicss.validareader("DocumentoCodigoBarras", "CasoId", respuestastrig_plazos).Text;
-                    //    String sSubTipoDocumentoDescrip = objfuncionesdicss.validareader("SubTipoDocumentoDescrip", "CasoId", respuestastrig_plazos).Text;
-                    //    String sEstatusPlazoDescrip = objfuncionesdicss.validareader("EstatusPlazoDescrip", "CasoId", respuestastrig_plazos).Text;
-                    //    String sSubTipoDocumentoId = objfuncionesdicss.validareader("SubTipoDocumentoId", "CasoId", respuestastrig_plazos).Text;
-                    //    String sTipoPlazoDescrip = objfuncionesdicss.validareader("TipoPlazoDescrip", "CasoId", respuestastrig_plazos).Text;
-                    //    String sTipoPlazoId = objfuncionesdicss.validareader("TipoPlazoId", "CasoId", respuestastrig_plazos).Text;
-                    //    String sPlazoFecha = objfuncionesdicss.validareader("PlazoFecha", "CasoId", respuestastrig_plazos).Text.Substring(0,10);
-                    //    String sfigura = objfuncionesdicss.validareader("figura", "CasoId", respuestastrig_plazos).Text;
-                    //    String susuario_capturo = objfuncionesdicss.validareader("usuario_capturo", "CasoId", respuestastrig_plazos).Text;
-                    //    String susuario_responsable = objfuncionesdicss.validareader("usuario_responsable", "CasoId", respuestastrig_plazos).Text;
-                    //    String scontactosdelcliente = objfuncionesdicss.validareader("contactosdelcliente", "CasoId", respuestastrig_plazos).Text;
-                    //    String sreferenciascliente = objfuncionesdicss.validareader("referenciascliente", "CasoId", respuestastrig_plazos).Text;
-                    //    String sCasoDenominacion = objfuncionesdicss.validareader("CasoDenominacion", "CasoId", respuestastrig_plazos).Text;
-                    //    String sCasoNumeroExpedienteLargo = objfuncionesdicss.validareader("CasoNumeroExpedienteLargo", "CasoId", respuestastrig_plazos).Text;
-                    //    String sinteresados = objfuncionesdicss.validareader("interesados", "CasoId", respuestastrig_plazos).Text;
-                    //    String sestatuscasoid = objfuncionesdicss.validareader("estatuscasoid", "CasoId", respuestastrig_plazos).Text;
-                    //    String sTipoTareaId = objfuncionesdicss.validareader("TipoTareaId", "CasoId", respuestastrig_plazos).Text;
-                    //    String sGrupoid = objfuncionesdicss.validareader("Grupoid", "CasoId", respuestastrig_plazos).Text;
-                    //    String sdiferenciafecha = objfuncionesdicss.validareader("diferenciafecha", "CasoId", respuestastrig_plazos).Text;
-                    //    String sPlazoMotivoCancelacion = objfuncionesdicss.validareader("PlazoMotivoCancelacion", "CasoId", respuestastrig_plazos).Text;
-                    //    //String susuario_cancelo = objfuncionesdicss.validareader("usuario_cancelo", "CasoId", respuestastrig_plazos).Text;
-                    //    String sPlazoFechaAtencion = objfuncionesdicss.validareader("PlazoFechaAtencion", "PlazoFechaAtencion", respuestastrig_plazos).Text;
-                    //    String splazoid = objfuncionesdicss.validareader("plazoid", "plazoid", respuestastrig_plazos).Text;
-                    //    String sTipoSolicitudId = objfuncionesdicss.validareader("TipoSolicitudId", "plazoid", respuestastrig_plazos).Text;
-                    //    String sTipoTareaDescrip = objfuncionesdicss.validareader("TipoTareaDescrip", "plazoid", respuestastrig_plazos).Text;
-                    //    String sPlazoFechaProrroga = objfuncionesdicss.validareader("PlazoFechaProrroga", "plazoid", respuestastrig_plazos).Text;
-                    //    String sUsuarioIdCancelo = objfuncionesdicss.validareader("UsuarioIdCancelo", "plazoid", respuestastrig_plazos).Text;
-                    //    String sdiferenciafechaatendido = objfuncionesdicss.validareader("diferenciafechaatendido", "plazoid", respuestastrig_plazos).Text;
-                    //    //diferenciafechaatendido
-
-                    //    ListViewItem items = new ListViewItem(splazoid);//plazoid
-                    //    items.SubItems.Add(susuario_capturo);//capturo
-                    //    items.SubItems.Add(sTipoPlazoDescrip);//tipo plazo
-                    //    items.SubItems.Add(sTipoTareaDescrip);//descripcion tarea
-                    //    items.SubItems.Add(sSubTipoDocumentoDescrip);
-                    //    items.SubItems.Add(sDocumentoFechaRecepcion);
-                    //    items.SubItems.Add(sPlazoFecha);
-                    //    items.SubItems.Add(sPlazoFechaAtencion);
-                    //    items.SubItems.Add("aviso cliente");
-                    //    items.SubItems.Add(sEstatusPlazoDescrip);
-                    //    if (sdiferenciafechaatendido!="")
-                    //    {
-                    //        int Mesatendido = Int32.Parse(sdiferenciafechaatendido) / 30;
-                    //        items.SubItems.Add(Mesatendido+"");
-                    //    }else{
-                    //        int Mesatendido = Int32.Parse(sdiferenciafecha) / 30;
-                    //        items.SubItems.Add(Mesatendido + "");
-                    //    }
-
-                    //    items.SubItems.Add(sPlazoFecha);
-                    //    items.SubItems.Add(sPlazoFechaAtencion);
-                    //    items.SubItems.Add(sPlazoFechaProrroga);
-                    //    items.SubItems.Add("");
-                    //    items.SubItems.Add(sPlazoMotivoCancelacion);
-                    //    lvPlazos.Items.Add(items);
-
-                    //    ListViewItem items = new ListViewItem(objfuncionesdicss.validareader("plazoid", "plazoid", resp_plazos).Text);//plazoid
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("usuarioIdAtendio", "plazoid", resp_plazos).Text);//capturo
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("TipoPlazoId", "plazoid", resp_plazos).Text);//tipoplazo
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("TipoPlazoId", "plazoid", resp_plazos).Text);//descripcion tarea
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("DocumentoId", "plazoid", resp_plazos).Text);//Documento
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("PlazoFechaAtencion", "plazoid", resp_plazos).Text);//Notificado en
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("PlazoFecha", "plazoid", resp_plazos).Text);//Vencimiento original
-                    //    items.SubItems.Add("2 meses");//Fecha escrito
-                    //    items.SubItems.Add("3 meses");//Fecha escrito
-                    //    items.SubItems.Add("mes");//mes
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("PlazoFechaAtencion", "plazoid", resp_plazos).Text);//Fecha escrito
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("PlazoFechaProrroga", "plazoid", resp_plazos).Text);//Aviso cliente
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("EstatusPlazoId", "plazoid", resp_plazos).Text);//Estatus 
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("PlazoFechaProrroga", "plazoid", resp_plazos).Text);//plazo final
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("PlazoFechaAtencion", "plazoid", resp_plazos).Text);//Fecha atención
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("PlazoFechaProrroga", "plazoid", resp_plazos).Text);//Fecha prorroga
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("PlazoMotivoCancelacion", "plazoid", resp_plazos).Text);//prorrogó o canceló
-                    //    items.SubItems.Add(objfuncionesdicss.validareader("PlazoMotivoCancelacion", "plazoid", resp_plazos).Text);//Motivo cancelación
-                    //    lvPlazos.Items.Add(items);
-                    //    //lvdocumentosimpi.Items.Add(items);
-
 
                     //}
                     /*fin de cambios*/
@@ -1375,194 +1110,7 @@ namespace Facturador
                 tb_numtit.Text = "0";
                 tb_inv.Text = "0";
                 tb_titinv.Text = "0";
-                ////iniciamos la consulta del interesado
-                //try {
-                //    conect con_casointeresado_count = new conect();
-                //    String sInteresados_count = " select count(*)as numtotaldeinteresados " +
-                //                                " FROM " +
-                //                                "     casointeresado, " +
-                //                                "     interesado, " +
-                //                                //"     direccion,  " +
-                //                                "     tiporelacion " +
-                //                                " WHERE " +
-                //                                "     casointeresado.CasoId = '" + sCasoiddom + "'" +
-                //                                " AND interesado.InteresadoID = casointeresado.InteresadoId " +
-                //                                " AND tiporelacion.TipoRelacionId = casointeresado.TipoRelacionId " +
-                //        //" AND interesado.InteresadoID = direccion.InteresadoId "+
-                //                                "GROUP BY interesado.InteresadoID order by casointeresado.CasoInteresadoSecuencia; ";
-                //    MySqlDataReader respuestastringinteresados_count = con_casointeresado_count.getdatareader(sInteresados_count);
-                //    int iCount_tam = 0;
-                //    while (respuestastringinteresados_count.Read())
-                //    {
-                //        iCount_tam++;
-                //    }
-                //    TipoRelacionId = new String[iCount_tam];
-                //    InteresadoCurp = new String[iCount_tam];
-                //    InteresadoNombre = new String[iCount_tam];
-                //    InteresadoApPaterno = new String[iCount_tam];
-                //    InteresadoApMaterno = new String[iCount_tam];
-                //    nacionalidad = new String[iCount_tam];
-                //    InteresadoRFC = new String[iCount_tam];
 
-                //    sgDireccionCalle = new String[iCount_tam];
-                //    sgDireccionNumExt = new String[iCount_tam];
-                //    sgDireccionNumInt = new String[iCount_tam];
-                //    sgDireccionColonia = new String[iCount_tam];
-                //    sgDireccionCP = new String[iCount_tam];
-                //    sgDireccionEstado = new String[iCount_tam];
-                //    sgDireccionPoblacion = new String[iCount_tam];
-                //    sgNombrepais = new String[iCount_tam];
-
-                //    respuestastringinteresados_count.Close();
-                //    con_casointeresado_count.Cerrarconexion();
-
-                //    actualizatablainteresado();
-                //    conect con_casointeresado = new conect();
-                //    String sInteresados = " SELECT  " +
-                //                        "     casointeresado.CasoId, " +
-                //                        "     casointeresado.TipoRelacionId, " +
-                //                        "     casointeresado.CasoInteresadoSecuencia, " +
-                //                        "     interesado.InteresadoID, " +
-                //                        "     interesado.InteresadoTipoPersonaSAT, " +
-                //                        "     interesado.InteresadoNombre, " +
-                //                        "     interesado.InteresadoApPaterno, " +
-                //                        "     interesado.InteresadoApMaterno, " +
-                //                        "     interesado.InteresadoRFC, " +
-                //                        "     interesado.InteresadoCurp, " +
-                //                        " CONCAT ( COALESCE(interesado.InteresadoNombre, ''  ), ' ', " +
-                //                        " COALESCE(interesado.InteresadoApPaterno, ''), ' ', " +
-                //                        " COALESCE(interesado.InteresadoApMaterno, '')) AS interesadonombrecompleto, " +
-
-
-                //                        " CONCAT (  COALESCE(Dame_direccion_DireccionCalle(interesado.InteresadoID), ''  ), ' ',  " +
-                //                        " COALESCE(Dame_direccion_DireccionNumExt(interesado.InteresadoID), ''), ' ', " +
-                //                        " COALESCE(Dame_direccion_DireccionNumInt(interesado.InteresadoID), ''), ' ', " +
-                //                        " COALESCE(Dame_direccion_DireccionColonia(interesado.InteresadoID), ''), ' ', " +
-                //                        " COALESCE(Dame_direccion_DireccionPoblacion(interesado.InteresadoID), ''), ' ', " +
-                //                        " COALESCE(Dame_direccion_DireccionEstado(interesado.InteresadoID), ''), ' ', " +
-                //                        " COALESCE(Dame_direccion_DireccionCP(interesado.InteresadoID), '')) AS direccioncompleta, " +
-
-                //                        "     Dame_direccion_DireccionCalle(interesado.InteresadoID) as DireccionCalle, " +
-                //                        "     Dame_direccion_DireccionNumExt(interesado.InteresadoID) as DireccionNumExt, " +
-                //                        "     Dame_direccion_DireccionNumInt(interesado.InteresadoID) as DireccionNumInt, " +
-                //                        "     Dame_direccion_DireccionColonia(interesado.InteresadoID) as DireccionColonia, " +
-                //                        "     Dame_direccion_DireccionCP(interesado.InteresadoID) as DireccionCP, " +
-                //                        "     Dame_direccion_DireccionEstado(interesado.InteresadoID) as DireccionEstado, " +
-                //                        "     Dame_direccion_DireccionPoblacion(interesado.InteresadoID) as DireccionPoblacion, " +
-
-
-                //                        " Damelanacionalidad (interesado.PaisId )AS nacionalidad, " +//DameNombrePais
-                //                        " DameNombrePais (Dame_direccion_PaisId(interesado.InteresadoID))AS Nombrepais, " +//DameNombrePais
-                //                        "     interesado.PaisId, " +
-                //                        "     tiporelacion.TipoRelacionDescrip, " +
-                //                        "     interesado.InteresadoPoder, " +
-                //                        "     interesado.InteresadoRGP " +
-                //                        " FROM " +
-                //                        "     casointeresado, " +
-                //                        "     interesado, " +
-                //        //"     caso,  " +
-                //        //  "     pais,  " +
-                //                        "     tiporelacion " +
-                //                        " WHERE " +
-                //                        "     casointeresado.CasoId = '" + sCasoiddom + "'" +
-                //                        " AND interesado.InteresadoID = casointeresado.InteresadoId " +
-                //                        " AND tiporelacion.TipoRelacionId = casointeresado.TipoRelacionId " +
-                //        //"     AND casointeresado.CasoId = caso.CasoId " +
-                //        // "     AND pais.PaisId = interesado.PaisId " +
-                //                       // "     AND interesado.InteresadoID = direccion.InteresadoId "+
-                //                        "GROUP BY interesado.InteresadoID order by casointeresado.CasoInteresadoSecuencia; ";
-                //    MySqlDataReader respuestastringinteresados = con_casointeresado.getdatareader(sInteresados);
-                //    lvinteresados.Items.Clear();
-                //    int count = 0;
-                //    String TIPOPERSONA = "";
-                //    int iContadortitula = 0;
-                //    int iContadorinventor = 0;
-                //    int iContadorinventortitular = 0;
-
-                //    while (respuestastringinteresados.Read())
-                //    {
-
-                //        TipoRelacionId[count] = objfuncionesdicss.validareader("TipoRelacionId", "InteresadoID", respuestastringinteresados).Text;
-                //        InteresadoCurp[count] = objfuncionesdicss.validareader("InteresadoCurp", "InteresadoID", respuestastringinteresados).Text;
-                //        InteresadoNombre[count] = objfuncionesdicss.validareader("InteresadoNombre", "InteresadoID", respuestastringinteresados).Text;
-                //        InteresadoApPaterno[count] = objfuncionesdicss.validareader("InteresadoApPaterno", "InteresadoID", respuestastringinteresados).Text;
-                //        InteresadoApMaterno[count] = objfuncionesdicss.validareader("InteresadoApMaterno", "InteresadoID", respuestastringinteresados).Text;
-                //        nacionalidad[count] = objfuncionesdicss.validareader("nacionalidad", "InteresadoID", respuestastringinteresados).Text;
-                //        InteresadoRFC[count] = objfuncionesdicss.validareader("InteresadoRFC", "InteresadoID", respuestastringinteresados).Text;
-
-                //        sgDireccionCalle[count] = objfuncionesdicss.validareader("DireccionCalle", "InteresadoID", respuestastringinteresados).Text;
-                //        sgDireccionNumExt[count] = objfuncionesdicss.validareader("DireccionNumExt", "InteresadoID", respuestastringinteresados).Text;
-                //        sgDireccionNumInt[count] = objfuncionesdicss.validareader("DireccionNumInt", "InteresadoID", respuestastringinteresados).Text;
-                //        sgDireccionColonia[count] = objfuncionesdicss.validareader("DireccionColonia", "InteresadoID", respuestastringinteresados).Text;
-                //        sgDireccionCP[count] = objfuncionesdicss.validareader("DireccionCP", "InteresadoID", respuestastringinteresados).Text;
-                //        sgDireccionEstado[count] = objfuncionesdicss.validareader("DireccionEstado", "InteresadoID", respuestastringinteresados).Text;
-                //        sgDireccionPoblacion[count] = objfuncionesdicss.validareader("DireccionPoblacion", "InteresadoID", respuestastringinteresados).Text;
-
-
-                //        sgNombrepais[count] = objfuncionesdicss.validareader("Nombrepais", "InteresadoID", respuestastringinteresados).Text;
-
-                //        switch (objfuncionesdicss.validareader("InteresadoTipoPersonaSAT", "InteresadoID", respuestastringinteresados).Text)
-                //        {
-                //            case "FN":
-                //                TIPOPERSONA = "Física Nacional";
-                //                break;
-                //            case "FE":
-                //                TIPOPERSONA = "Física Extranjera";
-                //                break;
-                //            case "MN":
-                //                TIPOPERSONA = "Moral Nacional";
-                //                break;
-                //            case "ME":
-                //                TIPOPERSONA = "Moral Extranjera";
-                //                break;
-                //        }
-
-                //        switch (objfuncionesdicss.validareader("TipoRelacionDescrip", "InteresadoID", respuestastringinteresados).Text)
-                //        {
-                //            case "Titular":
-                //                {
-                //                    iContadortitula++;
-                //                } break;
-                //            case "Inventor":
-                //                {
-                //                    iContadorinventor++;
-                //                } break;
-                //            case "Titular/Inventor":
-                //                {
-                //                    iContadorinventortitular++;
-                //                } break;
-                //        }
-                //        ListViewItem listinteresados = new ListViewItem(objfuncionesdicss.validareader("TipoRelacionDescrip", "InteresadoID", respuestastringinteresados).Text);
-                //        listinteresados.SubItems.Add(objfuncionesdicss.validareader("InteresadoID", "InteresadoID", respuestastringinteresados).Text);
-                //        listinteresados.SubItems.Add(objfuncionesdicss.validareader("interesadonombrecompleto", "InteresadoID", respuestastringinteresados).Text);
-                //        listinteresados.SubItems.Add(objfuncionesdicss.validareader("nacionalidad", "InteresadoID", respuestastringinteresados).Text);
-                //        listinteresados.SubItems.Add(objfuncionesdicss.validareader("direccioncompleta", "InteresadoID", respuestastringinteresados).Text);
-                //        listinteresados.SubItems.Add(objfuncionesdicss.validareader("InteresadoPoder", "InteresadoID", respuestastringinteresados).Text);
-                //        listinteresados.SubItems.Add(objfuncionesdicss.validareader("InteresadoRGP", "InteresadoID", respuestastringinteresados).Text);
-                //        listinteresados.SubItems.Add(TIPOPERSONA);
-                //        int residuo = count % 2;
-                //        if (residuo == 0)
-                //        {
-                //            listinteresados.BackColor = Color.LightGray;
-                //        }
-                //        else
-                //        {
-                //            listinteresados.BackColor = Color.Azure;
-                //        }
-                //        lvinteresados.Items.Add(listinteresados);
-                //        lvinteresados.FullRowSelect = true;
-                //        count++;
-
-                //    }
-                //    //cerrar conexion
-                //    respuestastringinteresados.Close();
-                //    con_casointeresado.Cerrarconexion();
-                //    tb_numtit.Text = iContadortitula + "";
-                //    tb_inv.Text = iContadorinventor + "";
-                //    tb_titinv.Text = iContadorinventortitular + "";
-                //}catch(Exception Ex){
-                //    new filelog(loguin.sId,"Error en el interesado"+ Ex.ToString());
-                //}
                 Svariablelinea = "antes de ejecutar actualizainformaciondeinteresado linea 1509";
                 actualizainformaciondeinteresado();
                 actualizainformaciondeinvnetores();
@@ -2213,7 +1761,8 @@ namespace Facturador
                     con_3_escritos.Cerrarconexion();
 
                 }
-            }catch (Exception exs) {
+            }
+            catch (Exception exs) {
                 new filelog("linea: 2055", exs.Message);
             }
             
@@ -3938,58 +3487,7 @@ namespace Facturador
                 //actualizatablainteresado();
                 //xxx
                 conect con_casointeresado = new conect();
-                //String sInteresados = " SELECT  " +
-                //                        " casointeresado.CasoId, " +
-                //                        "     casointeresado.CasoInteresadoSecuencia, " +
-                //                        "     interesado.InteresadoID, " +
-                //                        "     interesado.InteresadoTipoPersonaSAT, " +
-                //                        "     interesado.InteresadoNombre, " +
-                //                        "     interesado.InteresadoApPaterno, " +
-                //                        "     interesado.InteresadoApMaterno, " +
-                //                        "     casointeresado.TipoRelacionId, " +
-                //                        "     interesado.InteresadoRFC, " +
-                //                        "     interesado.InteresadoCurp, " +
-                //                        " CONCAT ( COALESCE(interesado.InteresadoNombre, ''  ), ' ', " +
-                //                        " COALESCE(interesado.InteresadoApPaterno, ''), ' ', " +
-                //                        " COALESCE(interesado.InteresadoApMaterno, '')) AS interesadonombrecompleto, " +
-                //                        " CONCAT (  COALESCE(direccion.DireccionCalle, ''  ), ' ',  " +
-                //                        " COALESCE(direccion.DireccionNumExt, ''), ' ', " +
-                //                        " COALESCE(direccion.DireccionNumInt, ''), ' ', " +
-                //                        " COALESCE(direccion.DireccionColonia, ''), ' ', " +
-                //                        " COALESCE(direccion.DireccionPoblacion, ''), ' ', " +
-                //                        " COALESCE(direccion.DireccionEstado, ''), ' ', " +
-                //                        " COALESCE(direccion.DireccionCP, '')) AS direccioncompleta, " +
-                //                        "     direccion.DireccionCalle, " +
-                //                        "     direccion.DireccionNumExt, " +
-                //                        "     direccion.DireccionNumInt, " +
-                //                        "     direccion.DireccionColonia, " +
-                //                        "     direccion.DireccionCP, " +
-                //                        "     direccion.DireccionEstado, " +
-                //                        "     direccion.DireccionPoblacion, " +
-                //                        " Damelanacionalidad (interesado.PaisId )AS nacionalidad, " +
-                //                        "     interesado.PaisId, " +
-                //                        " DameNombrePais(interesado.PaisId) As Nombrepais, " +
-                //                        "     tiporelacion.TipoRelacionDescrip, " +
-                //                        "     interesado.InteresadoPoder, " +
-                //    // "     pais.PaisNacionalidad, " +
-                //                        "     interesado.InteresadoRGP " +
-                //                        " FROM " +
-                //                        "     casointeresado, " +
-                //                        "     interesado, " +
-                //                        "     direccion,  " +
-                //    //"     caso,  " +
-                //    //  "     pais,  " +
-                //                        "     tiporelacion " +
-                //                        " WHERE " +
-                //                        "     casointeresado.CasoId = '" + sCasoId + "'" +
-                //                        " AND casointeresado.TipoSolicitudId = '" + sTiposolicitudGlobal + "'" +
-                //                        " AND interesado.InteresadoID = casointeresado.InteresadoId " +
-                //                        " AND tiporelacion.TipoRelacionId = casointeresado.TipoRelacionId " +
-                //    //"     AND casointeresado.CasoId = caso.CasoId " +
-                //    // "     AND pais.PaisId = interesado.PaisId " +
-                //                        " AND interesado.InteresadoID = direccion.InteresadoId" +
-                //                        //" AND direccion.DireccionID = casointeresado.DireccionId " +
-                //                        " GROUP BY interesado.InteresadoID order by casointeresado.CasoInteresadoId; ";
+
                 String sInteresados = " SELECT" +
                                         " casointeresado.CasoId, " +
                                         " casointeresado.CasoInteresadoSecuencia, " +
@@ -4482,6 +3980,7 @@ namespace Facturador
                         MessageBox.Show("Error al intentar guardar el documento \n Query:"+ sQueryinsert);
                         new filelog(loguin.sId, "linea 4010: " + sQueryinsert);
                     }
+                    respuestastringinteresados.Close();
                     con_insertdocelect.Cerrarconexion();
                 }
             }catch(Exception E)
@@ -5589,6 +5088,8 @@ namespace Facturador
                 {
                     lPais_texbox.Text = texti;
                 }
+                resp_updatecaso.Close();
+                con_4.Cerrarconexion();
 
             }
         }
@@ -6072,6 +5573,7 @@ namespace Facturador
                     else
                     {
                         sIdprioridadseleccionada = "";
+                        con_2.Cerrarconexion();
                     }
 
                 }
@@ -6922,7 +6424,9 @@ namespace Facturador
                         consultareferencias();
                     }
                 }
-            }catch(Exception eX){
+            
+            }
+            catch(Exception eX){
                 new filelog("ver edocs", "Error: " + eX.Message);
                 MessageBox.Show(eX.Message);
             }

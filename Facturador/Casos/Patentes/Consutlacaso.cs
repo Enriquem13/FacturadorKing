@@ -104,12 +104,13 @@ namespace Facturador
                                     " GROUP BY estatuscaso.EstatusCasoId" +
                                     " order by estatuscaso.EstatusCasoDescrip;";
 
-                MySqlDataReader resp_getestatus = con.getdatareader(sGetids);
+                MySqlDataReader resp_getestatus = con_estatus.getdatareader(sGetids);
                 while (resp_getestatus.Read())
                 {
                     cbFiltroestatus.Items.Add(validareader("EstatusCasoDescrip", "estatuscasoid", resp_getestatus));
                 }
                 resp_getestatus.Close();
+                con_estatus.Cerrarconexion();
                 //20220427FSV
             }
             catch (Exception exs) {
@@ -431,6 +432,7 @@ namespace Facturador
                         listaitems.SubItems.Add(validareader("cliente_Nombre", "CasoId", respuestastring3).Text);
                         listaitems.SubItems.Add(sPrioridades);
                         listaitems.SubItems.Add(validareader("referencia", "CasoId", respuestastring3).Text);
+                        con.Cerrarconexion();
                         if (residuo == 0)
                         {
                             listaitems.BackColor = Color.LightGray;

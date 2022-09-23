@@ -3839,7 +3839,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 46);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1360, 510);
+            this.tabPage1.Size = new System.Drawing.Size(1370, 510);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Generales          ";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -4356,11 +4356,11 @@
             this.tabcontrolall.Controls.Add(this.tbFacturas);
             this.tabcontrolall.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabcontrolall.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabcontrolall.Location = new System.Drawing.Point(0, 390);
+            this.tabcontrolall.Location = new System.Drawing.Point(0, 377);
             this.tabcontrolall.Multiline = true;
             this.tabcontrolall.Name = "tabcontrolall";
             this.tabcontrolall.SelectedIndex = 0;
-            this.tabcontrolall.Size = new System.Drawing.Size(1368, 560);
+            this.tabcontrolall.Size = new System.Drawing.Size(1378, 560);
             this.tabcontrolall.TabIndex = 0;
             // 
             // tab_anualidades

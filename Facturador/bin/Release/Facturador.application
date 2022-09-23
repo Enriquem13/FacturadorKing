@@ -8,20 +8,20 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="http://desktop-su3gnqt:53310/Facturador.application" />
+    <deploymentProvider codebase="http://sniperb6:53310/Facturador.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Facturador.exe.manifest" size="81859">
+    <dependentAssembly dependencyType="install" codebase="Facturador.exe.manifest" size="81960">
       <assemblyIdentity name="Facturador.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wBdB+dXh7JrOrOx8TrMjx70HHHAFvzsYaVzT357gjmM=</dsig:DigestValue>
+        <dsig:DigestValue>b5a6CWWm2rSqr7GeM+p6SWvDuEt38/8ypBVYSUb2oiY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

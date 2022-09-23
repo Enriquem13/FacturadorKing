@@ -33,8 +33,8 @@ namespace Facturador
                 {
 
                 }
-                conexion = "server=" + lineas[0] + ";database=" + lineas[1] + ";Uid=" + lineas[2] + ";port=" + lineas[5] + ";pwd=" + lineas[3] + ";";
-                //conexion = "server=" + lineas[0] + ";database=" + lineas[1] + ";Uid=" + lineas[2] + ";port=3307;pwd=" + lineas[3] + ";";//para pruebas ambiente dicss
+                //conexion = "server=" + lineas[0] + ";database=" + lineas[1] + ";Uid=" + lineas[2] + ";port=" + lineas[5] + ";pwd=" + lineas[3] + ";";
+                conexion = "server=" + lineas[0] + ";database=" + lineas[1] + ";Uid=" + lineas[2] + ";port=3307;pwd=" + lineas[3] + ";";//para pruebas ambiente dicss
                 con = new MySqlConnection(conexion);
                 
                 con.Open();
